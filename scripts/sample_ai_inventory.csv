@@ -1,0 +1,16 @@
+system_id,system_name,owner,use_case_category,annex_iii_area,annex_i_product,transparency_obligation,gpai_model,provider_or_deployer
+AI-EU-001,Resume Screening Engine,HR Technology,employment candidate shortlisting,4,no,no,no,deployer
+AI-EU-002,Credit Scoring Model,Risk & Analytics,essential private services credit assessment,5,no,no,no,both
+AI-EU-003,Customer Support Chatbot,CX Technology,conversational ai customer support,,no,yes,no,provider
+AI-EU-004,Social Media Content Moderator,Trust & Safety,content moderation minimal risk,,no,no,no,provider
+AI-EU-005,Medical Imaging Classifier,Clinical AI,safety component medical device diagnostics,,yes,no,no,provider
+AI-EU-006,Student Performance Predictor,EdTech,education access determination student assessment,3,no,no,no,deployer
+AI-EU-007,Real-time Biometric ID CCTV,Security Ops,real-time biometric identification public spaces,,no,no,no,deployer
+AI-EU-008,Benefit Eligibility Screener,Public Services,essential public services benefit eligibility,5,no,no,no,deployer
+AI-EU-009,LLM Foundation Model,AI Platform,general purpose language model generation,,no,yes,yes,provider
+AI-EU-010,Demand Forecasting System,Supply Chain,inventory demand forecasting minimal risk,,no,no,no,provider
+AI-EU-011,Deepfake Video Generator,Creative Studio,synthetic video content generation,,no,yes,no,provider
+AI-EU-012,Recidivism Risk Tool,Criminal Justice,law enforcement risk assessment profiling,6,no,no,no,deployer
+AI-EU-013,AI Traffic Management,Smart City,critical infrastructure traffic control,2,no,no,no,deployer
+AI-EU-014,Spam Filter,IT Security,email spam classification minimal risk,,no,no,no,provider
+AI-EU-015,Asylum Application Processor,Border Control,migration asylum application review,7,no,no,no,deployer
