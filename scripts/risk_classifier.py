@@ -1,314 +1,330 @@
 #!/usr/bin/env python3
 """
-risk_classifier.py
-------------------
-EU AI Act Compliance Toolkit — GRC Engineering Automation
+risk_classifier.py - UPGRADED v2.0
+EU AI Act Compliance Toolkit -- GRC Engineering Automation
 
-Purpose:
-    Reads a CSV inventory of AI systems and classifies each one under the
-    EU AI Act risk framework (Regulation (EU) 2024/1689):
-        - UNACCEPTABLE RISK  (Article 5  — prohibited)
-        - HIGH RISK          (Article 6  — Annex I or Annex III)
-        - LIMITED RISK       (Article 50 — transparency obligations)
-        - MINIMAL RISK       (no mandatory obligations)
-
-    Outputs a formatted console report and saves a classification report file.
-    CI/CD-friendly: exits with code 1 if any UNACCEPTABLE RISK systems are found.
-
-Usage:
-    python scripts/risk_classifier.py
-    python scripts/risk_classifier.py --input scripts/sample_ai_inventory.csv
-    python scripts/risk_classifier.py --input scripts/sample_ai_inventory.csv --output reports/risk_report.txt
-
-Expected CSV columns:
-    system_id, system_name, owner, use_case_category, annex_iii_area,
-    transparency_obligation, gpai_model, provider_or_deployer
-
-Author:  Ankit Uniyal
-Toolkit: EU AI Act Compliance Toolkit
-Version: 1.0.0
+Upgrades in v2.0:
+- Article 6(3) exclusion logic: structured CSV fields prevent incorrect high-risk classification
+- Dedicated 'prohibited_practice' CSV field: reduces reliance on brittle keyword matching
+- Warning system: flags keyword-matched prohibited practices for human review
+- GPAI model flag triggers reference to new document 11
+- Disclaimer: output is a triage aid, not a legal determination
 """
 
 import csv
 import argparse
 import sys
-from datetime import date
-from pathlib import Path
+import os
+from datetime import datetime
 
+ARTICLE_5_KEYWORDS = [
+    "subliminal manipulation", "subliminal technique",
+    "social scoring", "social credit",
+    "real-time biometric identification public", "real-time remote biometric",
+    "emotion recognition workplace", "emotion recognition education",
+    "untargeted facial scraping", "facial database scraping",
+    "predict criminal", "predictive policing profiling",
+    "exploitation of vulnerabilities",
+]
 
-# ── Constants ─────────────────────────────────────────────────────────────────
-DATE_FORMAT = "%Y-%m-%d"
-
-RISK_UNACCEPTABLE = "UNACCEPTABLE RISK"
-RISK_HIGH         = "HIGH RISK"
-RISK_LIMITED      = "LIMITED RISK"
-RISK_MINIMAL      = "MINIMAL RISK"
-
-# Annex III high-risk use case areas (Article 6(2))
 ANNEX_III_AREAS = {
     "1": "Biometrics",
     "2": "Critical Infrastructure",
-    "3": "Education & Vocational Training",
-    "4": "Employment & Workers Management",
-    "5": "Essential Private/Public Services",
+    "3": "Education and Vocational Training",
+    "4": "Employment and Workers Management",
+    "5": "Essential Private and Public Services",
     "6": "Law Enforcement",
-    "7": "Migration, Asylum & Border Control",
+    "7": "Migration, Asylum, and Border Control",
     "8": "Administration of Justice",
 }
 
-# Obligations by risk tier
 OBLIGATIONS = {
-    RISK_UNACCEPTABLE: [
-        "System is PROHIBITED under Article 5",
-        "Must NOT be placed on EU market or put into service",
-        "Immediate cessation of development/deployment required",
-        "Notify legal/compliance team immediately",
+    "UNACCEPTABLE": [
+        "IMMEDIATE ACTION: do NOT place/keep on EU market",
+        "Withdraw system if already deployed",
+        "Notify authorities if harm has occurred",
     ],
-    RISK_HIGH: [
+    "HIGH": [
         "Risk management system (Article 9)",
         "Data governance (Article 10)",
-        "Technical documentation — Annex IV (Article 11)",
-        "Automatic logging / record-keeping (Article 12)",
-        "Transparency & instructions for use (Article 13)",
-        "Human oversight measures (Article 14)",
-        "Accuracy, robustness & cybersecurity (Article 15)",
+        "Technical documentation Annex IV (Article 11)",
+        "Automatic logging (Article 12)",
+        "Transparency and instructions for use (Article 13)",
+        "Human oversight (Article 14)",
+        "Accuracy, robustness, cybersecurity (Article 15)",
         "Quality management system (Article 17)",
-        "Conformity assessment before market placement (Article 43)",
-        "EU database registration (Article 49 / Article 71)",
-        "CE marking (where applicable)",
+        "EU database registration (Articles 49/71)",
+        "Conformity assessment (Articles 43-48)",
+        "EU Declaration of Conformity (Article 47) -- see 12-EU-DECLARATION-OF-CONFORMITY.md",
         "Post-market monitoring (Article 72)",
-        "Serious incident reporting (Article 73)",
-        "Fundamental Rights Impact Assessment if deployer (Article 27)",
+        "Incident reporting (Article 73)",
+        "FRIA if deployer in public/public-service context (Article 27)",
+        "Inform workers before deployment in workplace (Article 26(7))",
     ],
-    RISK_LIMITED: [
-        "Disclose to users they are interacting with an AI (Article 50(1)) — chatbots",
-        "Label AI-generated content / deepfakes (Article 50(4)&(5))",
-        "Inform individuals of emotion recognition / biometric categorisation (Article 50(3))",
-        "GPAI model: technical documentation & training data summary (Article 53)",
+    "LIMITED": [
+        "Disclose AI to users (Article 50(1)) -- if chatbot/conversational",
+        "Label emotion recognition / biometric categorisation (Article 50(3))",
+        "Label AI-generated content / deepfakes (Article 50(4)-(5))",
+        "GPAI: Technical documentation Annex XI (Article 53) -- see 11-GPAI-TECHNICAL-DOCUMENTATION.md",
+        "GPAI: Copyright compliance policy (Article 53(1)(c))",
+        "GPAI: Publish training data summary (Article 53(1)(d))",
+        "GPAI systemic risk (>10^25 FLOPs): red-teaming, incident reporting (Article 55)",
     ],
-    RISK_MINIMAL: [
-        "No mandatory EU AI Act obligations",
-        "Voluntary codes of conduct encouraged",
-        "Best practice: maintain internal AI governance standards",
+    "MINIMAL": [
+        "No mandatory obligations under EU AI Act",
+        "Consider voluntary codes of conduct",
+        "Maintain good AI governance practices",
     ],
 }
 
 
-# ── Classification logic ───────────────────────────────────────────────────────
-
-def classify_risk(row: dict) -> tuple[str, str, list[str]]:
+def check_article_6_3_exclusion(row):
     """
-    Classify an AI system's risk tier based on CSV fields.
+    Check Article 6(3) exclusions. A system listed in Annex III is NOT
+    high-risk if it meets any of the four exclusions. Returns (excluded, reason).
 
-    Returns:
-        (risk_tier, classification_reason, obligations_list)
+    Requires CSV columns: exclusion_narrow_task, exclusion_human_result,
+    exclusion_no_individual, exclusion_preparatory (values: yes/no)
     """
-    use_case   = row.get("use_case_category", "").strip().lower()
-    annex3     = row.get("annex_iii_area", "").strip()
-    trans_obl  = row.get("transparency_obligation", "").strip().lower()
-    gpai       = row.get("gpai_model", "").strip().lower()
-    annex1     = row.get("annex_i_product", "").strip().lower()
+    exclusions = {
+        "exclusion_narrow_task": "Art. 6(3)(a): narrow procedural task only",
+        "exclusion_human_result": "Art. 6(3)(b): improves result of prior human activity only",
+        "exclusion_no_individual": "Art. 6(3)(c): detects patterns without influencing individuals",
+        "exclusion_preparatory": "Art. 6(3)(d): preparatory task to human assessment only",
+    }
+    for field, reason in exclusions.items():
+        if row.get(field, "").strip().lower() == "yes":
+            return True, reason
+    return False, ""
 
-    # Step 1 — Check for prohibited use cases (Article 5)
-    prohibited_keywords = [
-        "social scoring", "subliminal manipulation", "real-time biometric",
-        "emotion recognition workplace", "facial scraping", "predictive policing",
-        "exploit vulnerability", "biometric categorisation sensitive",
-        "remote biometric identification public"
-    ]
-    for keyword in prohibited_keywords:
-        if keyword in use_case:
-            return (
-                RISK_UNACCEPTABLE,
-                f"Matches prohibited practice (Article 5): '{keyword}'",
-                OBLIGATIONS[RISK_UNACCEPTABLE]
+
+def classify_system(row):
+    use_case = row.get("use_case_category", "").strip().lower()
+    annex_iii_area = row.get("annex_iii_area", "").strip()
+    annex_i_product = row.get("annex_i_product", "").strip().lower()
+    transparency_obligation = row.get("transparency_obligation", "").strip().lower()
+    gpai_model = row.get("gpai_model", "").strip().lower()
+    prohibited_practice = row.get("prohibited_practice", "").strip().lower()
+
+    warnings = []
+    exclusion = ""
+
+    # Step 1: Article 5 prohibited practices
+    is_prohibited = prohibited_practice == "yes"
+    prohibited_keyword = ""
+    if not is_prohibited:
+        for kw in ARTICLE_5_KEYWORDS:
+            if kw in use_case:
+                is_prohibited = True
+                prohibited_keyword = kw
+                warnings.append(
+                    f"REVIEW REQUIRED: keyword '{kw}' matched -- "
+                    f"confirm this is actually an Article 5 prohibited practice"
+                )
+                break
+
+    if is_prohibited:
+        return {
+            "tier": "UNACCEPTABLE",
+            "reason": (
+                "Prohibited (explicit flag)"
+                if prohibited_practice == "yes"
+                else f"Prohibited (keyword: '{prohibited_keyword}') -- REVIEW"
+            ),
+            "obligations": OBLIGATIONS["UNACCEPTABLE"],
+            "exclusion": "",
+            "warnings": warnings,
+        }
+
+    # Step 2: Article 6(1) -- Annex I safety component
+    if annex_i_product == "yes":
+        return {
+            "tier": "HIGH",
+            "reason": "HIGH -- Annex I safety component (Article 6(1))",
+            "obligations": OBLIGATIONS["HIGH"],
+            "exclusion": "",
+            "warnings": warnings,
+        }
+
+    # Step 3: Article 6(2) -- Annex III + Article 6(3) exclusion check
+    if annex_iii_area and annex_iii_area in ANNEX_III_AREAS:
+        area_name = ANNEX_III_AREAS[annex_iii_area]
+        excluded, excl_reason = check_article_6_3_exclusion(row)
+        if excluded:
+            exclusion = excl_reason
+            warnings.append(
+                f"Article 6(3) exclusion claimed: '{excl_reason}'. "
+                f"Document justification in 05-AI-SYSTEM-REGISTER.md. "
+                f"Misapplication creates regulatory risk."
             )
+            # Fall through to LIMITED/MINIMAL
+        else:
+            return {
+                "tier": "HIGH",
+                "reason": f"HIGH -- Annex III Area {annex_iii_area}: {area_name} (Art. 6(2))",
+                "obligations": OBLIGATIONS["HIGH"],
+                "exclusion": "",
+                "warnings": warnings,
+            }
 
-    # Step 2 — Check for Annex I product (safety component) → High Risk
-    if annex1 in ("yes", "true", "1", "y"):
-        return (
-            RISK_HIGH,
-            "Safety component of Annex I product (Article 6(1))",
-            OBLIGATIONS[RISK_HIGH]
-        )
+    # Step 4: Article 50 / GPAI -- Limited Risk
+    if transparency_obligation == "yes" or gpai_model == "yes":
+        parts = []
+        if transparency_obligation == "yes":
+            parts.append("transparency obligation (Article 50)")
+        if gpai_model == "yes":
+            parts.append("GPAI model (Article 53) -- see 11-GPAI-TECHNICAL-DOCUMENTATION.md")
+        return {
+            "tier": "LIMITED",
+            "reason": "LIMITED -- " + "; ".join(parts),
+            "obligations": OBLIGATIONS["LIMITED"],
+            "exclusion": exclusion,
+            "warnings": warnings,
+        }
 
-    # Step 3 — Check for Annex III use case → High Risk
-    if annex3 and annex3 in ANNEX_III_AREAS:
-        area_name = ANNEX_III_AREAS[annex3]
-        return (
-            RISK_HIGH,
-            f"Annex III Area {annex3} — {area_name} (Article 6(2))",
-            OBLIGATIONS[RISK_HIGH]
-        )
-
-    # Step 4 — Check for transparency obligation or GPAI → Limited Risk
-    if trans_obl in ("yes", "true", "1", "y") or gpai in ("yes", "true", "1", "y"):
-        reason = "GPAI model (Article 53)" if gpai in ("yes", "true", "1", "y") else "Transparency obligation (Article 50)"
-        return (
-            RISK_LIMITED,
-            reason,
-            OBLIGATIONS[RISK_LIMITED]
-        )
-
-    # Step 5 — Minimal risk
-    return (
-        RISK_MINIMAL,
-        "No prohibited, high-risk, or transparency triggers identified",
-        OBLIGATIONS[RISK_MINIMAL]
-    )
-
-
-# ── Core logic ────────────────────────────────────────────────────────────────
-
-def classify_inventory(csv_path: str) -> list[dict]:
-    """Read CSV and classify each AI system."""
-    results = []
-    path = Path(csv_path)
-
-    if not path.exists():
-        print(f"[ERROR] File not found: {csv_path}")
-        sys.exit(1)
-
-    required_cols = {
-        "system_id", "system_name", "owner",
-        "use_case_category", "annex_iii_area",
-        "transparency_obligation", "gpai_model"
+    # Step 5: Minimal Risk
+    return {
+        "tier": "MINIMAL",
+        "reason": "MINIMAL -- no Article 5, 6, or 50 triggers",
+        "obligations": OBLIGATIONS["MINIMAL"],
+        "exclusion": exclusion,
+        "warnings": warnings,
     }
 
-    with open(path, newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        missing = required_cols - set(reader.fieldnames or [])
-        if missing:
-            print(f"[ERROR] CSV missing required columns: {missing}")
-            sys.exit(1)
 
-        for row in reader:
-            risk_tier, reason, obligations = classify_risk(row)
-            results.append({
-                "system_id":   row["system_id"].strip(),
-                "system_name": row["system_name"].strip(),
-                "owner":       row["owner"].strip(),
-                "risk_tier":   risk_tier,
-                "reason":      reason,
-                "obligations": obligations,
-                "annex_iii":   ANNEX_III_AREAS.get(row.get("annex_iii_area", "").strip(), ""),
-            })
-    return results
+REQUIRED_COLUMNS = {
+    "system_id", "system_name", "owner", "use_case_category",
+    "annex_iii_area", "annex_i_product", "transparency_obligation",
+    "gpai_model", "provider_or_deployer",
+}
 
+ART_63_COLUMNS = {
+    "exclusion_narrow_task", "exclusion_human_result",
+    "exclusion_no_individual", "exclusion_preparatory", "prohibited_practice",
+}
 
-# ── Reporting ─────────────────────────────────────────────────────────────────
-
-def print_report(results: list[dict]) -> None:
-    """Print formatted console report."""
-    today = date.today().isoformat()
-    total          = len(results)
-    unacceptable   = sum(1 for r in results if r["risk_tier"] == RISK_UNACCEPTABLE)
-    high           = sum(1 for r in results if r["risk_tier"] == RISK_HIGH)
-    limited        = sum(1 for r in results if r["risk_tier"] == RISK_LIMITED)
-    minimal        = sum(1 for r in results if r["risk_tier"] == RISK_MINIMAL)
-
-    print("\n" + "=" * 80)
-    print("  EU AI Act — AI System Risk Classification Report")
-    print(f"  Run Date  : {today}")
-    print(f"  Regulation: (EU) 2024/1689 — EU Artificial Intelligence Act")
-    print("=" * 80)
-
-    # Tier colour indicators
-    tier_icons = {
-        RISK_UNACCEPTABLE: "[BANNED]",
-        RISK_HIGH:         "[HIGH  ]",
-        RISK_LIMITED:      "[LTD   ]",
-        RISK_MINIMAL:      "[MIN   ]",
-    }
-
-    print(f"\n  {'ID':<12}  {'System Name':<30}  {'Owner':<22}  {'Risk Tier':<18}  Reason")
-    print("  " + "-" * 110)
-
-    for r in results:
-        icon = tier_icons.get(r["risk_tier"], "")
-        print(
-            f"  {r['system_id']:<12}  {r['system_name'][:29]:<30}  "
-            f"{r['owner'][:21]:<22}  {icon} {r['risk_tier']:<18}  {r['reason'][:55]}"
-        )
-
-    print(f"\n{'─' * 70}")
-    print("  SUMMARY")
-    print(f"  Total AI Systems  : {total}")
-    print(f"  [BANNED] Unacceptable : {unacceptable}")
-    print(f"  [HIGH  ] High Risk    : {high}")
-    print(f"  [LTD   ] Limited Risk : {limited}")
-    print(f"  [MIN   ] Minimal Risk : {minimal}")
-    print(f"{'─' * 70}\n")
-
-    # Detail blocks for non-minimal systems
-    for r in results:
-        if r["risk_tier"] != RISK_MINIMAL:
-            print(f"  ▶ [{r['system_id']}] {r['system_name']}")
-            print(f"    Risk Tier : {r['risk_tier']}")
-            print(f"    Reason    : {r['reason']}")
-            print(f"    Key Obligations:")
-            for obl in r["obligations"][:6]:
-                print(f"      • {obl}")
-            if len(r["obligations"]) > 6:
-                print(f"      ... and {len(r['obligations']) - 6} more obligations")
-            print()
+TIER_LABELS = {
+    "UNACCEPTABLE": "[BANNED]",
+    "HIGH": "[HIGH  ]",
+    "LIMITED": "[LTD   ]",
+    "MINIMAL": "[MIN   ]",
+}
 
 
-def save_report(results: list[dict], output_path: str) -> None:
-    """Save classification report to text file."""
-    today = date.today().isoformat()
+def generate_report(results, input_file):
+    sep = "=" * 88
+    thin = "-" * 88
     lines = [
-        "EU AI Act — AI System Risk Classification Report",
-        f"Run Date  : {today}",
-        f"Regulation: (EU) 2024/1689",
-        "",
-        f"{'ID':<12}  {'System Name':<30}  {'Owner':<22}  {'Risk Tier':<20}  Reason",
-        "-" * 115,
+        sep,
+        "EU AI Act -- AI System Risk Classification Report (v2.0)",
+        f"Run Date   : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        f"Input File : {input_file}",
+        "Regulation : (EU) 2024/1689 -- EU Artificial Intelligence Act",
+        "DISCLAIMER : Triage aid only. Human compliance review is mandatory.",
+        sep, "",
+        f"{'ID':<12} {'System Name':<35} {'Owner':<20} {'Tier':<10} Reason",
+        thin,
     ]
+
     for r in results:
+        label = TIER_LABELS.get(r["tier"], r["tier"])
         lines.append(
-            f"{r['system_id']:<12}  {r['system_name'][:29]:<30}  "
-            f"{r['owner'][:21]:<22}  {r['risk_tier']:<20}  {r['reason']}"
+            f"{r['system_id']:<12} {r['system_name'][:34]:<35} {r['owner'][:19]:<20} "
+            f"{label} {r['reason']}"
         )
 
-    lines += ["", "OBLIGATION DETAILS:", "-" * 60]
+    lines.extend(["", thin])
+
+    exclusions = [r for r in results if r.get("exclusion")]
+    if exclusions:
+        lines.extend(["", "ARTICLE 6(3) EXCLUSIONS (require documented justification):"])
+        for r in exclusions:
+            lines.append(f"  {r['system_id']} {r['system_name']}: {r['exclusion']}")
+
+    all_warnings = [(r["system_id"], r["system_name"], w)
+                    for r in results for w in r.get("warnings", [])]
+    if all_warnings:
+        lines.extend(["", "WARNINGS (require human review):"])
+        for sid, sname, w in all_warnings:
+            lines.append(f"  [{sid}] {sname}: {w}")
+
+    tier_counts = {"UNACCEPTABLE": 0, "HIGH": 0, "LIMITED": 0, "MINIMAL": 0}
     for r in results:
-        lines.append(f"\n[{r['system_id']}] {r['system_name']} — {r['risk_tier']}")
-        lines.append(f"  Reason: {r['reason']}")
-        lines.append("  Obligations:")
-        for obl in r["obligations"]:
-            lines.append(f"    - {obl}")
+        tier_counts[r["tier"]] = tier_counts.get(r["tier"], 0) + 1
 
-    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-    Path(output_path).write_text("\n".join(lines), encoding="utf-8")
-    print(f"  Report saved to: {output_path}\n")
+    lines.extend([
+        "", thin, "SUMMARY",
+        f"  Total         : {len(results)}",
+        f"  [BANNED]      : {tier_counts['UNACCEPTABLE']}",
+        f"  [HIGH  ]      : {tier_counts['HIGH']}",
+        f"  [LTD   ]      : {tier_counts['LIMITED']}",
+        f"  [MIN   ]      : {tier_counts['MINIMAL']}",
+        thin, "",
+    ])
 
+    return "\n".join(lines)
 
-# ── Entry point ───────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(
-        description="EU AI Act GRC Engineering — AI System Risk Classifier"
+        description="EU AI Act Risk Classifier v2.0 -- exits with code 1 on BANNED systems"
     )
     parser.add_argument(
-        "--input", "-i",
-        default="scripts/sample_ai_inventory.csv",
-        help="Path to AI system inventory CSV (default: scripts/sample_ai_inventory.csv)"
+        "--input",
+        default=os.path.join(os.path.dirname(__file__), "sample_ai_inventory.csv"),
     )
-    parser.add_argument(
-        "--output", "-o",
-        default="scripts/risk_classification_report.txt",
-        help="Path for output report file (default: scripts/risk_classification_report.txt)"
-    )
+    parser.add_argument("--output", default=None)
     args = parser.parse_args()
 
-    results = classify_inventory(args.input)
-    print_report(results)
-    save_report(results, args.output)
+    output_file = args.output or os.path.join(
+        os.path.dirname(args.input), "risk_classification_report.txt"
+    )
 
-    # Exit code 1 if any UNACCEPTABLE RISK systems found (CI/CD pipeline support)
-    prohibited = sum(1 for r in results if r["risk_tier"] == RISK_UNACCEPTABLE)
-    sys.exit(1 if prohibited > 0 else 0)
+    if not os.path.exists(args.input):
+        print(f"ERROR: Input file not found: {args.input}", file=sys.stderr)
+        sys.exit(2)
+
+    results = []
+    with open(args.input, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        headers = list(reader.fieldnames or [])
+        missing_req = REQUIRED_COLUMNS - set(headers)
+        if missing_req:
+            print(f"ERROR: Missing required columns: {missing_req}", file=sys.stderr)
+            sys.exit(2)
+        missing_63 = ART_63_COLUMNS - set(headers)
+        if missing_63:
+            print(
+                f"WARNING: Missing Art. 6(3)/prohibited columns: {sorted(missing_63)}. "
+                f"Add to inventory for complete classification.",
+                file=sys.stderr,
+            )
+        for row in reader:
+            c = classify_system(row)
+            results.append({
+                "system_id": row.get("system_id", "").strip(),
+                "system_name": row.get("system_name", "").strip(),
+                "owner": row.get("owner", "").strip(),
+                **c,
+            })
+
+    if not results:
+        print("WARNING: No systems found.", file=sys.stderr)
+        sys.exit(0)
+
+    report = generate_report(results, args.input)
+    print(report)
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(report)
+    print(f"Report saved: {output_file}")
+
+    banned = sum(1 for r in results if r["tier"] == "UNACCEPTABLE")
+    if banned > 0:
+        print(
+            f"\nCI/CD GATE: {banned} BANNED system(s) detected -- exit code 1",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
 
 if __name__ == "__main__":
