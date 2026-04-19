@@ -1,8 +1,8 @@
 # 03 — Fundamental Rights Impact Assessment (FRIA)
 
-**EU AI Act Reference:** Article 27  
-**Applies to:** Deployers of High-Risk AI Systems (in the public sector or private bodies providing public services)  
-**Mandatory for:** Bodies governed by public law; private operators providing public services (banking, insurance, healthcare, education)  
+**EU AI Act Reference:** Article 27
+**Applies to:** Deployers of High-Risk AI Systems (in the public sector or private bodies providing public services)
+**Mandatory for:** Bodies governed by public law; private operators providing public services (banking, insurance, healthcare, education)
 **Last Updated:** April 2026
 
 ---
@@ -13,10 +13,39 @@ Article 27 requires certain deployers of high-risk AI systems to carry out a Fun
 
 ---
 
+## Part 0 — FRIA Scoping: Do You Need This Assessment?
+
+Complete this section before starting Parts 1-8. If FRIA is not required, you may stop here and document the scoping outcome.
+
+### Scoping Decision Table
+
+| # | Question | YES | NO |
+|---|---|---|---|
+| 1 | Is your organisation a **body governed by public law** (as defined in Art. 4(8) of Directive 2014/24/EU on public procurement — e.g. government ministry, local authority, publicly funded body)? | FRIA **MANDATORY** — proceed to Part 1 | Continue to Q2 |
+| 2 | Is your organisation a **private body providing services in the public interest** in any of the following regulated sectors: banking and credit, insurance, social security/benefits, healthcare, education or vocational training? | FRIA **MANDATORY** — proceed to Part 1 | Continue to Q3 |
+| 3 | Is the AI system classified as **High-Risk** under Article 6 of the EU AI Act (after excluding Art. 6(3) systems)? | FRIA **VOLUNTARY** — strongly recommended as governance best practice; complete if resources allow | FRIA **NOT REQUIRED** — document outcome and sign off below |
+
+### Scoping Outcome
+
+| Field | Entry |
+|---|---|
+| Organisation name | |
+| Organisation type | Public body / Private providing public services / Other private |
+| AI system name | |
+| AI system risk classification | High-Risk / Limited / Minimal |
+| **FRIA obligation** | Mandatory / Voluntary / Not required |
+| Scoping completed by | Name / Role |
+| Scoping date | |
+| If NOT required, stop here — basis: | |
+
+> **Cross-reference:** See **01-RISK-CLASSIFICATION-GUIDE.md Part 0** for the full FRIA scoping decision table aligned with risk classification. If you have not yet classified the AI system, complete that guide first.
+
+---
+
 ## Part 1 — Deployer and System Information
 
 | Field | Entry |
-|-------|-------|
+|---|---|
 | Organisation Name | |
 | Organisation Type | Public body / Private providing public services |
 | Department / Business Unit | |
@@ -37,28 +66,28 @@ Article 27 requires certain deployers of high-risk AI systems to carry out a Fun
 
 Describe precisely how the AI system will be used in your organisation:
 
-> *[Describe intended use, including the specific decisions or actions it will support]*
+[Describe intended use, including the specific decisions or actions it will support]
 
 ### 2.2 Categories of Natural Persons Affected
 
 | Group | Affected? | Description |
-|-------|-----------|-------------|
-| Customers / clients | ☐ Yes / ☐ No | |
-| Employees / workers | ☐ Yes / ☐ No | |
-| Job applicants | ☐ Yes / ☐ No | |
-| Students / learners | ☐ Yes / ☐ No | |
-| Benefit claimants | ☐ Yes / ☐ No | |
-| Patients | ☐ Yes / ☐ No | |
-| Members of the public | ☐ Yes / ☐ No | |
-| Vulnerable groups | ☐ Yes / ☐ No | Specify: |
-| Minors | ☐ Yes / ☐ No | |
-| Other | ☐ Yes / ☐ No | Specify: |
+|---|---|---|
+| Customers / clients | Yes / No | |
+| Employees / workers | Yes / No | |
+| Job applicants | Yes / No | |
+| Students / learners | Yes / No | |
+| Benefit claimants | Yes / No | |
+| Patients | Yes / No | |
+| Members of the public | Yes / No | |
+| Vulnerable groups | Yes / No | Specify: |
+| Minors | Yes / No | |
+| Other | Yes / No | Specify: |
 
-**Estimated number of individuals affected:** _______________
+Estimated number of individuals affected: _______________
 
 ### 2.3 Geographical Scope
 
-> *[Describe the territories / jurisdictions where the system will be deployed]*
+[Describe the territories / jurisdictions where the system will be deployed]
 
 ---
 
@@ -66,12 +95,12 @@ Describe precisely how the AI system will be used in your organisation:
 
 For each right, assess whether the system's deployment may positively or negatively affect it.
 
-**Assessment Scale:** 🟢 No impact | 🟡 Low risk | 🟠 Medium risk | 🔴 High risk | N/A
+**Assessment Scale:** No impact | Low risk | Medium risk | High risk | N/A
 
 ### 3.1 Dignity
 
 | Right | Article (EU Charter) | Impact | Justification | Mitigation |
-|-------|---------------------|--------|---------------|-----------|
+|---|---|---|---|---|
 | Human dignity | Art. 1 | | | |
 | Right to physical / mental integrity | Art. 3 | | | |
 | Prohibition of slavery and forced labour | Art. 5 | | | |
@@ -79,7 +108,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ### 3.2 Freedoms
 
 | Right | Article (EU Charter) | Impact | Justification | Mitigation |
-|-------|---------------------|--------|---------------|-----------|
+|---|---|---|---|---|
 | Right to liberty and security | Art. 6 | | | |
 | Respect for private and family life | Art. 7 | | | |
 | Protection of personal data | Art. 8 | | | |
@@ -95,7 +124,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ### 3.3 Equality
 
 | Right | Article (EU Charter) | Impact | Justification | Mitigation |
-|-------|---------------------|--------|---------------|-----------|
+|---|---|---|---|---|
 | Equality before the law | Art. 20 | | | |
 | Non-discrimination | Art. 21 | | | |
 | Cultural, religious, linguistic diversity | Art. 22 | | | |
@@ -107,7 +136,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ### 3.4 Solidarity
 
 | Right | Article (EU Charter) | Impact | Justification | Mitigation |
-|-------|---------------------|--------|---------------|-----------|
+|---|---|---|---|---|
 | Fair and just working conditions | Art. 31 | | | |
 | Social security and assistance | Art. 34 | | | |
 | Healthcare access | Art. 35 | | | |
@@ -116,7 +145,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ### 3.5 Citizens' Rights
 
 | Right | Article (EU Charter) | Impact | Justification | Mitigation |
-|-------|---------------------|--------|---------------|-----------|
+|---|---|---|---|---|
 | Right to good administration | Art. 41 | | | |
 | Right of access to documents | Art. 42 | | | |
 | Right to an effective remedy | Art. 47 | | | |
@@ -129,7 +158,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ### 4.1 Protected Characteristics at Risk
 
 | Characteristic | Risk Level | Evidence | Mitigation |
-|----------------|-----------|----------|-----------|
+|---|---|---|---|
 | Race or ethnic origin | | | |
 | Sex / Gender | | | |
 | Age | | | |
@@ -143,7 +172,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ### 4.2 Data Bias Assessment
 
 | Question | Response |
-|----------|----------|
+|---|---|
 | Has training data been tested for bias? | Yes / No — Details: |
 | Are protected characteristics (or proxies) used as inputs? | Yes / No — Details: |
 | Have disparate impact analyses been conducted? | Yes / No — Details: |
@@ -154,7 +183,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ## Part 5 — Risk Summary and Mitigation Plan
 
 | # | Fundamental Right at Risk | Risk Level | Root Cause | Mitigation Measure | Owner | Deadline | Status |
-|---|--------------------------|-----------|-----------|-------------------|-------|---------|--------|
+|---|---|---|---|---|---|---|---|
 | 1 | | | | | | | |
 | 2 | | | | | | | |
 | 3 | | | | | | | |
@@ -164,7 +193,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ## Part 6 — Human Oversight and Redress
 
 | Question | Response |
-|----------|----------|
+|---|---|
 | Can affected individuals request human review of automated decisions? | Yes / No |
 | Is there a documented complaints / redress procedure? | Yes / No — Reference: |
 | Are oversight persons trained to identify rights violations? | Yes / No |
@@ -175,7 +204,7 @@ For each right, assess whether the system's deployment may positively or negativ
 ## Part 7 — Consultation
 
 | Question | Response |
-|----------|----------|
+|---|---|
 | Were affected communities / representatives consulted? | Yes / No — Details: |
 | Were civil society or advocacy groups engaged? | Yes / No — Details: |
 | Was a Data Protection Officer (DPO) consulted? | Yes / No |
@@ -187,29 +216,29 @@ For each right, assess whether the system's deployment may positively or negativ
 
 **Overall FRIA Result:**
 
-☐ **APPROVED** — No significant fundamental rights impacts identified. Proceed with deployment.  
-☐ **APPROVED WITH CONDITIONS** — Impacts identified and mitigations agreed. Deploy after mitigations implemented.  
-☐ **DEFERRED** — Significant impacts identified. Further assessment required before deployment.  
-☐ **REJECTED** — Unacceptable fundamental rights risks. Deployment not approved.
+- [ ] APPROVED — No significant fundamental rights impacts identified. Proceed with deployment.
+- [ ] APPROVED WITH CONDITIONS — Impacts identified and mitigations agreed. Deploy after mitigations implemented.
+- [ ] DEFERRED — Significant impacts identified. Further assessment required before deployment.
+- [ ] REJECTED — Unacceptable fundamental rights risks. Deployment not approved.
 
 **Rationale:**
 
-> *[Provide summary justification for the overall decision]*
+[Provide summary justification for the overall decision]
 
----
-
-## Sign-off
+### Sign-off
 
 | Role | Name | Signature | Date |
-|------|------|-----------|------|
+|---|---|---|---|
 | Deployer Representative | | | |
 | Data Protection Officer | | | |
 | Legal / Compliance | | | |
 | Senior Responsible Officer | | | |
 
-**Next Review Date:** _______________  
+**Next Review Date:** _______________
+
 **Review Trigger Events:** System update / significant change in use / new evidence of harm
 
 ---
 
-*Part of the [EU AI Act Compliance Toolkit](README.md)*
+*Part of the EU AI Act Compliance Toolkit*
+*This document does not constitute legal advice. Seek qualified legal counsel for binding compliance determinations.*
