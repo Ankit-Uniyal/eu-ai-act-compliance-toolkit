@@ -4,12 +4,9 @@
 **Applies to:** All organisations providing or deploying AI systems in the EU
 **Last Updated:** April 2026
 
----
-
 ## Purpose
 
 This Master Compliance Scorecard provides a single consolidated view of your organisation's EU AI Act compliance position across all 20 toolkit documents. Use it to:
-
 - Conduct an initial gap analysis before building your compliance programme
 - Track progress as you implement each requirement
 - Present compliance status to senior leadership and the board
@@ -17,8 +14,6 @@ This Master Compliance Scorecard provides a single consolidated view of your org
 - Identify priority actions based on risk tier and compliance deadline
 
 **How to use:** Complete the scorecard for each AI system in scope. Systems at different risk tiers will have different applicable requirements — the scorecard identifies N/A items automatically via the tier columns.
-
----
 
 ## Document Control
 
@@ -65,7 +60,7 @@ Use the following status codes throughout the scorecard:
 | N/A | Not applicable to this risk tier or role |
 | PENDING | Awaiting external input (e.g. EU database, Notified Body) |
 
-**Priority codes:**
+Priority codes:
 
 | Code | Meaning |
 |---|---|
@@ -78,8 +73,8 @@ Use the following status codes throughout the scorecard:
 
 ## Part 3 — Foundation: Risk Classification and Scoping
 
-*Applies to: All organisations, all AI systems*
-*Reference: Document 01 — 01-RISK-CLASSIFICATION-GUIDE.md*
+**Applies to:** All organisations, all AI systems
+**Reference:** Document 01 — 01-RISK-CLASSIFICATION-GUIDE.md
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner | Due Date |
 |---|---|---|---|---|---|---|
@@ -100,10 +95,10 @@ Use the following status codes throughout the scorecard:
 
 ## Part 4 — High-Risk AI: Pre-Market Requirements
 
-*Applies to: Providers of High-Risk AI Systems (all Annex I and Annex III systems)*
+**Applies to:** Providers of High-Risk AI Systems (all Annex I and Annex III systems)
 
 ### 4.1 Risk Management System (Article 9)
-*Reference: Document 02, Section A*
+**Reference:** Document 02, Section A
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -116,7 +111,7 @@ Use the following status codes throughout the scorecard:
 | 2.7 | Risk management is iterative throughout lifecycle | | P3 | | |
 
 ### 4.2 Data and Data Governance (Article 10)
-*Reference: Documents 02 (Section B), 04 (Section 2.5), 18*
+**Reference:** Documents 02 (Section B), 04 (Section 2.5), 18
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -128,17 +123,17 @@ Use the following status codes throughout the scorecard:
 | 3.6 | Data provenance documented in technical documentation | | P2 | | |
 
 ### 4.3 Technical Documentation (Article 11 + Annex IV)
-*Reference: Document 04*
+**Reference:** Document 04
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
 | 4.1 | Technical documentation prepared before market placement | | P1 | | |
-| 4.2 | All 8 Annex IV sections completed | | P1 | | |
+| 4.2 | All 8 Annex IV sections completed (including Section 8 PMM) | | P1 | | |
 | 4.3 | Documentation up to date and version controlled | | P2 | | |
 | 4.4 | 10-year retention plan in place | | P2 | | |
 
 ### 4.4 Logging and Record-Keeping (Article 12)
-*Reference: Document 02 (Section D), Document 04 (Section 3.4)*
+**Reference:** Document 02 (Section D), Document 04 (Section 3.4)
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -147,7 +142,7 @@ Use the following status codes throughout the scorecard:
 | 5.3 | Log types and retention periods documented | | P2 | | |
 
 ### 4.5 Transparency and Instructions for Use (Article 13)
-*Reference: Document 02 (Section E)*
+**Reference:** Document 02 (Section E)
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -156,7 +151,7 @@ Use the following status codes throughout the scorecard:
 | 6.3 | Instructions provided to deployers | | P1 | | |
 
 ### 4.6 Human Oversight (Article 14)
-*Reference: Document 07*
+**Reference:** Document 07
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -167,7 +162,7 @@ Use the following status codes throughout the scorecard:
 | 7.5 | Oversight roles defined and persons assigned (Article 14(3)) | | P2 | See Doc 17 | |
 
 ### 4.7 Accuracy, Robustness, Cybersecurity (Article 15)
-*Reference: Document 02 (Section G)*
+**Reference:** Document 02 (Section G)
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -177,7 +172,7 @@ Use the following status codes throughout the scorecard:
 | 8.4 | Technical redundancy / fail-safe plans in place | | P2 | | |
 
 ### 4.8 Quality Management System (Article 17)
-*Reference: Document 16*
+**Reference:** Document 16
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -185,12 +180,14 @@ Use the following status codes throughout the scorecard:
 | 9.2 | QMS covers all Article 17(1)(a)-(g) elements | | P1 | | |
 | 9.3 | QMS approved by Senior Responsible Officer | | P1 | | |
 
+**Section 4 Total Items: 35** (4.1: 7 items; 4.2: 6; 4.3: 4; 4.4: 3; 4.5: 3; 4.6: 5; 4.7: 4; 4.8: 3)
+
 ---
 
 ## Part 5 — High-Risk AI: Conformity and Market Placement
 
 ### 5.1 Conformity Assessment (Articles 43-48)
-*Reference: Document 02*
+**Reference:** Document 02
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -200,7 +197,7 @@ Use the following status codes throughout the scorecard:
 | 10.4 | Remediation plan in place if CONDITIONAL | | P1 | | |
 
 ### 5.2 EU Declaration of Conformity (Article 47)
-*Reference: Document 12*
+**Reference:** Document 12
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -210,7 +207,7 @@ Use the following status codes throughout the scorecard:
 | 11.4 | DoC retained for 10 years | | P2 | | |
 
 ### 5.3 EU Database Registration (Articles 49, 71)
-*Reference: Document 05*
+**Reference:** Document 05
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -218,19 +215,21 @@ Use the following status codes throughout the scorecard:
 | 12.2 | Registration number recorded in AI System Register | | P1 | | |
 
 ### 5.4 CE Marking (Article 48)
-*Reference: Document 14*
+**Reference:** Document 14
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
 | 13.1 | CE marking requirement assessed | | P2 | | |
 | 13.2 | CE marking affixed where required | | P1 | N/A if not Annex I | |
 
+**Section 5 Total Items: 12** (5.1: 4; 5.2: 4; 5.3: 2; 5.4: 2)
+
 ---
 
 ## Part 6 — Deployer Obligations
 
-*Applies to: Deployers of High-Risk AI Systems*
-*Reference: Document 10*
+**Applies to:** Deployers of High-Risk AI Systems
+**Reference:** Document 10
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -240,15 +239,17 @@ Use the following status codes throughout the scorecard:
 | 14.4 | System operation monitored (Art. 26(4)) | | P2 | | |
 | 14.5 | Serious incidents reported to provider / MSA (Art. 26(5)) | | P1 | See Doc 08 | |
 | 14.6 | Logs retained where within deployer's control (Art. 26(6)) | | P2 | | |
-| 14.7 | Workers and representatives informed before workplace AI deployment (Art. 26(7)) | | P2 | | |
+| 14.7 | Workers and representatives informed before workplace AI deployment (Art. 26(7)) | | P2 | See Doc 22 | |
 | 14.8 | Transparency obligations with natural persons met (Art. 26(8)) | | P2 | See Doc 06 | |
+
+**Section 6 Total Items: 8**
 
 ---
 
 ## Part 7 — FRIA (Article 27)
 
-*Applies to: Public sector deployers and private bodies providing public services in regulated sectors*
-*Reference: Document 03*
+**Applies to:** Public sector deployers and private bodies providing public services in regulated sectors
+**Reference:** Document 03
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -259,12 +260,14 @@ Use the following status codes throughout the scorecard:
 | 15.5 | Conditions / mitigations from FRIA implemented | | P1 | | |
 | 15.6 | FRIA signed off by Senior Responsible Officer and DPO | | P2 | | |
 
+**Section 7 Total Items: 6**
+
 ---
 
 ## Part 8 — Limited Risk: Transparency Obligations (Article 50)
 
-*Applies to: All providers/deployers of chatbots, deepfake AI, emotion recognition, GPAI*
-*Reference: Document 06*
+**Applies to:** All providers/deployers of chatbots, deepfake AI, emotion recognition, GPAI
+**Reference:** Document 06
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -273,12 +276,14 @@ Use the following status codes throughout the scorecard:
 | 16.3 | Emotion recognition / biometric categorisation disclosure implemented | | P2 | N/A if not applicable | |
 | 16.4 | User rights information (GDPR Arts. 21-22) provided | | P2 | See Doc 18 | |
 
+**Section 8 Total Items: 4**
+
 ---
 
 ## Part 9 — GPAI Model Obligations (Articles 51-56)
 
-*Applies to: Providers of GPAI models (foundation models, LLMs)*
-*Reference: Document 11*
+**Applies to:** Providers of GPAI models (foundation models, LLMs)
+**Reference:** Document 11
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -291,11 +296,13 @@ Use the following status codes throughout the scorecard:
 | 17.7 | EU AI Office incident reporting in place (systemic risk only) | | P1 | N/A if not systemic | |
 | 17.8 | Energy efficiency reporting in place (systemic risk only) | | P2 | N/A if not systemic | |
 
+**Section 9 Total Items: 8**
+
 ---
 
 ## Part 10 — Ongoing Obligations: Post-Market and Incidents
 
-*Applies to: Providers of High-Risk AI Systems (ongoing)*
+**Applies to:** Providers of High-Risk AI Systems (ongoing)
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -307,26 +314,30 @@ Use the following status codes throughout the scorecard:
 | 18.6 | Incident register maintained | | P2 | | |
 | 18.7 | Substantial modification assessment procedure in place (Art. 25) | | P2 | | |
 
+**Section 10 Total Items: 7**
+
 ---
 
 ## Part 11 — Supply Chain: Non-EU Providers, Importers, Distributors
 
-*Reference: Documents 13, 14, 15*
+**Reference:** Documents 13, 14, 15
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
-| 19.1 | Authorised Representative designated (non-EU providers) | | P1 | N/A if EU provider | See Doc 13 |
+| 19.1 | Authorised Representative designated (non-EU providers) | | P1 | N/A if EU provider; See Doc 13 | |
 | 19.2 | AR registered in EU AI database | | P1 | N/A if EU provider | |
-| 19.3 | Importer pre-market verification completed | | P1 | N/A if not Importer | See Doc 15 |
-| 19.4 | Distributor pre-distribution verification completed | | P1 | N/A if not Distributor | See Doc 15 |
+| 19.3 | Importer pre-market verification completed | | P1 | N/A if not Importer; See Doc 15 | |
+| 19.4 | Distributor pre-distribution verification completed | | P1 | N/A if not Distributor; See Doc 15 | |
 | 19.5 | Supply chain due diligence register maintained | | P2 | | |
+
+**Section 11 Total Items: 5**
 
 ---
 
 ## Part 12 — AI Literacy and Competency (Article 4)
 
-*Applies to: All providers and deployers*
-*Reference: Document 17*
+**Applies to:** All providers and deployers
+**Reference:** Document 17
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -336,12 +347,14 @@ Use the following status codes throughout the scorecard:
 | 20.4 | AI oversight persons certified per Article 14(3) | | P1 | | |
 | 20.5 | Training records maintained | | P3 | | |
 
+**Section 12 Total Items: 5**
+
 ---
 
 ## Part 13 — GDPR and AI Act Joint Compliance
 
-*Applies to: All organisations processing personal data in AI systems*
-*Reference: Document 18*
+**Applies to:** All organisations processing personal data in AI systems
+**Reference:** Document 18
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
@@ -354,19 +367,23 @@ Use the following status codes throughout the scorecard:
 | 21.7 | Data subject rights procedures updated for AI context | | P2 | | |
 | 21.8 | Dual incident reporting procedure (MSA + DPA) in place | | P1 | | |
 
+**Section 13 Total Items: 8**
+
 ---
 
 ## Part 14 — Consolidated Gap Summary
 
-After completing all sections, summarise your compliance position here:
+After completing all sections, summarise your compliance position here.
 
 ### 14.1 Overall Scorecard Summary
+
+> **Note on item counts:** The scorecard contains 118 checkable requirements across 11 compliance sections. The total reflects the comprehensive coverage required for a full EU AI Act compliance programme. Not all items will apply to every organisation (see N/A column).
 
 | Section | Total Items | DONE | IN PROGRESS | GAP | N/A | % Complete |
 |---|---|---|---|---|---|---|
 | 3 — Risk Classification | 10 | | | | | |
-| 4 — Pre-Market (High Risk) | 29 | | | | | |
-| 5 — Conformity and Placement | 10 | | | | | |
+| 4 — Pre-Market (High Risk) | 35 | | | | | |
+| 5 — Conformity and Placement | 12 | | | | | |
 | 6 — Deployer Obligations | 8 | | | | | |
 | 7 — FRIA | 6 | | | | | |
 | 8 — Limited Risk Transparency | 4 | | | | | |
@@ -375,7 +392,7 @@ After completing all sections, summarise your compliance position here:
 | 11 — Supply Chain | 5 | | | | | |
 | 12 — AI Literacy | 5 | | | | | |
 | 13 — GDPR Intersection | 8 | | | | | |
-| **TOTAL** | **100** | | | | | |
+| **TOTAL** | **118** | | | | | |
 
 ### 14.2 P1 Critical Gaps (Action Required Before Market Placement)
 
@@ -438,4 +455,5 @@ Designed for presentation to senior leadership and the board:
 ---
 
 *Part of the EU AI Act Compliance Toolkit*
+
 *This document does not constitute legal advice. Seek qualified legal counsel for binding compliance determinations.*
