@@ -8,6 +8,33 @@ Regulatory baseline: Regulation (EU) 2024/1689 as entered into force 1 August 20
 
 ---
 
+## [3.2.0] - 2026-04-29
+
+### Added
+
+**25-PROHIBITED-PRACTICES-ASSESSMENT.md** — New standalone Article 5 Prohibited Practices Assessment Checklist. Closes a critical coverage gap: the eight prohibited practices have been enforceable since 2 February 2025 and carry the highest fines in the Regulation (up to €35 million / 7% of global turnover). Covers: preliminary scoping questions; individual assessments for all eight prohibitions (subliminal techniques, vulnerable group exploitation, social scoring by public authorities, real-time remote biometric identification, biometric categorisation by protected characteristics, emotion recognition in workplace/education, untargeted facial image scraping, and predictive individual criminal profiling); exemption tests for Prohibitions 4 and 6; scope boundary notes distinguishing prohibited from high-risk; clearance certificate with four-party sign-off; and post-clearance obligations table linking to Doc 01.
+
+**26-RISK-MANAGEMENT-SYSTEM.md** — New standalone Article 9 Risk Management System template. Article 9 is one of the most frequently audited requirements for high-risk AI systems but was previously covered only partially within Doc 02 (Conformity Assessment) and Doc 04 (Technical Documentation). This document provides a complete, standalone RMS framework distinct from the QMS (Article 17, Doc 16). Covers: RMS governance structure and scope; Step 1 — risk identification across six categories (technical performance, data and bias, human oversight, security/adversarial, fundamental rights, operational) plus reasonably foreseeable misuse; Step 2 — risk estimation with likelihood/severity/breadth scales and risk register; Step 3 — risk evaluation against acceptable thresholds (four-level policy with approval requirements); Step 4 — risk treatment plans by category with standard treatment measures library; Step 5 — residual risk assessment and acceptance with aggregate sign-off; Step 6 — testing and validation including pre-market testing, bias testing by protected characteristic, and performance threshold table; Step 7 — post-market monitoring integration with update triggers and RMS update log; and Article 9 completeness checklist with Annex IV cross-reference map.
+
+**27-GPAI-SYSTEMIC-RISK-COMPLIANCE.md** — New GPAI Systemic Risk Compliance Guide for Articles 55-56. Supplements Doc 11 (GPAI baseline obligations) with the additional obligations triggered when a GPAI model meets the systemic risk threshold (≥ 10²⁵ FLOPs or EU AI Office designation). Covers: systemic risk classification determination; rebuttable presumption process; Obligation 1 — adversarial testing/red-teaming with eight risk domain coverage checklist (CBRN uplift, cyberoffensive capabilities, critical infrastructure attack, disinformation at scale, autonomous harmful action, safety bypass, bias at scale, privacy violation at scale) and findings register; Obligation 2 — enhanced incident reporting with systemic risk incident categories and timelines (including parallel GDPR/AI Act reporting for personal data breach); Obligation 3 — cybersecurity measures including risk assessment table and 10-control minimum standard; Obligation 4 — EU AI Office cooperation including five-step internal response process; Article 56 powers awareness checklist; post-training risk mitigation measures register (six measure types); downstream provider management controls; annual review governance; and voluntary codes of practice participation tracker.
+
+**28-MARKET-SURVEILLANCE-RESPONSE.md** — New Market Surveillance and Regulatory Response Procedure. Addresses the practical "what happens when the regulator comes knocking" gap that existing toolkit documents did not cover. Covers: regulatory landscape (national MSAs, EU AI Office, DPAs, sectoral regulators) with competent authority contact register; comprehensive document retention schedule (12 document types with Article-specific retention periods, including the critical 10-year obligation for technical documentation and QMS records); deployer-specific retention obligations; annual document retention audit; regulatory readiness assessment with 16-item self-assessment across three categories; five-step first response protocol (Day 0 authentication through sign-off); on-site inspection protocol with guidance on cooperation, note-taking, and rights; regulatory interaction log template; corrective action response procedure; Article 99 administrative fines reference table (€35m/7%; €15m/3%; €7.5m/1.5%); appeals and judicial remedies overview; and 15-item enforcement readiness checklist with scoring.
+
+### Changed
+
+**README.md** — Updated to v3.2.0. Added Docs 25-28 to document table. Updated routing table to include new "Preparing for market surveillance inspection" row and updated all relevant rows to include Doc 25 (prohibited practices) as Step 1 for all providers and deployers. Updated "How to Use" section: added Step 1 (prohibited practices screen) before risk classification, added RMS step for high-risk providers, added market surveillance preparation to ongoing processes. Added RMS and MSA to Key Definitions.
+
+### Regulatory Coverage Added in v3.2.0
+
+| Coverage Added | Reference | Document |
+|---|---|---|
+| All 8 Article 5 prohibited practices with exemption tests | Art. 5(1)(a)-(h), Art. 5(2)-(7), Recitals 40-49 | Document 25 |
+| Article 9 Risk Management System — complete standalone template | Art. 9 | Document 26 |
+| GPAI systemic risk obligations — adversarial testing, incident reporting, cybersecurity, EU AI Office cooperation | Arts. 51, 55-56, Annex XIII | Document 27 |
+| Market surveillance authorities, enforcement powers, document retention, regulatory response | Arts. 74-99, Art. 18 | Document 28 |
+
+---
+
 ## [3.1.0] - 2026-04-29
 
 ### Fixed
