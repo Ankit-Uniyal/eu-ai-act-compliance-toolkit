@@ -1,14 +1,20 @@
 # EU AI Act Compliance Toolkit
 
-**Version 3.0.0 | April 2026**
+**Version 3.1.0 | April 2026**
 
-A practical, practitioner-built compliance toolkit for the EU Artificial Intelligence Act (Regulation (EU) 2024/1689). Upgraded in v3.0 with a Quality Management System template, AI Literacy and Competency Framework, GDPR intersection map, Master Compliance Scorecard, and Notified Body Engagement Guide.
+A practical, practitioner-built compliance toolkit for the EU Artificial Intelligence Act (Regulation (EU) 2024/1689). Now with 24 compliance documents, 2 worked examples, and GRC automation scripts — covering every major obligation from risk classification through post-market monitoring.
+
+> **New in v3.1.0:** 5 precision fixes to existing documents (Docs 04, 16, 18, 19, 20) + 4 new documents: Legitimate Interest Assessment template (Doc 21), Worker Information Notice (Doc 22), Annex VII NB Assessment Checklist (Doc 23), and Credit Scoring AI Worked Example (Doc 24).
+
+---
 
 ## Overview
 
-The EU AI Act (entered into force 1 August 2024) is the world's first comprehensive legal framework for artificial intelligence. It applies a risk-based approach, imposing obligations proportional to the potential harm an AI system can cause -- to providers, deployers, importers, and distributors operating in or supplying to the EU market.
+The EU AI Act (entered into force 1 August 2024) is the world's first comprehensive legal framework for artificial intelligence. It applies a risk-based approach, imposing obligations proportional to the potential harm an AI system can cause — to providers, deployers, importers, and distributors operating in or supplying to the EU market.
 
 This toolkit translates the Act's 113 Articles and 13 Annexes into actionable templates, checklists, and automation scripts that GRC professionals, AI governance practitioners, and compliance teams can use immediately.
+
+---
 
 ## Compliance Timeline
 
@@ -20,16 +26,41 @@ This toolkit translates the Act's 113 Articles and 13 Annexes into actionable te
 | High-risk AI systems (Annex I) obligations | 2 August 2026 |
 | All remaining provisions fully applicable | 2 August 2027 |
 
+---
+
 ## Risk Tier Framework
 
 The EU AI Act classifies AI systems into four risk tiers:
 
 | Tier | Description | Examples |
 |---|---|---|
-| Unacceptable Risk (Article 5) | Prohibited -- banned outright | Social scoring, subliminal AI, real-time biometric ID in public |
+| Unacceptable Risk (Article 5) | Prohibited — banned outright | Social scoring, subliminal AI, real-time biometric ID in public spaces |
 | High Risk (Articles 6-51, Annexes I and III) | Strict obligations: conformity assessment, registration, oversight | CV screening, credit scoring, medical devices with AI |
 | Limited Risk (Articles 50, 52) | Transparency obligations only | Chatbots, deepfakes, GPAI models |
 | Minimal Risk | Voluntary codes of conduct | Spam filters, AI in games |
+
+---
+
+## Which Documents Apply to Me?
+
+Use this routing guide to find the documents most relevant to your role and situation:
+
+| I am a... | Start here | Also use |
+|---|---|---|
+| **Provider** building a high-risk AI system | 01 → 02 → 04 → 16 → 12 | 03, 07, 08, 09, 10, 17, 18, 19, 20, 21, 23 |
+| **Deployer** putting a high-risk AI system into service | 01 → 10 → 07 → 17 | 03, 08, 09, 18, 19, 22 |
+| **Both provider and deployer** (same organisation) | 01 → 02 → 04 → 10 → 16 | All applicable documents |
+| **Non-EU provider** placing on EU market | 01 → 13 → 02 → 04 | 12, 14, 15, 16, 20 |
+| **Importer** of an AI system | 15 → 01 | 12, 13, 14 |
+| **Distributor** of an AI system | 15 → 01 | 12, 13, 14 |
+| **GPAI / LLM model provider** | 11 → 06 | 01, 16, 18, 21 |
+| **Legal/Compliance team** doing gap analysis | 19 → 01 | All documents flagged as gaps |
+| **Processing personal data** in AI | 18 → 21 | 03, 04, 08 |
+| **Deploying AI in the workplace** | 22 → 07 → 17 | 10, 19 |
+| **Preparing for Notified Body assessment** | 20 → 23 → 02 → 04 → 16 | 12 |
+| **New to the toolkit** | Worked Examples | 01, 19 |
+
+---
 
 ## Toolkit Structure
 
@@ -64,57 +95,62 @@ The EU AI Act classifies AI systems into four risk tiers:
 |---|---|---|---|
 | 16 | Quality Management System | Article 17 QMS template covering policy, design, data governance, documentation, PMM, incidents, and audit | Article 17 |
 | 17 | AI Literacy and Competency Framework | Role-based training programme, competency levels, assessment tool, Article 14(3) oversight person certification | Article 4, Article 14(3) |
-| 18 | GDPR x EU AI Act Intersection Map | Systematic mapping of GDPR and AI Act obligations: data governance, automated decisions, DPIA/FRIA, transparency, dual incident reporting | Articles 9, 10, 13, 26, 27 |
-| 19 | Master Compliance Scorecard | Consolidated 100-item gap analysis across all 20 documents; executive dashboard; P1-P4 priority tracking | All Articles |
+| 18 | GDPR × EU AI Act Intersection Map | Systematic mapping of GDPR and AI Act obligations: data governance, automated decisions, DPIA/FRIA, transparency, dual incident reporting | Articles 9, 10, 13, 26, 27 |
+| 19 | Master Compliance Scorecard | Consolidated 118-item gap analysis across all documents; executive dashboard; P1-P4 priority tracking | All Articles |
 | 20 | Notified Body Engagement Guide | When a Notified Body is required, how to find and select one, assessment process, certificate maintenance | Articles 43-46, Annex VII |
 
-### Worked Example
+### New in v3.1.0 (Documents 21-24)
+
+| # | Document | Purpose | Reference |
+|---|---|---|---|
+| 21 | Legitimate Interest Assessment (LIA) | Three-part LIA template for AI training data processing under GDPR Art. 6(1)(f) | GDPR Art. 6(1)(f); AI Act Art. 10 |
+| 22 | Worker Information Notice | Art. 26(7) pre-deployment notice template and procedure for workplace AI deployment | AI Act Art. 26(7); labour law |
+| 23 | Annex VII Assessment Criteria Checklist | NB review criteria mapped to QMS and technical documentation evidence; provider readiness pre-assessment | Annex VII; Art. 43-44 |
+| 24 | Worked Example: Credit Scoring AI | End-to-end compliance walkthrough for Annex III Area 5 credit scoring (provider/deployer split scenario) | All Articles |
+
+### Worked Examples
 
 | File | Description |
 |---|---|
 | WORKED-EXAMPLE-HR-SCREENING-SYSTEM.md | Completed example: CV screening AI system (fictional HireRight GmbH / TalentFilter Pro). Shows application of all 10 core documents with realistic data. |
+| 24-WORKED-EXAMPLE-CREDIT-SCORING-AI.md | Completed example: Credit scoring AI (fictional RetailBank NV / CreditScore-AI v2.3). Provider/deployer split, Annex III Area 5, GDPR/AI Act joint compliance. |
 
-## GRC Engineering -- Automation Scripts
+### GRC Engineering — Automation Scripts
 
 | Script | Purpose | Automates |
 |---|---|---|
 | scripts/risk_classifier.py (v2.0) | CLI tool to classify AI systems by EU AI Act risk tier | Risk classification workflow with Art. 6(3) exclusion logic |
 | scripts/sample_ai_inventory.csv | Sample 15-system AI inventory covering all risk tiers | Input for risk_classifier.py |
 
-## Who This Is For
-
-- GRC professionals building AI compliance programmes
-- AI governance practitioners mapping systems to regulatory requirements
-- Legal and compliance teams preparing for EU AI Act obligations
-- AI product teams understanding what their systems must do before deployment
-- Auditors assessing AI systems against the EU AI Act framework
-- Importers and distributors of AI systems needing supply chain due diligence
+---
 
 ## How to Use This Toolkit
 
-**Step 1 — Assess your position**
-Complete the Master Compliance Scorecard (19) for an immediate gap analysis across all requirements.
+**Step 1 — Establish your position**
+Complete the Master Compliance Scorecard (Doc 19) for an immediate gap analysis across all 118 requirements.
 
 **Step 2 — Classify your AI systems**
 Use 01-RISK-CLASSIFICATION-GUIDE.md or run scripts/risk_classifier.py
 
 **Step 3 — High-Risk AI providers**
-- Complete 02-CONFORMITY-ASSESSMENT-CHECKLIST.md and 04-TECHNICAL-DOCUMENTATION-TEMPLATE.md
-- Build your Quality Management System using 16-QUALITY-MANAGEMENT-SYSTEM.md
-- If Notified Body is required: follow 20-NOTIFIED-BODY-ENGAGEMENT-GUIDE.md
+1. Complete 02-CONFORMITY-ASSESSMENT-CHECKLIST.md and 04-TECHNICAL-DOCUMENTATION-TEMPLATE.md
+2. Build your Quality Management System using 16-QUALITY-MANAGEMENT-SYSTEM.md (verify Art. 17(1)(a)-(g) sub-paragraph coverage using Part 3A)
+3. If Notified Body is required: follow 20-NOTIFIED-BODY-ENGAGEMENT-GUIDE.md and use 23-ANNEX-VII-ASSESSMENT-CHECKLIST.md to prepare
 
 **Step 4 — Deployers of High-Risk AI**
-- Complete the FRIA (03) -- required for public sector and public-service deployers
-- Implement the Human Oversight Framework (07)
-- Ensure staff are trained using 17-AI-LITERACY-COMPETENCY-FRAMEWORK.md
+1. Complete the FRIA (Doc 03) — required for public sector and public-service deployers
+2. Implement the Human Oversight Framework (Doc 07)
+3. Ensure staff are trained using 17-AI-LITERACY-COMPETENCY-FRAMEWORK.md
+4. Provide workers with pre-deployment notice using 22-WORKER-INFORMATION-NOTICE.md
 
 **Step 5 — All AI systems**
-- Check 06-TRANSPARENCY-OBLIGATIONS.md and 07-HUMAN-OVERSIGHT-FRAMEWORK.md
-- Map GDPR obligations using 18-GDPR-AI-ACT-INTERSECTION.md
-- Register all systems in 05-AI-SYSTEM-REGISTER.md
+1. Check 06-TRANSPARENCY-OBLIGATIONS.md and 07-HUMAN-OVERSIGHT-FRAMEWORK.md
+2. Map GDPR obligations using 18-GDPR-AI-ACT-INTERSECTION.md
+3. If processing personal data under Art. 6(1)(f), complete a LIA per 21-LEGITIMATE-INTEREST-ASSESSMENT.md
+4. Register all systems in 05-AI-SYSTEM-REGISTER.md
 
 **Step 6 — Establish ongoing processes**
-- 08-INCIDENT-REPORTING-PROCEDURE.md and 09-POST-MARKET-MONITORING-PLAN.md
+08-INCIDENT-REPORTING-PROCEDURE.md and 09-POST-MARKET-MONITORING-PLAN.md
 
 **Step 7 — Supply chain**
 - Non-EU providers: complete 13-AUTHORISED-REPRESENTATIVE.md before market placement
@@ -124,7 +160,9 @@ Use 01-RISK-CLASSIFICATION-GUIDE.md or run scripts/risk_classifier.py
 **Step 8 — GPAI/LLM model providers**
 Complete 11-GPAI-TECHNICAL-DOCUMENTATION.md
 
-## GRC Automation -- risk_classifier.py v2.0
+---
+
+## GRC Automation — risk_classifier.py v2.0
 
 ```bash
 # Basic run with sample inventory
@@ -137,7 +175,7 @@ python scripts/risk_classifier.py --input path/to/your/inventory.csv
 python scripts/risk_classifier.py --input scripts/sample_ai_inventory.csv --output reports/q2_risk_report.txt
 ```
 
-New in v2.0 -- add these columns to your CSV for complete classification:
+New in v2.0 — add these columns to your CSV for complete classification:
 
 | New Column | Values | Purpose |
 |---|---|---|
@@ -147,7 +185,9 @@ New in v2.0 -- add these columns to your CSV for complete classification:
 | exclusion_no_individual | yes / no | Article 6(3)(c): no individual influence |
 | exclusion_preparatory | yes / no | Article 6(3)(d): preparatory task only |
 
-**Important:** Classifier output is a triage aid. Human compliance review is mandatory before acting on any classification.
+> **Important:** Classifier output is a triage aid. Human compliance review is mandatory before acting on any classification.
+
+---
 
 ## Key Definitions
 
@@ -161,24 +201,31 @@ New in v2.0 -- add these columns to your CSV for complete classification:
 | GPAI Model | General-purpose AI model (e.g. foundation models / LLMs) |
 | Notified Body | Third-party conformity assessment body |
 | FRIA | Fundamental Rights Impact Assessment |
+| LIA | Legitimate Interest Assessment (GDPR Art. 6(1)(f)) |
+
+---
 
 ## Related Resources
 
 - [EU AI Act Full Text (EUR-Lex)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 - [EU AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)
 - [High-Risk AI Systems List (Annex III)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
-- [NANDO Database -- Notified Bodies](https://ec.europa.eu/growth/tools-databases/nando/)
+- [NANDO Database — Notified Bodies](https://ec.europa.eu/growth/tools-databases/nando/)
 - [ISO/IEC 42001:2023 AI Governance](https://www.iso.org/standard/81230.html)
 - [ISO/IEC 23894:2023 AI Risk Management](https://www.iso.org/standard/77304.html)
+
+---
 
 ## Versioning and Changelog
 
 See CHANGELOG.md for full version history, regulatory coverage tracking, and planned updates.
 
-Current version: v3.0.0 (April 2026) -- see CHANGELOG.md for what's new.
+**Current version: v3.1.0 (April 2026)** — see CHANGELOG.md for what's new.
+
+---
 
 ## Disclaimer
 
 This toolkit is provided for informational and educational purposes. It does not constitute legal advice. Always consult qualified legal counsel for compliance decisions.
 
-Maintained by Ankit Uniyal | AI Governance and GRC Engineering
+*Maintained by Ankit Uniyal | AI Governance and GRC Engineering*
