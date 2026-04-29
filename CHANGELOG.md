@@ -8,6 +8,45 @@ Regulatory baseline: Regulation (EU) 2024/1689 as entered into force 1 August 20
 
 ---
 
+## [3.1.0] - 2026-04-29
+
+### Fixed
+
+**04-TECHNICAL-DOCUMENTATION-TEMPLATE.md** — Annex IV Section 8 (Post-Market Monitoring) was a one-line cross-reference placeholder. Replaced with full embedded PMM template including: performance monitoring approach (activities, method, frequency, thresholds), data collection from deployers (Article 72(3)), trigger criteria for reactive review (6 named triggers), corrective action 6-step process, and PMM record-keeping table with 10-year retention requirements per Article 18.
+
+**16-QUALITY-MANAGEMENT-SYSTEM.md** — Added Part 3A: Article 17(1) Sub-Paragraph Compliance Map — explicit table mapping each Article 17(1)(a)-(g) sub-paragraph to QMS sections and evidence documents for conformity assessment reviewers. Added Part 3B: ISO/IEC 42001:2023 Gap Mapping — 11-row table mapping each AI Act Article 17(1) requirement to the corresponding ISO/IEC 42001:2023 clause, identifying gaps and adoption approach options (Full / Partial / Reference only).
+
+**18-GDPR-AI-ACT-INTERSECTION.md** — Corrected a material error in Section 2.1 (Data Governance Joint Compliance Map): GDPR Art. 5(1)(f) (integrity and confidentiality / security) was incorrectly mapped to the "bias examined" row. Corrected to Art. 5(1)(d) (accuracy) + Recital 71 GDPR (non-discrimination in profiling) for the bias row. Added a separate row for data integrity/security correctly mapped to Art. 5(1)(f). Updated bias audit reference in the joint compliance checklist to "Arts. 5(1)(d), 9; Recital 71".
+
+**19-MASTER-COMPLIANCE-SCORECARD.md** — Corrected item count arithmetic: the scorecard contained 118 checkable requirements across 11 sections (not 100 as previously stated in Part 14). Updated summary table totals to show accurate section counts (Part 3: 10; Part 4: 35; Part 5: 12; Part 6: 8; Part 7: 6; Part 8: 4; Part 9: 8; Part 10: 7; Part 11: 5; Part 12: 5; Part 13: 8; Total: 118). Added per-section totals throughout the scorecard. Added explanatory note in Part 14.1. Improved table structure with explicit column headers throughout.
+
+**20-NOTIFIED-BODY-ENGAGEMENT-GUIDE.md** — Corrected imprecise Article reference in Section 1.2, Circumstance 2: "Article 5(1)(h)" was cited for real-time remote biometric identification systems. Per the enacted Regulation (EU) 2024/1689, the conditions and derogations for real-time remote biometric identification in publicly accessible spaces for law enforcement are in Article 5(2)-(7). Updated to cite "Article 5(2)-(7)" with contextual explanation.
+
+### Added
+
+**21-LEGITIMATE-INTEREST-ASSESSMENT.md** — New GDPR Art. 6(1)(f) Legitimate Interest Assessment template for AI data processing contexts. Covers: three-part LIA test (purpose, necessity, balancing), AI-specific risk factors, safeguards assessment, AI processing context table for common activities (training, deployment, bias monitoring, logging), special category data legal basis, ongoing review requirements, and relationship to AI Act Art. 10 data governance. Includes LIA tracker and required actions checklist.
+
+**22-WORKER-INFORMATION-NOTICE.md** — New Article 26(7) worker information notice template. Covers: scope trigger assessment, pre-deployment information procedure with timeline, model notice text (plain-language description, safeguards, worker rights, contact details), national law assessment table (Germany BetrVG, France Labour Code, Netherlands WOR, Sweden MBL, EU EWC Directive), information and consultation tracker, and post-deployment review checklist.
+
+**23-ANNEX-VII-ASSESSMENT-CHECKLIST.md** — New Annex VII provider readiness checklist mapping what a Notified Body actually reviews against required evidence. Covers: Phase 1 QMS assessment (15 items covering all Art. 17(1)(a)-(g) requirements), Phase 2 technical documentation assessment (32 items across all 8 Annex IV sections), Phase 3 substantive requirements assessment (Articles 9, 10, 14, 15, 13). Includes traffic light readiness tracker and estimated NB finding risk assessment.
+
+**24-WORKED-EXAMPLE-CREDIT-SCORING-AI.md** — Second end-to-end worked example covering a fictional credit scoring AI (CreditScore-AI v2.3, RetailBank NV as deployer, FinTech Solutions BV as provider). Covers Annex III Area 5(b) classification, Article 6(3) exclusion assessment, provider/deployer role split, risk management (6 risks identified), data governance (training data summary, bias audit by protected characteristic), GDPR joint compliance (DPIA, Art. 22, LIA), human oversight design, transparency (Art. 13(3) instructions mapped), conformity assessment (internal; CONFORMANT), EU database registration, PMM plan summary, AI literacy requirements, and lessons learned table.
+
+### Changed
+
+**README.md** — Updated to v3.1.0. Added "Which Documents Apply to Me?" routing table (12 role-based rows). Added Doc 24 to Worked Examples table. Updated scorecard item count to 118. Updated v3.1.0 document table (Docs 21-24). Added LIA to Key Definitions.
+
+### Regulatory Coverage Added in v3.1.0
+
+| Coverage Added | Reference | Document |
+|---|---|---|
+| GDPR Art. 6(1)(f) legitimate interests three-part test for AI processing | GDPR Art. 6(1)(f); Recital 47; AI Act Art. 10 | Document 21 |
+| Worker information obligation before workplace AI deployment | AI Act Art. 26(7) | Document 22 |
+| Notified Body assessment criteria evidence mapping | Annex VII; Arts. 43-44 | Document 23 |
+| Credit scoring AI system worked example (Annex III Area 5) | All Articles | Document 24 |
+
+---
+
 ## [3.0.0] - 2026-04-29
 
 ### Added
