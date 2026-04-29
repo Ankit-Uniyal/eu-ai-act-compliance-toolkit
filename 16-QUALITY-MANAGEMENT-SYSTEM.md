@@ -4,8 +4,6 @@
 **Applies to:** Providers of High-Risk AI Systems
 **Last Updated:** April 2026
 
----
-
 ## Purpose
 
 Article 17 of the EU AI Act requires providers of high-risk AI systems to put in place a quality management system (QMS) before placing their system on the market or putting it into service. The QMS must be documented and must cover the full lifecycle of the AI system.
@@ -13,8 +11,6 @@ Article 17 of the EU AI Act requires providers of high-risk AI systems to put in
 This template provides a structured, Article 17-compliant QMS that can be adopted standalone or integrated into an existing ISO 9001 or ISO/IEC 42001 management system.
 
 **Cross-reference:** The QMS is one of the eight sections verified in the Conformity Assessment Checklist (02-CONFORMITY-ASSESSMENT-CHECKLIST.md, Section H). Complete this document before finalising the conformity assessment.
-
----
 
 ## Document Control
 
@@ -39,12 +35,12 @@ This QMS applies to all high-risk AI systems developed, placed on the market, or
 
 The organisation is committed to developing and deploying AI systems that are safe, accurate, transparent, and respectful of fundamental rights:
 
-1. **Compliance** — Meet all applicable requirements of the EU AI Act and harmonised standards.
-2. **Risk-Based Design** — Identify, assess, and mitigate risks throughout the AI system lifecycle.
-3. **Data Integrity** — Ensure training, validation, and testing data meets governance standards.
-4. **Human Oversight** — Design and operate systems so human oversight is meaningful, not nominal.
-5. **Continuous Improvement** — Monitor performance post-deployment and act on findings.
-6. **Accountability** — Assign clear roles and responsibilities for QMS compliance.
+- **Compliance** — Meet all applicable requirements of the EU AI Act and harmonised standards.
+- **Risk-Based Design** — Identify, assess, and mitigate risks throughout the AI system lifecycle.
+- **Data Integrity** — Ensure training, validation, and testing data meets governance standards.
+- **Human Oversight** — Design and operate systems so human oversight is meaningful, not nominal.
+- **Continuous Improvement** — Monitor performance post-deployment and act on findings.
+- **Accountability** — Assign clear roles and responsibilities for QMS compliance.
 
 ---
 
@@ -63,6 +59,8 @@ The organisation is committed to developing and deploying AI systems that are sa
 ---
 
 ## Part 3 — Compliance Strategy (Article 17(1)(a))
+
+Article 17(1)(a) requires the QMS to address the strategy for regulatory compliance, including compliance with standards and, where applicable, with the technical specifications set out for the purpose of compliance.
 
 | Requirement | Approach | Owner | Status |
 |---|---|---|---|
@@ -87,6 +85,49 @@ The organisation is committed to developing and deploying AI systems that are sa
 | ISO 31000:2018 Risk Management | Full / Partial / Reference only | Yes / No |
 | ISO/IEC 23894:2023 AI Risk Management | Full / Partial / Reference only | Yes / No |
 | CEN/CENELEC standards (when published) | Monitor upon publication | Tracked |
+
+---
+
+## Part 3A — Article 17(1) Sub-Paragraph Compliance Map
+
+Article 17(1) of Regulation (EU) 2024/1689 requires the QMS to address **seven specific elements** labelled (a) through (g). This section maps each sub-paragraph to the corresponding QMS component and provides the evidence trail for conformity assessment reviewers.
+
+| Art. 17(1) Sub-paragraph | Requirement | QMS Section | Evidence Document | Status |
+|---|---|---|---|---|
+| (a) | Strategy for regulatory compliance, including compliance with standards and technical specifications | Part 3 — Compliance Strategy | This document, Part 3 | |
+| (b) | Techniques, procedures, and systematic actions to be used for the design, design control, and design verification of the high-risk AI system | Part 4 — Design and Development Procedures | Development lifecycle gate records | |
+| (c) | Examination, test, and validation procedures to be carried out before, during, and after the development of the AI system and the frequency with which they are to be carried out | Part 5 — Data Governance; validation records in Doc 04 Section 2.7 | Test and validation reports | |
+| (d) | Technical specifications, including standards, to be applied; where the relevant harmonised standards are not applied in full, the means used to ensure compliance | Part 3.2 — Standards Strategy | Standards gap assessment | |
+| (e) | Systems and procedures for data management, including data collection, data analysis, and data labelling | Part 5 — Data Governance Procedures | Data governance policy; bias audit report | |
+| (f) | The risk management system referred to in Article 9 | Part 3 (Art. 9 reference) + Doc 02 Section A | Risk management system documentation; risk register | |
+| (g) | The setting-up, implementation, and maintenance of a post-market monitoring system, in accordance with Article 72 | Part 7 — Post-Market Monitoring | 09-POST-MARKET-MONITORING-PLAN.md | |
+
+> **Note on Article 17(1)(g):** The enacted text of Article 17(1) also encompasses incident reporting per Article 73. The QMS must demonstrate an operational serious incident reporting procedure (Part 8 of this document; Document 08).
+
+---
+
+## Part 3B — ISO/IEC 42001:2023 Gap Mapping
+
+ISO/IEC 42001:2023 is the AI Management System (AIMS) standard. Where an organisation chooses to integrate its EU AI Act QMS with ISO/IEC 42001, the following mapping identifies where each EU AI Act Article 17 requirement can be satisfied within the ISO/IEC 42001 AIMS structure.
+
+| EU AI Act Art. 17(1) | Requirement Summary | ISO/IEC 42001 Clause | ISO/IEC 42001 Requirement | Gap / Notes |
+|---|---|---|---|---|
+| (a) | Regulatory compliance strategy | 6.1, 6.2 | Risk assessment and AI objectives | ISO 42001 cl. 6 addresses planning for compliance; extend to EU AI Act requirements explicitly |
+| (b) | Design control and verification | 8.3, 8.4 | AI system design and development; AI system operation | ISO 42001 cl. 8.3 covers AIMS design controls; align lifecycle gates to Annex IV requirements |
+| (c) | Testing and validation procedures | 8.4, 9.1 | AI system deployment; monitoring and measurement | ISO 42001 cl. 9.1 covers performance evaluation; extend to pre-market validation per Art. 9 and 15 |
+| (d) | Technical specifications and standards | 4.2, 6.1 | Understanding requirements; risk assessment | ISO 42001 cl. 4.2 (interested parties' requirements) can be extended to EU AI Act harmonised standards |
+| (e) | Data management | Annex B (B.5, B.6) | Data for AI; impact assessment for AI | ISO 42001 Annex B provides data governance guidance; map directly to Art. 10 requirements |
+| (f) | Risk management system (Art. 9) | 6.1, 8.2 | Risk assessment; AI risk treatment | ISO 42001 cl. 6.1 and 8.2 cover risk management; supplement with Art. 9's iterative lifecycle requirement |
+| (g) | Post-market monitoring (Art. 72) | 9.1, 10.1 | Monitoring and measurement; continual improvement | ISO 42001 cl. 9.1 and 10.1 support ongoing monitoring; supplement with Art. 72 specific obligations |
+| — | Incident reporting (Art. 73) | 10.1 | Nonconformity and corrective action | ISO 42001 cl. 10.1 covers nonconformity; extend to Art. 73 serious incident reporting timeline (72 hours to MSA) |
+| — | AI literacy (Art. 4) | 7.2 | Competence | ISO 42001 cl. 7.2 covers competence; extend to Art. 4 AI literacy requirements |
+| — | QMS documentation and records | 7.5 | Documented information | ISO 42001 cl. 7.5 covers documentation control; align retention to Art. 18 (10 years) |
+
+**Adoption approach options:**
+
+1. **Full ISO/IEC 42001 adoption:** Certify to ISO/IEC 42001 and document EU AI Act extensions in a Supplementary Compliance Register.
+2. **Partial adoption:** Use ISO/IEC 42001 structure for the AIMS framework; maintain a standalone EU AI Act QMS for Art. 17-specific requirements.
+3. **Reference only:** Use ISO/IEC 42001 as a best-practice guide; the EU AI Act QMS is the primary compliance document.
 
 ---
 
@@ -129,7 +170,7 @@ All post-market changes must be assessed under Article 3(23) and Article 25.
 
 ---
 
-## Part 5 — Data Governance Procedures (Article 17(1)(c))
+## Part 5 — Data Governance Procedures (Article 17(1)(c) and (e))
 
 ### 5.1 Data Governance Requirements (Article 10)
 
@@ -172,9 +213,9 @@ Document control requirements: version numbers, approval dates, named owners, an
 
 ---
 
-## Part 7 — Post-Market Monitoring (Article 17(1)(f))
+## Part 7 — Post-Market Monitoring (Article 17(1)(g))
 
-Full procedures in **09-POST-MARKET-MONITORING-PLAN.md**.
+Full procedures in 09-POST-MARKET-MONITORING-PLAN.md.
 
 | PMM Element | Reference | Owner |
 |---|---|---|
@@ -189,7 +230,7 @@ Full procedures in **09-POST-MARKET-MONITORING-PLAN.md**.
 
 ## Part 8 — Incident Reporting (Article 17(1)(g))
 
-Full procedures in **08-INCIDENT-REPORTING-PROCEDURE.md**.
+Full procedures in 08-INCIDENT-REPORTING-PROCEDURE.md.
 
 | Obligation | Reference | Timeline | Owner |
 |---|---|---|---|
@@ -250,4 +291,5 @@ Full procedures in **08-INCIDENT-REPORTING-PROCEDURE.md**.
 ---
 
 *Part of the EU AI Act Compliance Toolkit*
+
 *This document does not constitute legal advice. Seek qualified legal counsel for binding compliance determinations.*
