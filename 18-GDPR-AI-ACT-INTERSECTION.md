@@ -5,19 +5,15 @@
 **Applies to:** Providers and Deployers processing personal data in AI systems
 **Last Updated:** April 2026
 
----
-
 ## Purpose
 
-The EU AI Act and GDPR operate in parallel for any AI system that processes personal data. They are separate regulations with different supervisory authorities, but they overlap significantly and must both be complied with simultaneously.
-
-This document maps the key intersection points, identifies where joint compliance measures can satisfy both frameworks, and flags where obligations diverge and require separate action.
+The EU AI Act and GDPR operate in parallel for any AI system that processes personal data. They are separate regulations with different supervisory authorities, but they overlap significantly and must both be complied with simultaneously. This document maps the key intersection points, identifies where joint compliance measures can satisfy both frameworks, and flags where obligations diverge and require separate action.
 
 **Supervisory Authorities:**
-- EU AI Act: National Market Surveillance Authorities (MSAs); EU AI Office (for GPAI)
-- GDPR: Data Protection Authorities (DPAs / Supervisory Authorities)
+- **EU AI Act:** National Market Surveillance Authorities (MSAs); EU AI Office (for GPAI)
+- **GDPR:** Data Protection Authorities (DPAs / Supervisory Authorities)
 
-**Important:** This document is a compliance mapping tool, not legal advice. The intersection of GDPR and the EU AI Act is an evolving area. Always consult qualified legal counsel for decisions in specific deployments.
+> **Important:** This document is a compliance mapping tool, not legal advice. The intersection of GDPR and the EU AI Act is an evolving area. Always consult qualified legal counsel for decisions in specific deployments.
 
 ---
 
@@ -55,8 +51,11 @@ AI Act Article 10 requires high-risk AI training, validation, and test data to m
 | Data is relevant to intended purpose | Art. 10(2) | Art. 5(1)(b) — purpose limitation | Document intended purpose; ensure data is fit for that purpose and not repurposed |
 | Data is accurate | Art. 10(3) | Art. 5(1)(d) — accuracy | Implement data quality controls; document in Annex IV (Document 04) |
 | Data is minimised | Art. 10(5) — only where strictly necessary | Art. 5(1)(c) — data minimisation | Identify minimum personal data needed; document justification for any special category data use |
-| Bias examined | Art. 10(2)(f) | Art. 5(1)(f) — integrity and confidentiality (extended) | Conduct pre-market bias audit; document in conformity assessment |
+| Bias examined | Art. 10(2)(f) | Art. 5(1)(d) — accuracy; Recital 71 GDPR (non-discrimination in profiling) | Conduct pre-market bias audit; document in conformity assessment; ensure outputs do not produce discriminatory results contrary to the accuracy and non-discrimination principles |
+| Data integrity and security | Art. 10 (data governance measures) | Art. 5(1)(f) — integrity and confidentiality | Implement technical and organisational measures to protect training data; document security controls |
 | Retention limits | Art. 18 — technical docs 10 years | Art. 5(1)(e) — storage limitation | Define retention periods for personal data in training vs. technical documentation; these may differ |
+
+> **Correction note:** GDPR Art. 5(1)(f) covers integrity and confidentiality (security), not bias. Bias and non-discrimination in automated processing is addressed in GDPR Recital 71, the GDPR WP29/EDPB guidance on profiling, and Art. 5(1)(d) accuracy. These have been correctly mapped above.
 
 ### 2.2 Special Category Data (Article 9 GDPR / Article 10(5) AI Act)
 
@@ -161,7 +160,7 @@ Where both assessments are required, consider a combined document:
 | Risk and mitigation | Yes | Yes |
 | Residual risk decision | Yes | Yes |
 
-Recommended approach: Use the FRIA template (Document 03) as the primary document and add GDPR-specific sections (lawful basis, data subject rights, DPO consultation, GDPR risk assessment) as appendices or integrated sections.
+**Recommended approach:** Use the FRIA template (Document 03) as the primary document and add GDPR-specific sections (lawful basis, data subject rights, DPO consultation, GDPR risk assessment) as appendices or integrated sections.
 
 ---
 
@@ -229,7 +228,7 @@ Where a serious incident under the AI Act also involves a personal data breach:
 | GDPR personal data breach notification | Within 72 hours of awareness | National DPA (supervisory authority) | Standard GDPR breach procedure |
 | Notification to affected individuals (if high risk to their rights) | Without undue delay | Affected individuals | GDPR Art. 34 |
 
-Note: The 72-hour window runs from when the organisation became aware. If the same incident triggers both, notifications should be coordinated but filed separately with the MSA and DPA.
+> **Note:** The 72-hour window runs from when the organisation became aware. If the same incident triggers both, notifications should be coordinated but filed separately with the MSA and DPA.
 
 ---
 
@@ -272,7 +271,7 @@ Use this checklist to identify whether joint GDPR / AI Act compliance actions ha
 | Special category data legal basis identified | Art. 9 | Art. 10(5) | Done / Pending / N/A |
 | Retention schedules cover AI Act 10-year requirement | Art. 5(1)(e) | Art. 18 | Done / Pending |
 | Dual incident reporting procedure in place (MSA + DPA) | Art. 33 | Art. 73 | Done / Pending |
-| Bias audit results reviewed by DPO | Art. 5 | Art. 10(2)(f) | Done / Pending |
+| Bias audit results reviewed by DPO | Arts. 5(1)(d), 9; Recital 71 | Art. 10(2)(f) | Done / Pending |
 
 ---
 
@@ -291,4 +290,5 @@ Use this checklist to identify whether joint GDPR / AI Act compliance actions ha
 ---
 
 *Part of the EU AI Act Compliance Toolkit*
+
 *This document does not constitute legal advice. Seek qualified legal counsel for binding compliance determinations. GDPR guidance from your national Data Protection Authority should also be consulted.*
