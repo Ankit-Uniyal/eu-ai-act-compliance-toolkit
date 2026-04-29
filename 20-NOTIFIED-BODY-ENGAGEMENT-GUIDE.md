@@ -4,15 +4,9 @@
 **Applies to:** Providers of High-Risk AI Systems requiring third-party conformity assessment
 **Last Updated:** April 2026
 
----
-
 ## Purpose
 
-Most high-risk AI systems under the EU AI Act allow providers to self-certify via an internal conformity assessment (Annex VI). However, certain categories require involvement of a Notified Body — an independent third-party assessment organisation accredited by a national accreditation body.
-
-This guide explains when a Notified Body is required, how to find and select one, how to prepare for the assessment, and how to manage the ongoing relationship.
-
----
+Most high-risk AI systems under the EU AI Act allow providers to self-certify via an internal conformity assessment (Annex VI). However, certain categories require involvement of a Notified Body — an independent third-party assessment organisation accredited by a national accreditation body. This guide explains when a Notified Body is required, how to find and select one, how to prepare for the assessment, and how to manage the ongoing relationship.
 
 ## Document Control
 
@@ -29,8 +23,7 @@ This guide explains when a Notified Body is required, how to find and select one
 
 ### 1.1 The Default Rule: Internal Conformity Assessment
 
-For most Annex III high-risk AI systems, Article 43(2) permits providers to conduct an **internal conformity assessment** (Annex VI procedure) without involving a Notified Body. This requires the provider to:
-
+For most Annex III high-risk AI systems, Article 43(2) permits providers to conduct an internal conformity assessment (Annex VI procedure) without involving a Notified Body. This requires the provider to:
 - Verify the system complies with all Chapter III Section 2 requirements (Articles 9-15, 17)
 - Maintain technical documentation
 - Draw up the EU Declaration of Conformity
@@ -49,11 +42,13 @@ Relevant Annex I legislation typically requiring NB involvement:
 - Machinery Regulation (EU) 2023/1230 — Annex IV machinery
 - Radio Equipment Directive 2014/53/EU — certain categories
 
-**Circumstance 2 — Biometric Systems (Article 43(1)(b))**
+**Circumstance 2 — Real-Time Remote Biometric Identification Systems (Article 43(1)(b))**
 
-Where a high-risk AI system is intended for use as a **real-time remote biometric identification system** (Article 5(1)(h) — now with limited lawful enforcement uses post Article 5 amendments), Notified Body involvement is required.
+Where a high-risk AI system is intended for use as a real-time remote biometric identification system in publicly accessible spaces, Notified Body involvement is required under Article 43(1)(b).
 
-Note: The biometric categorisation systems listed in Annex III Area 1 that are NOT real-time remote biometric ID may still be assessed via internal conformity assessment.
+Under the enacted EU AI Act (Regulation (EU) 2024/1689), the use of real-time remote biometric identification systems in publicly accessible spaces for law enforcement purposes is addressed in **Article 5(2)-(7)**, which sets out the conditions, safeguards, and derogations under which such use may exceptionally be permitted. Systems falling within Article 5(2) derogations that are deployed as high-risk systems under Annex III Area 1 still require Notified Body assessment where Article 43(1)(b) applies.
+
+> **Note:** The biometric categorisation systems listed in Annex III Area 1 that are NOT real-time remote biometric identification systems may still be assessed via internal conformity assessment (Annex VI).
 
 ### 1.3 Summary Decision Table
 
@@ -63,7 +58,7 @@ Note: The biometric categorisation systems listed in Annex III Area 1 that are N
 | Annex III high-risk — safety component of Annex I product with mandatory NB | Yes | Annex VII (NB) |
 | Medical device AI — Class I | No (unless AI Act Art. 43(1)(b) applies) | Internal — Annex VI |
 | Medical device AI — Class IIa and above (MDR) | Yes (MDR NB required) | MDR NB + Annex VII AI Act |
-| Real-time remote biometric identification (law enforcement, limited exceptions) | Yes | Annex VII (NB) |
+| Real-time remote biometric identification in publicly accessible spaces (Art. 43(1)(b)) | Yes | Annex VII (NB) |
 | GPAI model only (no high-risk AI system) | No | N/A — Articles 53-56 apply |
 
 ---
@@ -73,7 +68,6 @@ Note: The biometric categorisation systems listed in Annex III Area 1 that are N
 ### 2.1 What a Notified Body Does
 
 Under Article 44 and Annex VII, a Notified Body assesses whether the high-risk AI system meets all applicable requirements. The NB:
-
 - Reviews technical documentation
 - Assesses the risk management system
 - Evaluates data governance and bias assessment methodology
@@ -107,14 +101,15 @@ The primary source for finding accredited Notified Bodies is the NANDO (New Appr
 **NANDO Database:** https://ec.europa.eu/growth/tools-databases/nando/
 
 Search filters to use:
-- Directive / Regulation: Select the relevant legislation (EU AI Act once operational; or MDR / Machinery for Annex I products)
-- Country: Select EU Member State where NB is established
-- Product code: Use relevant product classification codes
+- **Directive / Regulation:** Select the relevant legislation (EU AI Act once operational; or MDR / Machinery for Annex I products)
+- **Country:** Select EU Member State where NB is established
+- **Product code:** Use relevant product classification codes
 
 ### 3.2 EU AI Act Specific Notified Bodies
 
-Note: As of April 2026, the Notified Body designation process under the EU AI Act is still maturing. Many existing NBs designated under Annex I product legislation (MDR, Machinery) are expected to seek designation under the AI Act. Monitor:
+> **Note:** As of April 2026, the Notified Body designation process under the EU AI Act is still maturing. Many existing NBs designated under Annex I product legislation (MDR, Machinery) are expected to seek designation under the AI Act.
 
+Monitor:
 - NANDO database for newly designated AI Act NBs
 - EU AI Office announcements: https://digital-strategy.ec.europa.eu/en/policies/ai-office
 - National Accreditation Body announcements in your jurisdiction
@@ -197,7 +192,7 @@ Prepare the following documentation package for submission to the NB:
 | Phase 5: Certificate decision | NB issues certificate of conformity or declines | 1-2 weeks | — |
 | Phase 6: Certificate issuance | Certificate issued; valid for defined period (typically 3-5 years) | — | Update DoC, register, technical docs to reference certificate |
 
-**Total typical timeline: 3-6 months for a straightforward system.** Complex systems, significant non-conformances, or NB capacity constraints can extend this materially. Plan your compliance timeline accordingly.
+**Total typical timeline:** 3-6 months for a straightforward system. Complex systems, significant non-conformances, or NB capacity constraints can extend this materially. Plan your compliance timeline accordingly.
 
 ### 5.2 Types of NB Findings
 
@@ -211,11 +206,12 @@ Prepare the following documentation package for submission to the NB:
 ### 5.3 If the NB Declines to Issue a Certificate
 
 If a Notified Body concludes the system does not meet requirements:
-1. Request a detailed written explanation of all non-conformances
-2. Assess whether findings are correct or whether you wish to appeal
-3. If correct: implement remediation and request re-assessment
-4. If disputing: engage the appeals process (each NB must have a defined appeals mechanism per Article 44(10))
-5. Note: A declined certificate does not automatically require notification to authorities, but the system **cannot be placed on the market** until conformity is achieved
+- Request a detailed written explanation of all non-conformances
+- Assess whether findings are correct or whether you wish to appeal
+- If correct: implement remediation and request re-assessment
+- If disputing: engage the appeals process (each NB must have a defined appeals mechanism per Article 44(10))
+
+> **Note:** A declined certificate does not automatically require notification to authorities, but the system cannot be placed on the market until conformity is achieved.
 
 ---
 
@@ -267,7 +263,7 @@ NB assessment costs vary significantly based on:
 | NB experience | NB with prior AI Act assessment experience | First-time AI Act NB (learning curve) |
 | Surveillance requirements | Annual desk-based surveillance | Frequent on-site surveillance |
 
-Indicative ranges (highly variable; confirm with NB): Initial assessments for straightforward Annex III systems may range from EUR 15,000 to EUR 100,000+. Medical device AI NB assessments are typically higher. Request detailed fee proposals from at least two NBs.
+**Indicative ranges** (highly variable; confirm with NB): Initial assessments for straightforward Annex III systems may range from EUR 15,000 to EUR 100,000+. Medical device AI NB assessments are typically higher. Request detailed fee proposals from at least two NBs.
 
 ### 7.2 Timeline Planning
 
@@ -336,4 +332,5 @@ Where an AI system is a component of a product regulated under Annex I legislati
 ---
 
 *Part of the EU AI Act Compliance Toolkit*
+
 *This document does not constitute legal advice. Seek qualified legal counsel for binding compliance determinations. Notified Body selection and engagement decisions have significant legal and commercial implications and should be made with expert guidance.*
