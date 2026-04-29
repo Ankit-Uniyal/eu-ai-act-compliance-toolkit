@@ -1,8 +1,8 @@
 # EU AI Act Compliance Toolkit
 
-**Version 2.0.0 | April 2026**
+**Version 3.0.0 | April 2026**
 
-A practical, practitioner-built compliance toolkit for the EU Artificial Intelligence Act (Regulation (EU) 2024/1689). Upgraded in v2.0 with GPAI documentation, Declaration of Conformity, Authorised Representative, CE Marking, Importer/Distributor checklists, worked examples, and an improved risk classifier.
+A practical, practitioner-built compliance toolkit for the EU Artificial Intelligence Act (Regulation (EU) 2024/1689). Upgraded in v3.0 with a Quality Management System template, AI Literacy and Competency Framework, GDPR intersection map, Master Compliance Scorecard, and Notified Body Engagement Guide.
 
 ## Overview
 
@@ -58,13 +58,23 @@ The EU AI Act classifies AI systems into four risk tiers:
 | 14 | CE Marking Guide | When CE marking is required and how to affix it | Article 48, Annex I |
 | 15 | Importer and Distributor Checklists | Dedicated checklists for supply chain roles | Articles 23-24 |
 
+### New in v3.0 (Documents 16-20)
+
+| # | Document | Purpose | EU AI Act Reference |
+|---|---|---|---|
+| 16 | Quality Management System | Article 17 QMS template covering policy, design, data governance, documentation, PMM, incidents, and audit | Article 17 |
+| 17 | AI Literacy and Competency Framework | Role-based training programme, competency levels, assessment tool, Article 14(3) oversight person certification | Article 4, Article 14(3) |
+| 18 | GDPR x EU AI Act Intersection Map | Systematic mapping of GDPR and AI Act obligations: data governance, automated decisions, DPIA/FRIA, transparency, dual incident reporting | Articles 9, 10, 13, 26, 27 |
+| 19 | Master Compliance Scorecard | Consolidated 100-item gap analysis across all 20 documents; executive dashboard; P1-P4 priority tracking | All Articles |
+| 20 | Notified Body Engagement Guide | When a Notified Body is required, how to find and select one, assessment process, certificate maintenance | Articles 43-46, Annex VII |
+
 ### Worked Example
 
 | File | Description |
 |---|---|
 | WORKED-EXAMPLE-HR-SCREENING-SYSTEM.md | Completed example: CV screening AI system (fictional HireRight GmbH / TalentFilter Pro). Shows application of all 10 core documents with realistic data. |
 
-### GRC Engineering -- Automation Scripts
+## GRC Engineering -- Automation Scripts
 
 | Script | Purpose | Automates |
 |---|---|---|
@@ -82,20 +92,39 @@ The EU AI Act classifies AI systems into four risk tiers:
 
 ## How to Use This Toolkit
 
-1. **Classify** your AI systems using 01-RISK-CLASSIFICATION-GUIDE.md or run scripts/risk_classifier.py
-2. **If High Risk:** complete 02-CONFORMITY-ASSESSMENT-CHECKLIST.md and 04-TECHNICAL-DOCUMENTATION-TEMPLATE.md
-3. **If deploying High Risk AI:** complete the FRIA (03) -- required for public sector and public-service deployers
-4. **For all AI systems:** check 06-TRANSPARENCY-OBLIGATIONS.md and 07-HUMAN-OVERSIGHT-FRAMEWORK.md
-5. **Register** all systems in 05-AI-SYSTEM-REGISTER.md
-6. **Establish ongoing processes:** 08-INCIDENT-REPORTING-PROCEDURE.md and 09-POST-MARKET-MONITORING-PLAN.md
-7. **Non-EU providers:** complete 13-AUTHORISED-REPRESENTATIVE.md before market placement
-8. **Annex I product providers:** follow 14-CE-MARKING-GUIDE.md and complete 12-EU-DECLARATION-OF-CONFORMITY.md
-9. **Importers and Distributors:** follow 15-IMPORTER-DISTRIBUTOR-CHECKLISTS.md
-10. **GPAI/LLM model providers:** complete 11-GPAI-TECHNICAL-DOCUMENTATION.md instead of (or in addition to) Document 04
+**Step 1 — Assess your position**
+Complete the Master Compliance Scorecard (19) for an immediate gap analysis across all requirements.
+
+**Step 2 — Classify your AI systems**
+Use 01-RISK-CLASSIFICATION-GUIDE.md or run scripts/risk_classifier.py
+
+**Step 3 — High-Risk AI providers**
+- Complete 02-CONFORMITY-ASSESSMENT-CHECKLIST.md and 04-TECHNICAL-DOCUMENTATION-TEMPLATE.md
+- Build your Quality Management System using 16-QUALITY-MANAGEMENT-SYSTEM.md
+- If Notified Body is required: follow 20-NOTIFIED-BODY-ENGAGEMENT-GUIDE.md
+
+**Step 4 — Deployers of High-Risk AI**
+- Complete the FRIA (03) -- required for public sector and public-service deployers
+- Implement the Human Oversight Framework (07)
+- Ensure staff are trained using 17-AI-LITERACY-COMPETENCY-FRAMEWORK.md
+
+**Step 5 — All AI systems**
+- Check 06-TRANSPARENCY-OBLIGATIONS.md and 07-HUMAN-OVERSIGHT-FRAMEWORK.md
+- Map GDPR obligations using 18-GDPR-AI-ACT-INTERSECTION.md
+- Register all systems in 05-AI-SYSTEM-REGISTER.md
+
+**Step 6 — Establish ongoing processes**
+- 08-INCIDENT-REPORTING-PROCEDURE.md and 09-POST-MARKET-MONITORING-PLAN.md
+
+**Step 7 — Supply chain**
+- Non-EU providers: complete 13-AUTHORISED-REPRESENTATIVE.md before market placement
+- Annex I product providers: follow 14-CE-MARKING-GUIDE.md and complete 12-EU-DECLARATION-OF-CONFORMITY.md
+- Importers and Distributors: follow 15-IMPORTER-DISTRIBUTOR-CHECKLISTS.md
+
+**Step 8 — GPAI/LLM model providers**
+Complete 11-GPAI-TECHNICAL-DOCUMENTATION.md
 
 ## GRC Automation -- risk_classifier.py v2.0
-
-The upgraded classifier adds Article 6(3) exclusion logic and a structured prohibited_practice field:
 
 ```bash
 # Basic run with sample inventory
@@ -137,19 +166,19 @@ New in v2.0 -- add these columns to your CSV for complete classification:
 
 - [EU AI Act Full Text (EUR-Lex)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 - [EU AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)
-- [High-Risk AI Systems List (Annex III)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689#anx3)
+- [High-Risk AI Systems List (Annex III)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 - [NANDO Database -- Notified Bodies](https://ec.europa.eu/growth/tools-databases/nando/)
 - [ISO/IEC 42001:2023 AI Governance](https://www.iso.org/standard/81230.html)
 - [ISO/IEC 23894:2023 AI Risk Management](https://www.iso.org/standard/77304.html)
 
 ## Versioning and Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for full version history, regulatory coverage tracking, and planned updates.
+See CHANGELOG.md for full version history, regulatory coverage tracking, and planned updates.
 
-Current version: **v2.0.0** (April 2026) -- see CHANGELOG.md for what's new.
+Current version: v3.0.0 (April 2026) -- see CHANGELOG.md for what's new.
 
 ## Disclaimer
 
 This toolkit is provided for informational and educational purposes. It does not constitute legal advice. Always consult qualified legal counsel for compliance decisions.
 
-*Maintained by Ankit Uniyal | AI Governance and GRC Engineering*
+Maintained by Ankit Uniyal | AI Governance and GRC Engineering
