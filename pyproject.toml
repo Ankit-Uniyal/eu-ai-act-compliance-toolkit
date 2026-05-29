@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eu-ai-act-risk-classifier"
+version = "2.1.0"
+description = "EU AI Act risk-tier classifier (triage aid). Part of the EU AI Act Compliance Toolkit."
+readme = "scripts/README.md"
+requires-python = ">=3.9"
+dependencies = []
+license = { text = "See repository LICENSE" }
+authors = [{ name = "Ankit Uniyal" }]
+keywords = ["eu-ai-act", "compliance", "grc", "risk-classification", "ai-governance"]
+
+[project.urls]
+Homepage = "https://github.com/Ankit-Uniyal/eu-ai-act-compliance-toolkit"
+
+[project.scripts]
+eu-ai-risk-classify = "risk_classifier:main"
+
+[tool.setuptools]
+py-modules = ["risk_classifier"]
+
+[tool.setuptools.package-dir]
+"" = "scripts"
