@@ -251,3 +251,16 @@ See CHANGELOG.md for full version history, regulatory coverage tracking, and pla
 This toolkit is provided for informational and educational purposes. It does not constitute legal advice. Always consult qualified legal counsel for compliance decisions.
 
 Maintained by Ankit Uniyal | AI Governance and GRC Engineering
+
+---
+
+## Using the toolkit without Git
+
+You don't need a developer setup to use these templates:
+
+1. Click the green **Code** button at the top of this repository, then **Download ZIP**.
+2. Unzip it. Every `NN-*.md` file is a plain-text template you can open in any text editor, or paste into Word / Google Docs to fill in.
+3. Start with the **"Which Documents Apply to Me?"** routing table above, then follow the **"How to Use This Toolkit"** steps. The [docs/INDEX.md](docs/INDEX.md) coverage map shows every document at a glance.
+4. The Python script under `scripts/` is **optional** — it automates risk classification, but the documents work fully on their own.
+
+**Prefer editable forms?** The Markdown tables paste cleanly into Word and Excel. Copy a document's table into a spreadsheet to turn a checklist into trackable rows.
