@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """
-risk_classifier.py - UPGRADED v2.0
+risk_classifier.py - UPGRADED v2.1
 EU AI Act Compliance Toolkit -- GRC Engineering Automation
+
+Upgrades in v2.1:
+- --format txt|json|csv: machine-readable output for GRC platforms / CI pipelines
+- --version flag
+- Input validation: warns on invalid annex_iii_area and non yes/no field values
 
 Upgrades in v2.0:
 - Article 6(3) exclusion logic: structured CSV fields prevent incorrect high-risk classification
@@ -12,10 +17,13 @@ Upgrades in v2.0:
 """
 
 import csv
+import json
 import argparse
 import sys
 import os
 from datetime import datetime
+
+__version__ = "2.1.0"
 
 ARTICLE_5_KEYWORDS = [
     "subliminal manipulation", "subliminal technique",
@@ -82,7 +90,6 @@ def check_article_6_3_exclusion(row):
     """
     Check Article 6(3) exclusions. A system listed in Annex III is NOT
     high-risk if it meets any of the four exclusions. Returns (excluded, reason).
-
     Requires CSV columns: exclusion_narrow_task, exclusion_human_result,
     exclusion_no_individual, exclusion_preparatory (values: yes/no)
     """
@@ -203,12 +210,36 @@ ART_63_COLUMNS = {
     "exclusion_no_individual", "exclusion_preparatory", "prohibited_practice",
 }
 
+YES_NO_COLUMNS = [
+    "annex_i_product", "transparency_obligation", "gpai_model",
+    "prohibited_practice", "exclusion_narrow_task", "exclusion_human_result",
+    "exclusion_no_individual", "exclusion_preparatory",
+]
+
 TIER_LABELS = {
     "UNACCEPTABLE": "[BANNED]",
-    "HIGH": "[HIGH  ]",
-    "LIMITED": "[LTD   ]",
-    "MINIMAL": "[MIN   ]",
+    "HIGH": "[HIGH ]",
+    "LIMITED": "[LTD ]",
+    "MINIMAL": "[MIN ]",
 }
+
+
+def validate_row(row):
+    """Return a list of validation warnings for a single CSV row."""
+    issues = []
+    sid = row.get("system_id", "?").strip() or "?"
+    area = row.get("annex_iii_area", "").strip()
+    if area and area not in ANNEX_III_AREAS:
+        issues.append(
+            f"[{sid}] invalid annex_iii_area '{area}' (expected 1-8 or blank) -- treated as blank"
+        )
+    for field in YES_NO_COLUMNS:
+        val = row.get(field, "").strip().lower()
+        if val not in ("", "yes", "no"):
+            issues.append(
+                f"[{sid}] field '{field}'='{val}' is not yes/no -- treated as 'no'"
+            )
+    return issues
 
 
 def generate_report(results, input_file):
@@ -216,7 +247,7 @@ def generate_report(results, input_file):
     thin = "-" * 88
     lines = [
         sep,
-        "EU AI Act -- AI System Risk Classification Report (v2.0)",
+        "EU AI Act -- AI System Risk Classification Report (v2.1)",
         f"Run Date   : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         f"Input File : {input_file}",
         "Regulation : (EU) 2024/1689 -- EU Artificial Intelligence Act",
@@ -254,35 +285,56 @@ def generate_report(results, input_file):
 
     lines.extend([
         "", thin, "SUMMARY",
-        f"  Total         : {len(results)}",
-        f"  [BANNED]      : {tier_counts['UNACCEPTABLE']}",
-        f"  [HIGH  ]      : {tier_counts['HIGH']}",
-        f"  [LTD   ]      : {tier_counts['LIMITED']}",
-        f"  [MIN   ]      : {tier_counts['MINIMAL']}",
+        f"  Total    : {len(results)}",
+        f"  [BANNED] : {tier_counts['UNACCEPTABLE']}",
+        f"  [HIGH ]  : {tier_counts['HIGH']}",
+        f"  [LTD ]   : {tier_counts['LIMITED']}",
+        f"  [MIN ]   : {tier_counts['MINIMAL']}",
         thin, "",
     ])
 
     return "\n".join(lines)
 
 
+def write_json(results, path):
+    payload = {"generated": datetime.now().isoformat(), "systems": results}
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
+
+
+def write_csv(results, path):
+    cols = ["system_id", "system_name", "owner", "tier", "reason", "exclusion"]
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(cols + ["warnings"])
+        for r in results:
+            w.writerow([r.get(c, "") for c in cols] + [" | ".join(r.get("warnings", []))])
+
+
 def main():
     parser = argparse.ArgumentParser(
-        description="EU AI Act Risk Classifier v2.0 -- exits with code 1 on BANNED systems"
+        description="EU AI Act Risk Classifier v2.1 -- exits with code 1 on BANNED systems"
     )
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument(
         "--input",
         default=os.path.join(os.path.dirname(__file__), "sample_ai_inventory.csv"),
     )
     parser.add_argument("--output", default=None)
-    args = parser.parse_args()
-
-    output_file = args.output or os.path.join(
-        os.path.dirname(args.input), "risk_classification_report.txt"
+    parser.add_argument(
+        "--format", choices=["txt", "json", "csv"], default="txt",
+        help="Output format (default: txt)",
     )
+    args = parser.parse_args()
 
     if not os.path.exists(args.input):
         print(f"ERROR: Input file not found: {args.input}", file=sys.stderr)
         sys.exit(2)
+
+    ext = {"txt": ".txt", "json": ".json", "csv": ".csv"}[args.format]
+    output_file = args.output or os.path.join(
+        os.path.dirname(args.input), "risk_classification_report" + ext
+    )
 
     results = []
     with open(args.input, newline="", encoding="utf-8") as f:
@@ -300,6 +352,8 @@ def main():
                 file=sys.stderr,
             )
         for row in reader:
+            for issue in validate_row(row):
+                print(f"WARNING: {issue}", file=sys.stderr)
             c = classify_system(row)
             results.append({
                 "system_id": row.get("system_id", "").strip(),
@@ -312,10 +366,15 @@ def main():
         print("WARNING: No systems found.", file=sys.stderr)
         sys.exit(0)
 
-    report = generate_report(results, args.input)
-    print(report)
-    with open(output_file, "w", encoding="utf-8") as f:
-        f.write(report)
+    if args.format == "json":
+        write_json(results, output_file)
+    elif args.format == "csv":
+        write_csv(results, output_file)
+    else:
+        report = generate_report(results, args.input)
+        print(report)
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(report)
     print(f"Report saved: {output_file}")
 
     banned = sum(1 for r in results if r["tier"] == "UNACCEPTABLE")
