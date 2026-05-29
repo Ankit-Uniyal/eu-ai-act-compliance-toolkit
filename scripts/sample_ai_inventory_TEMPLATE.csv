@@ -1,0 +1,5 @@
+# EU AI Act Risk Classifier -- input template. Delete these comment lines before running.
+# annex_iii_area: 1=Biometrics 2=Critical Infra 3=Education 4=Employment 5=Essential Services 6=Law Enforcement 7=Migration 8=Justice (blank if none)
+# yes/no fields: annex_i_product, transparency_obligation, gpai_model, prohibited_practice, exclusion_*
+# Set exclusion_* to yes ONLY with documented Art. 6(3) justification (see 05-AI-SYSTEM-REGISTER.md)
+system_id,system_name,owner,use_case_category,annex_iii_area,annex_i_product,transparency_obligation,gpai_model,provider_or_deployer,prohibited_practice,exclusion_narrow_task,exclusion_human_result,exclusion_no_individual,exclusion_preparatory
