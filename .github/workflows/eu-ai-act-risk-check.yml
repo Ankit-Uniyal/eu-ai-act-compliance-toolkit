@@ -1,0 +1,41 @@
+name: EU AI Act Risk Classification Check
+
+on:
+  push:
+    paths:
+      - 'scripts/**'
+  schedule:
+    - cron: '0 8 * * 1'   # Every Monday 08:00 UTC
+  workflow_dispatch:
+
+jobs:
+  classify-ai-systems:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run unit tests
+        run: python -m unittest discover -s scripts -p "test_*.py"
+
+      # NOTE: the sample inventory intentionally contains one BANNED system
+      # (AI-EU-007) to demonstrate the gate. The classifier exits 1 when a
+      # banned system is found. continue-on-error keeps the demo green while
+      # still recording the result; remove it when pointing at a real inventory
+      # so the gate actually blocks the pipeline.
+      - name: Run EU AI Act Risk Classifier
+        continue-on-error: true
+        run: |
+          python scripts/risk_classifier.py \
+            --input scripts/sample_ai_inventory.csv \
+            --output scripts/risk_classification_report.txt
+
+      - name: Upload Risk Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-ai-act-risk-report
+          path: scripts/risk_classification_report.txt
