@@ -1,4 +1,4 @@
-# 21 — Legitimate Interest Assessment (LIA) Template
+# 21: Legitimate Interest Assessment (LIA) Template
 
 **GDPR Reference:** Article 6(1)(f) | Recital 47 | Recital 48
 **EU AI Act Reference:** Article 10 (data governance) | Article 17 (QMS)
@@ -10,9 +10,9 @@
 Article 6(1)(f) GDPR permits processing of personal data where necessary for the purposes of the legitimate interests pursued by the controller or a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject.
 
 This Legitimate Interest Assessment (LIA) template documents the three-part test required to rely on Art. 6(1)(f):
-1. **Purpose test** — Is there a legitimate interest?
-2. **Necessity test** — Is the processing necessary for that interest?
-3. **Balancing test** — Is the interest overridden by the data subject's interests, rights, or freedoms?
+1. **Purpose test:** Is there a legitimate interest?
+2. **Necessity test:** Is the processing necessary for that interest?
+3. **Balancing test:** Is the interest overridden by the data subject's interests, rights, or freedoms?
 
 **Relationship to AI Act:** The AI Act does not establish lawful bases for GDPR processing. However, many AI system activities (training data processing, bias monitoring, logging under Art. 12) rely on GDPR Art. 6(1)(f). Where the AI Act imposes processing obligations (e.g. mandatory logging under Art. 12), the appropriate GDPR basis is Art. 6(1)(c) (legal obligation), not Art. 6(1)(f). This LIA applies only to processing not directly mandated by the AI Act.
 
@@ -35,7 +35,7 @@ This Legitimate Interest Assessment (LIA) template documents the three-part test
 
 ---
 
-## Part 1 — Processing Activity Description
+## Part 1: Processing Activity Description
 
 ### 1.1 What personal data is being processed?
 
@@ -57,12 +57,12 @@ This Legitimate Interest Assessment (LIA) template documents the three-part test
 
 ### 1.5 Is special category data involved?
 
-- [ ] No — proceed with Art. 6(1)(f) LIA
-- [ ] Yes — Art. 9(2) GDPR exemption is also required. Document Art. 9(2) basis separately.
+- [ ] No, proceed with Art. 6(1)(f) LIA
+- [ ] Yes, Art. 9(2) GDPR exemption is also required. Document Art. 9(2) basis separately.
 
 ---
 
-## Part 2 — Purpose Test (Is There a Legitimate Interest?)
+## Part 2: Purpose Test (Is There a Legitimate Interest?)
 
 ### 2.1 Identifying the Legitimate Interest
 
@@ -71,8 +71,8 @@ The legitimate interest must be lawful, real, and not trivial.
 | Question | Response |
 |---|---|
 | What is the legitimate interest pursued? | |
-| Is this interest lawful (not contrary to law or public policy)? | Yes / No — Evidence: |
-| Is this a current, real interest (not speculative)? | Yes / No — Evidence: |
+| Is this interest lawful (not contrary to law or public policy)? | Yes / No, Evidence: |
+| Is this a current, real interest (not speculative)? | Yes / No, Evidence: |
 | Is the interest specific enough to enable the balancing test? | Yes / No |
 
 **Common legitimate interests in AI contexts:**
@@ -98,7 +98,7 @@ The legitimate interest must be lawful, real, and not trivial.
 
 ---
 
-## Part 3 — Necessity Test (Is the Processing Necessary?)
+## Part 3: Necessity Test (Is the Processing Necessary?)
 
 ### 3.1 Necessity Assessment
 
@@ -108,9 +108,9 @@ Processing is necessary only if it is the minimum required to achieve the purpos
 |---|---|
 | Is the processing necessary to achieve the stated purpose? | Yes / No |
 | Could the purpose be achieved without processing personal data? | Yes (purpose fails necessity test) / No |
-| Could the purpose be achieved with anonymised or pseudonymised data? | Yes / No — Explain why not: |
-| Could the purpose be achieved with synthetic data? | Yes / No — Explain why not: |
-| Is the minimum amount of personal data used? | Yes / No — Identify excess: |
+| Could the purpose be achieved with anonymised or pseudonymised data? | Yes / No, Explain why not: |
+| Could the purpose be achieved with synthetic data? | Yes / No, Explain why not: |
+| Is the minimum amount of personal data used? | Yes / No, Identify excess: |
 | Are retention periods minimised appropriately? | Yes / No |
 
 ### 3.2 Data Minimisation and Alternatives Assessment
@@ -134,7 +134,7 @@ Processing is necessary only if it is the minimum required to achieve the purpos
 
 ---
 
-## Part 4 — Balancing Test (Do Data Subject Interests Override?)
+## Part 4: Balancing Test (Do Data Subject Interests Override?)
 
 ### 4.1 Data Subject's Interests, Rights, and Freedoms
 
@@ -192,13 +192,13 @@ Identify the safeguards that reduce the weight given to data subjects' interests
 
 **Balancing Test Conclusion:**
 
-- [ ] **Legitimate interest prevails** — Data subject interests do not override; processing may proceed
-- [ ] **Conditional** — Legitimate interest prevails subject to the safeguards documented above being implemented
-- [ ] **Data subject interests override** — Legitimate interest basis cannot be used; identify alternative basis or redesign processing
+- [ ] **Legitimate interest prevails:** Data subject interests do not override; processing may proceed
+- [ ] **Conditional:** Legitimate interest prevails subject to the safeguards documented above being implemented
+- [ ] **Data subject interests override:** Legitimate interest basis cannot be used; identify alternative basis or redesign processing
 
 ---
 
-## Part 5 — Overall LIA Conclusion
+## Part 5: Overall LIA Conclusion
 
 | Test | Result |
 |---|---|
@@ -226,7 +226,7 @@ List any conditions that must be satisfied before processing proceeds:
 
 ---
 
-## Part 6 — Ongoing Review
+## Part 6: Ongoing Review
 
 The legitimate interest basis must be kept under review. Review is required when:
 - The processing activity or purpose changes
