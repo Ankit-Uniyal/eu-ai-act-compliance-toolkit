@@ -1,4 +1,4 @@
-# 24 — Worked Example: Credit Scoring AI System
+# 24: Worked Example: Credit Scoring AI System
 
 **EU AI Act Reference:** Article 6(2) | Annex III Area 5 (Access to and enjoyment of essential private services and public services and benefits) | Articles 9-17 | Article 27 | Article 43-47
 **Applies to:** This worked example; providers and deployers of AI systems used in consumer credit assessment
@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This worked example demonstrates how to apply the full EU AI Act Compliance Toolkit to a credit scoring AI system — a system that falls squarely within Annex III Area 5 of the EU AI Act (high-risk AI used in access to private services, specifically creditworthiness assessment).
+This worked example demonstrates how to apply the full EU AI Act Compliance Toolkit to a credit scoring AI system, a system that falls squarely within Annex III Area 5 of the EU AI Act (high-risk AI used in access to private services, specifically creditworthiness assessment).
 
 It complements the existing HR Screening System worked example (WORKED-EXAMPLE-HR-SCREENING-SYSTEM.md), providing a second end-to-end illustration covering a different high-risk category and a deployer-provider split scenario.
 
@@ -14,11 +14,11 @@ It complements the existing HR Screening System worked example (WORKED-EXAMPLE-H
 
 ---
 
-## Part 1 — System Description
+## Part 1: System Description
 
 ### 1.1 Scenario
 
-**Organisation:** RetailBank NV — a mid-sized retail bank operating in the Netherlands, Belgium, and Germany.
+**Organisation:** RetailBank NV, a mid-sized retail bank operating in the Netherlands, Belgium, and Germany.
 
 **System Name:** CreditScore-AI v2.3
 
@@ -34,7 +34,7 @@ It complements the existing HR Screening System worked example (WORKED-EXAMPLE-H
 
 ---
 
-## Part 2 — Step 1: Risk Classification
+## Part 2: Step 1: Risk Classification
 
 **Reference: 01-RISK-CLASSIFICATION-GUIDE.md**
 
@@ -42,19 +42,19 @@ It complements the existing HR Screening System worked example (WORKED-EXAMPLE-H
 
 | Test | Assessment |
 |---|---|
-| Machine-based system? | Yes — LightGBM model |
-| Infers from input to produce outputs (predictions, decisions, recommendations)? | Yes — outputs credit score and decision recommendation |
-| Can influence real-world environments? | Yes — loan decisions affect individuals' access to credit |
+| Machine-based system? | Yes, LightGBM model |
+| Infers from input to produce outputs (predictions, decisions, recommendations)? | Yes, outputs credit score and decision recommendation |
+| Can influence real-world environments? | Yes, loan decisions affect individuals' access to credit |
 
 **Conclusion: CreditScore-AI is an AI system under Article 3(1).** ✓
 
-### 2.2 Check Against Article 5 — Prohibited Practices
+### 2.2 Check Against Article 5: Prohibited Practices
 
 | Prohibited Practice | Applicable? |
 |---|---|
 | Subliminal manipulation (Art. 5(1)(a)) | No |
-| Exploitation of vulnerability (Art. 5(1)(b)) | No — but DPA guidance on vulnerable customers should be consulted |
-| Social scoring by public authorities (Art. 5(1)(c)) | No — private lender |
+| Exploitation of vulnerability (Art. 5(1)(b)) | No, but DPA guidance on vulnerable customers should be consulted |
+| Social scoring by public authorities (Art. 5(1)(c)) | No, private lender |
 | Real-time remote biometric identification (Art. 5(2)) | No |
 | Biometric categorisation for inferences (Art. 5(1)(d)) | No |
 
@@ -64,14 +64,14 @@ It complements the existing HR Screening System worked example (WORKED-EXAMPLE-H
 
 | Annex III Area | Description | Applicable? |
 |---|---|---|
-| Area 1 — Biometrics | | No |
-| Area 2 — Critical infrastructure | | No |
-| Area 3 — Education | | No |
-| Area 4 — Employment | | No |
-| **Area 5 — Access to private services** | AI used in creditworthiness assessment and credit scoring of natural persons | **YES** |
-| Area 6 — Law enforcement | | No |
-| Area 7 — Migration | | No |
-| Area 8 — Administration of justice | | No |
+| Area 1, Biometrics | | No |
+| Area 2, Critical infrastructure | | No |
+| Area 3, Education | | No |
+| Area 4, Employment | | No |
+| **Area 5, Access to private services** | AI used in creditworthiness assessment and credit scoring of natural persons | **YES** |
+| Area 6, Law enforcement | | No |
+| Area 7, Migration | | No |
+| Area 8, Administration of justice | | No |
 
 **Annex III, Area 5, Item (b):** "AI systems intended to be used for the purpose of making decisions, or materially influencing decisions, on the creditworthiness of natural persons or on their access to or enjoyment of essential private services."
 
@@ -89,7 +89,7 @@ Article 6(3) permits exclusion from high-risk treatment if the AI system does no
 
 ---
 
-## Part 3 — Step 2: Roles — Provider vs. Deployer
+## Part 3: Step 2: Roles: Provider vs. Deployer
 
 **Reference: 10-PROVIDER-DEPLOYER-RESPONSIBILITIES.md**
 
@@ -98,13 +98,13 @@ Article 6(3) permits exclusion from high-risk treatment if the AI system does no
 | Party | Role | Key Obligations |
 |---|---|---|
 | FinTech Solutions BV | Provider (places AI system on market) | Articles 9-17: risk management, data governance, technical documentation, logging, transparency, human oversight design, accuracy, QMS; conformity assessment; EU Declaration of Conformity; EU database registration |
-| RetailBank NV | Deployer (puts into service) | Art. 26: use in accordance with instructions; human oversight; input data quality; monitoring; incident reporting; worker information; FRIA (if applicable — public service? — No, private bank, not mandatory, but good practice); GDPR compliance |
+| RetailBank NV | Deployer (puts into service) | Art. 26: use in accordance with instructions; human oversight; input data quality; monitoring; incident reporting; worker information; FRIA (if applicable, public service?, No, private bank, not mandatory, but good practice); GDPR compliance |
 
 ### 3.2 Key Provider-Deployer Interface Points
 
 | Obligation | Provider Action | Deployer Action |
 |---|---|---|
-| Instructions for use | FinTech Solutions provides instructions per Art. 13(3) | RetailBank implements — human oversight, data input quality |
+| Instructions for use | FinTech Solutions provides instructions per Art. 13(3) | RetailBank implements, human oversight, data input quality |
 | Human oversight | FinTech Solutions designs override capability; defines oversight role requirements | RetailBank assigns trained loan officers; ensures meaningful review |
 | Logging | FinTech Solutions builds logging capability per Art. 12 | RetailBank retains logs where within deployer control (Art. 26(6)) |
 | Post-market monitoring | FinTech Solutions operates PMM plan; receives deployer data | RetailBank reports performance data and incidents to FinTech Solutions |
@@ -112,7 +112,7 @@ Article 6(3) permits exclusion from high-risk treatment if the AI system does no
 
 ---
 
-## Part 4 — Step 3: Risk Management System
+## Part 4: Step 3: Risk Management System
 
 **Reference: 02-CONFORMITY-ASSESSMENT-CHECKLIST.md (Section A) | 04-TECHNICAL-DOCUMENTATION-TEMPLATE.md (Section 4)**
 
@@ -123,9 +123,9 @@ Article 6(3) permits exclusion from high-risk treatment if the AI system does no
 | R-001 | Model underperforms for underrepresented demographic groups → disparate impact in lending | Medium | High | Medium | Bias audit; fairness thresholds; human review escalation for borderline cases |
 | R-002 | Input data quality from applicant is poor or fraudulent → incorrect credit score | Medium | High | Low | Input validation; fraud detection layer; human oversight required for all Decline recommendations |
 | R-003 | Model drift as economic conditions change → predictions become less accurate | Medium | Medium | Low | Monthly accuracy monitoring; quarterly recalibration review |
-| R-004 | Automation bias — loan officers over-rely on score, rubber-stamping decisions | Medium | High | Medium | Training programme; decision record requires officer to document independent assessment |
+| R-004 | Automation bias, loan officers over-rely on score, rubber-stamping decisions | Medium | High | Medium | Training programme; decision record requires officer to document independent assessment |
 | R-005 | Adversarial gaming by applicants who manipulate inputs | Low | Medium | Low | Feature engineering to reduce gameable features; anomaly detection |
-| R-006 | Data breach — applicant personal data including financial data | Low | High | Low | ISO 27001 controls; encryption at rest and in transit; access controls |
+| R-006 | Data breach, applicant personal data including financial data | Low | High | Low | ISO 27001 controls; encryption at rest and in transit; access controls |
 
 ### 4.2 Risk Management Process
 
@@ -137,7 +137,7 @@ The risk management system is iterative (Art. 9(1)):
 
 ---
 
-## Part 5 — Step 4: Data Governance
+## Part 5: Step 4: Data Governance
 
 **Reference: 04-TECHNICAL-DOCUMENTATION-TEMPLATE.md (Section 2.5)**
 
@@ -148,9 +148,9 @@ The risk management system is iterative (Art. 9(1)):
 | Data source | RetailBank NV historical loan data (2019-2024) |
 | Data volume | 2.3 million loan applications; 1.8 million with outcome data |
 | Data features (47) | Age, income, employment type, loan amount requested, loan term, existing debt, payment history, residence tenure, region, and 37 further financial/behavioural features |
-| Personal data | Yes — financial and demographic data of RetailBank NV customers |
-| Special category data | No direct special category data used; age and region are proxy variables — bias assessment conducted |
-| GDPR lawful basis for training | Art. 6(1)(f) GDPR — legitimate interests of RetailBank NV (internal product development); LIA completed per Doc 21 |
+| Personal data | Yes, financial and demographic data of RetailBank NV customers |
+| Special category data | No direct special category data used; age and region are proxy variables, bias assessment conducted |
+| GDPR lawful basis for training | Art. 6(1)(f) GDPR, legitimate interests of RetailBank NV (internal product development); LIA completed per Doc 21 |
 
 ### 5.2 Bias Audit Summary
 
@@ -159,13 +159,13 @@ The risk management system is iterative (Art. 9(1)):
 | Age | Age (direct feature) | Yes | Approval rate gap < 3% across age brackets 25-65; 18-24 cohort reviewed separately |
 | Gender | Not a direct feature | Yes | No statistically significant disparity identified |
 | Ethnicity / Race | Not a feature; region used as proxy | Yes | Regional disparity identified; mitigated by removing high-correlation regional codes; residual disparity < 5% |
-| Income level | Direct feature (by design) | Yes — within-income-band performance | Disparity by design (credit risk); documented as intentional and reviewed for proportionality |
+| Income level | Direct feature (by design) | Yes, within-income-band performance | Disparity by design (credit risk); documented as intentional and reviewed for proportionality |
 
-**Bias audit result:** PASSED with conditions — regional proxy variable monitoring ongoing; fairness dashboard deployed.
+**Bias audit result:** PASSED with conditions, regional proxy variable monitoring ongoing; fairness dashboard deployed.
 
 ---
 
-## Part 6 — Step 5: Technical Documentation
+## Part 6: Step 5: Technical Documentation
 
 **Reference: 04-TECHNICAL-DOCUMENTATION-TEMPLATE.md**
 
@@ -179,12 +179,12 @@ The risk management system is iterative (Art. 9(1)):
 | §4 Risk Management | Complete | Per Part 4 above |
 | §5 Lifecycle Changes | Complete | Version history; v1.0-v2.3 documented |
 | §6 Standards Applied | Complete | ISO/IEC 42001:2023; ISO 27001; EBA Guidelines on internal governance |
-| §7 EU Declaration of Conformity | Draft — pending conformity assessment completion | |
+| §7 EU Declaration of Conformity | Draft, pending conformity assessment completion | |
 | §8 Post-Market Monitoring | Complete | Monthly accuracy monitoring; quarterly review |
 
 ---
 
-## Part 7 — Step 6: Human Oversight
+## Part 7: Step 6: Human Oversight
 
 **Reference: 07-HUMAN-OVERSIGHT-FRAMEWORK.md**
 
@@ -192,12 +192,12 @@ The risk management system is iterative (Art. 9(1)):
 
 | Requirement | How Addressed |
 |---|---|
-| Art. 14(1) — Effective oversight by natural persons | All final credit decisions made by trained loan officers; system outputs score and recommendation only |
-| Art. 14(3)(a) — Override capability | Loan officers can override any system recommendation in the loan management system; override requires documentation of reasoning |
-| Art. 14(3)(b) — Awareness of automation bias | AI literacy training includes module on automation bias; officers trained to form independent assessment before viewing AI score |
-| Art. 14(3)(c) — Interpret outputs correctly | Training programme; system UI includes explanation of score components; confidence intervals displayed |
-| Art. 14(3)(d) — Ability to refuse to use | Officers may escalate to Senior Credit Manager if concerned about system outputs |
-| Art. 14(4) — Special attention to vulnerable persons | Flagging system for applicants triggering vulnerable customer indicators; enhanced human review required |
+| Art. 14(1), Effective oversight by natural persons | All final credit decisions made by trained loan officers; system outputs score and recommendation only |
+| Art. 14(3)(a), Override capability | Loan officers can override any system recommendation in the loan management system; override requires documentation of reasoning |
+| Art. 14(3)(b), Awareness of automation bias | AI literacy training includes module on automation bias; officers trained to form independent assessment before viewing AI score |
+| Art. 14(3)(c), Interpret outputs correctly | Training programme; system UI includes explanation of score components; confidence intervals displayed |
+| Art. 14(3)(d), Ability to refuse to use | Officers may escalate to Senior Credit Manager if concerned about system outputs |
+| Art. 14(4), Special attention to vulnerable persons | Flagging system for applicants triggering vulnerable customer indicators; enhanced human review required |
 
 ### 7.2 Human Oversight Roles
 
@@ -211,11 +211,11 @@ The risk management system is iterative (Art. 9(1)):
 
 ---
 
-## Part 8 — Step 7: Transparency and Instructions for Use
+## Part 8: Step 7: Transparency and Instructions for Use
 
 **Reference: 06-TRANSPARENCY-OBLIGATIONS.md**
 
-### 8.1 Instructions for Use (Article 13(3)) — Key Elements
+### 8.1 Instructions for Use (Article 13(3)): Key Elements
 
 | Art. 13(3) Element | Content |
 |---|---|
@@ -239,7 +239,7 @@ RetailBank NV (as Deployer) must inform applicants:
 
 ---
 
-## Part 9 — Step 8: GDPR Joint Compliance
+## Part 9: Step 8: GDPR Joint Compliance
 
 **Reference: 18-GDPR-AI-ACT-INTERSECTION.md | 21-LEGITIMATE-INTEREST-ASSESSMENT.md**
 
@@ -247,38 +247,38 @@ RetailBank NV (as Deployer) must inform applicants:
 
 | Obligation | How Addressed |
 |---|---|
-| Lawful basis for credit assessment processing | Art. 6(1)(b) GDPR — necessary for performance of contract (processing loan application) |
-| Lawful basis for AI model training | Art. 6(1)(f) — legitimate interests; LIA completed (Doc 21 template) |
-| GDPR Art. 22 automated decision-making | System generates recommendation not final decision; genuine human review by loan officer; Art. 22 exception applies (Art. 22(2)(a) — contract necessity) where human reviews and makes final decision |
-| DPIA required? | Yes — Art. 35(3)(a) (systematic profiling of natural persons with legal/significant effects); DPIA completed |
-| Privacy notice updated? | Yes — includes AI processing description; Art. 13(2)(f) logic of automated processing included |
-| Data subject rights procedure | Updated — includes right to request human review; right to obtain explanation; right to object to profiling |
+| Lawful basis for credit assessment processing | Art. 6(1)(b) GDPR, necessary for performance of contract (processing loan application) |
+| Lawful basis for AI model training | Art. 6(1)(f), legitimate interests; LIA completed (Doc 21 template) |
+| GDPR Art. 22 automated decision-making | System generates recommendation not final decision; genuine human review by loan officer; Art. 22 exception applies (Art. 22(2)(a), contract necessity) where human reviews and makes final decision |
+| DPIA required? | Yes, Art. 35(3)(a) (systematic profiling of natural persons with legal/significant effects); DPIA completed |
+| Privacy notice updated? | Yes, includes AI processing description; Art. 13(2)(f) logic of automated processing included |
+| Data subject rights procedure | Updated, includes right to request human review; right to obtain explanation; right to object to profiling |
 
 ---
 
-## Part 10 — Step 9: Conformity Assessment and Market Placement
+## Part 10: Step 9: Conformity Assessment and Market Placement
 
 ### 10.1 Conformity Assessment Method
 
 | Assessment | Detail |
 |---|---|
-| Annex III Area 5 — Notified Body required? | No — Annex III Area 5 is not Annex I product safety. Internal conformity assessment (Annex VI) permitted. |
-| Internal conformity assessment completed? | Yes — per Doc 02; result: CONFORMANT |
-| EU Declaration of Conformity prepared? | Yes — per Doc 12 |
-| CE marking required? | No — not Annex I product |
-| EU AI database registration required? | Yes — Article 49; registration to be completed before placement |
-| Registration status | PENDING — timeline: before deployment in Netherlands market |
+| Annex III Area 5, Notified Body required? | No, Annex III Area 5 is not Annex I product safety. Internal conformity assessment (Annex VI) permitted. |
+| Internal conformity assessment completed? | Yes, per Doc 02; result: CONFORMANT |
+| EU Declaration of Conformity prepared? | Yes, per Doc 12 |
+| CE marking required? | No, not Annex I product |
+| EU AI database registration required? | Yes, Article 49; registration to be completed before placement |
+| Registration status | PENDING, timeline: before deployment in Netherlands market |
 
 ### 10.2 Conformity Assessment Result
 
-**Overall result: CONFORMANT** — subject to:
+**Overall result: CONFORMANT:** subject to:
 1. Ongoing bias monitoring maintaining regional disparity below 5%
 2. Human oversight training programme completion for all RetailBank NV loan officers
 3. EU AI database registration before market placement
 
 ---
 
-## Part 11 — Step 10: Post-Market Monitoring Plan (Summary)
+## Part 11: Step 10: Post-Market Monitoring Plan (Summary)
 
 **Reference: 09-POST-MARKET-MONITORING-PLAN.md | Doc 04 Section 8**
 
@@ -292,7 +292,7 @@ RetailBank NV (as Deployer) must inform applicants:
 
 ---
 
-## Part 12 — AI Literacy Requirements
+## Part 12: AI Literacy Requirements
 
 **Reference: 17-AI-LITERACY-COMPETENCY-FRAMEWORK.md**
 
@@ -305,25 +305,25 @@ RetailBank NV (as Deployer) must inform applicants:
 
 ---
 
-## Part 13 — Summary Compliance Status
+## Part 13: Summary Compliance Status
 
 | Compliance Area | Status | Key Actions Remaining |
 |---|---|---|
-| Risk Classification | ✅ Complete | — |
-| Provider/Deployer roles | ✅ Complete | — |
+| Risk Classification | ✅ Complete |, |
+| Provider/Deployer roles | ✅ Complete |, |
 | Risk Management System | ✅ Complete | Quarterly review cycle established |
 | Data Governance | ✅ Complete | Regional bias monitoring ongoing |
 | Technical Documentation | ✅ Complete | DoC pending |
 | Human Oversight Framework | ✅ Complete | Training programme in progress |
 | Transparency / Instructions for Use | ✅ Complete | Consumer disclosure in privacy notice |
 | GDPR Joint Compliance | ✅ Complete | DPIA completed |
-| Conformity Assessment | ✅ CONFORMANT | — |
+| Conformity Assessment | ✅ CONFORMANT |, |
 | EU Database Registration | ⚠️ Pending | Register before Netherlands launch |
 | Post-Market Monitoring | ✅ Complete | Monitoring systems operational |
 | AI Literacy | ⚠️ In Progress | Training completion required before go-live |
 | Article 26(7) Worker Notice | ✅ Complete | Loan officer notice issued per Doc 22 |
 
-**Overall Deployment Readiness:** **READY TO DEPLOY** — subject to EU database registration and training completion.
+**Overall Deployment Readiness:** **READY TO DEPLOY:** subject to EU database registration and training completion.
 
 ---
 
@@ -332,10 +332,10 @@ RetailBank NV (as Deployer) must inform applicants:
 | Issue | Lesson |
 |---|---|
 | Regional proxy variable bias initially overlooked | Always test proxies for protected characteristics, not just direct features |
-| Art. 22 GDPR / Art. 14 AI Act interface | Human review must be genuinely meaningful — rubber stamping fails both regimes |
-| DPIA and FRIA overlap | For credit scoring by a private lender, DPIA required; FRIA is voluntary (not a public body) — but many elements overlap |
-| Deployer's Art. 26(7) obligation | Often overlooked — RetailBank NV must inform loan officer staff before system deployment |
-| EU database registration timing | Registration must occur before market placement — not after go-live |
+| Art. 22 GDPR / Art. 14 AI Act interface | Human review must be genuinely meaningful, rubber stamping fails both regimes |
+| DPIA and FRIA overlap | For credit scoring by a private lender, DPIA required; FRIA is voluntary (not a public body), but many elements overlap |
+| Deployer's Art. 26(7) obligation | Often overlooked, RetailBank NV must inform loan officer staff before system deployment |
+| EU database registration timing | Registration must occur before market placement, not after go-live |
 
 ---
 
