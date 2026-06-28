@@ -1,4 +1,4 @@
-# 05 — AI System Register
+# 05: AI System Register
 
 **EU AI Act Reference:** Articles 49, 71 | Article 16(d) (Provider obligation to keep register)
 **Applies to:** All organisations providing or deploying AI systems in the EU
@@ -20,7 +20,7 @@ This register serves as the organisation's central inventory of all AI systems. 
 
 ## Instructions
 
-- Register all AI systems — regardless of risk tier
+- Register all AI systems, regardless of risk tier
 - Complete a Risk Classification (01-RISK-CLASSIFICATION-GUIDE.md) for each system
 - Update the register whenever a system is: acquired, modified, decommissioned, or reclassified
 - Review the complete register at minimum annually or upon regulatory changes
@@ -53,12 +53,12 @@ Expand this table as needed. Each row = one AI system.
 | Business Function | e.g. HR, Finance, Operations, Customer Service |
 | Primary Use Case | Brief description of what the system does |
 | Risk Tier | Unacceptable / High / Limited / Minimal |
-| Annex III Category | Area 1-8 if High Risk (e.g. 'Area 4 — Employment') |
-| **Art. 6(3) Exclusion Claimed** | **Yes / No — whether the organisation claims the system is NOT High-Risk despite appearing in Annex III, under Article 6(3)** |
-| **Art. 6(3) Exclusion Basis** | **The specific exclusion ground: Procedural task / Post-hoc improvement / Pattern detection only / Preparatory task — include document/section reference** |
+| Annex III Category | Area 1-8 if High Risk (e.g. 'Area 4, Employment') |
+| **Art. 6(3) Exclusion Claimed** | **Yes / No, whether the organisation claims the system is NOT High-Risk despite appearing in Annex III, under Article 6(3)** |
+| **Art. 6(3) Exclusion Basis** | **The specific exclusion ground: Procedural task / Post-hoc improvement / Pattern detection only / Preparatory task, include document/section reference** |
 | **Exclusion Approved By** | **Name, role and date of the person who reviewed and approved the exclusion claim** |
 | EU DB Registration # | Number from EU AI database (mandatory for High Risk) |
-| FRIA Required | Yes / No (required for certain public sector deployers — see 03-FUNDAMENTAL-RIGHTS-IMPACT-ASSESSMENT.md Part 0) |
+| FRIA Required | Yes / No (required for certain public sector deployers, see 03-FUNDAMENTAL-RIGHTS-IMPACT-ASSESSMENT.md Part 0) |
 | FRIA Status | Not started / In progress / Completed / Review due |
 | Conformity Assessment | Not started / In progress / Completed / Certified |
 | Technical Docs Complete | Yes / No / Partial |
@@ -94,7 +94,7 @@ Auto-calculate or manually update after each register review.
 
 ---
 
-## High-Risk Systems — Compliance Status Dashboard
+## High-Risk Systems: Compliance Status Dashboard
 
 | System ID | System Name | Conformity Assessment | Technical Docs | FRIA | EU Registration | Human Oversight Plan | Post-Market Monitoring |
 |---|---|---|---|---|---|---|---|
