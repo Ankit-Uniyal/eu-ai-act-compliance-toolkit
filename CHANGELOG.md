@@ -8,6 +8,32 @@ Regulatory baseline: Regulation (EU) 2024/1689 as entered into force 1 August 20
 
 ---
 
+## [3.2.1] - 2026-04-30
+
+### Fixed (regulatory accuracy)
+
+This patch release corrects a set of statutory references and timelines identified in an expert review. No new documents were added; existing documents were corrected.
+
+**08-INCIDENT-REPORTING-PROCEDURE.md** — Corrected the Article 73 serious-incident reporting deadlines. The Act does **not** use a single 72-hour deadline. Article 73(2)–(4) sets tiered deadlines from awareness: immediately and in any event **15 days** (general), **2 days** (widespread infringement / serious incident disrupting critical infrastructure, Art. 3(49)(b)), and **10 days** (death of a person). The 72-hour figure is the GDPR Art. 33 personal-data-breach deadline and was removed from the AI Act context. Aligned the Art. 3(49) serious-incident categories with the enacted text.
+
+**18-GDPR-AI-ACT-INTERSECTION.md** — Corrected Part 8.2 dual incident reporting to show the AI Act (Art. 73 tiers) and GDPR (Art. 33, 72h) clocks as separate regimes. Added the Article 86 right to explanation of individual decision-making and Art. 26(11) deployer information to affected persons. Clarified the Art. 10(5) special-category-data pathway for bias detection and Art. 27(4) DPIA/FRIA complementarity. Corrected the GDPR-complementarity recital to Recital 10.
+
+**25-PROHIBITED-PRACTICES-ASSESSMENT.md** — Corrected the Article 5(1) sub-letters to the enacted text: predictive policing based on profiling = **(d)**; untargeted facial-image scraping = **(e)**; emotion recognition in workplace/education = **(f)**; biometric categorisation by protected characteristics = **(g)**; real-time remote biometric identification = **(h)**. Removed the "public authorities only" limitation from social scoring (c). Re-pointed RBI exemptions to Art. 5(1)(h)(i)–(iii) with the Annex II 4-year custodial threshold and the 24-hour urgent-authorisation rule. Corrected the recital range to 28–45.
+
+**27-GPAI-SYSTEMIC-RISK-COMPLIANCE.md** — Corrected the Article 55(1) sub-letter mapping: (a) model evaluation/adversarial testing, (b) systemic-risk assessment & mitigation, (c) serious-incident reporting to the AI Office "without undue delay", (d) **cybersecurity**. Removed the incorrect "Art. 55(1)(d) = EU AI Office cooperation / energy efficiency" labels. Re-pointed the AI Office/Commission investigatory and corrective powers from Article 56 (Codes of practice) to the correct enforcement articles **88, 91, 92, 93**, and added the Article 101 GPAI penalty regime (3% / €15m). Replaced "≤ 72 hours" GPAI timelines with the statutory "without undue delay".
+
+**01-RISK-CLASSIFICATION-GUIDE.md** — Corrected the Article 5 prohibited-practice sub-letters in Step 2. Added the Article 6(3) profiling override (an Annex III system performing profiling of natural persons is always high-risk) and the Article 49(2) requirement to register a 6(3)-excluded system in the EU database. Clarified that Article 50 transparency is an overlay that also applies to high-risk and excluded systems. Updated FRIA scoping for the credit/insurance mandatory cases.
+
+**02-CONFORMITY-ASSESSMENT-CHECKLIST.md** — Added Section 0 on the Article 43 conformity assessment route (Annex VI internal control vs Annex VII Notified Body vs sectoral Annex I legislation). Corrected the sign-off: Article 22 designates the **Authorised Representative** for non-EU providers, not a generic internal "responsible person". Strengthened the Art. 15 cybersecurity row with named adversarial-ML threats; added Art. 14(5) two-person biometric verification and Art. 12(3) biometric logging items.
+
+**README.md** — Moved GPAI out of the "Limited Risk" tier into its own separate-regime row (Arts. 51–56). Split the high-risk timeline into Annex III (2 Aug 2026) and Annex I product-embedded systems (2 Aug 2027) and added the legacy-GPAI deadline. Updated script references to v2.1/v2.2 with the new `--format json|csv` output and CI gate. Corrected Doc 27 (Arts. 88–94) and Doc 25 (Recitals 28–45) references. Added a prominent QUICKSTART link and a NIST AI RMF resource link.
+
+**scripts/risk_classifier.py** — Upgraded to **v2.2**. GPAI obligations (Arts. 53–55) are now appended **in addition** to the system risk tier, fixing a bug where a GPAI model embedded in a high-risk system silently lost its GPAI obligations. Added a `gpai_systemic` CSV flag (Art. 55) and an Art. 6(3) profiling override. Corrected the HIGH/LIMITED obligations lists and added the Art. 49(2) exclusion-registration reminder.
+
+**docs/QUICKSTART.md** — New plain-language, 10-minute orientation for newcomers: what the Act is, role-based "hats", the four tiers plus the GPAI regime, the real deadlines, the first three steps, the GDPR interplay, and the penalty bands. Linked from the README and Doc 01.
+
+---
+
 ## [3.2.0] - 2026-04-29
 
 ### Added
