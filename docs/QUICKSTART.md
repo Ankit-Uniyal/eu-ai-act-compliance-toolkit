@@ -37,8 +37,9 @@ Your obligations depend on your role. You can wear more than one hat.
 |---|---|
 | 2 February 2025 | Prohibited practices banned; AI-literacy duty starts |
 | 2 August 2025 | GPAI model rules + governance/penalties |
-| 2 August 2026 | Most high-risk (Annex III) obligations |
-| 2 August 2027 | High-risk AI embedded in regulated products (Annex I); legacy GPAI models |
+| 2 August 2026 | Most high-risk (Annex III) obligations + transparency duties (Art. 50) |
+| 2 August 2027 | High-risk AI embedded in regulated products (Annex I, Art. 6(1)); legacy GPAI models |
+| 2 August 2030 | Legacy high-risk systems used by public authorities |
 
 *(Dates can be adjusted by later EU acts — verify against EUR-Lex.)*
 
@@ -63,7 +64,18 @@ GDPR applies **at the same time** as the AI Act. They are separate laws with sep
 - Supplying incorrect information: up to **€7.5 million or 1.5%**.
 - GPAI-model providers: up to **€15 million or 3%**, enforced by the Commission.
 
-## 8. Where to go next
+## 8. Official guidance you can rely on
+
+You don't have to interpret the Act alone. The European Commission and the European AI Office have published official, free guidance that this toolkit is aligned to:
+
+- **Guidelines on prohibited AI practices** and **Guidelines on the AI system definition** (Feb 2025) — example-rich help for steps A and B above.
+- **General-Purpose AI (GPAI) Code of Practice** (Jul 2025) — a Commission-endorsed, voluntary way for model providers to show compliance (Transparency, Copyright, and Safety & Security chapters).
+- **Code of Practice on marking and labelling AI-generated content** (Jun 2026) — for the transparency duties that apply from August 2026.
+- The **AI Pact**, **AI Act Service Desk**, and **Single Information Platform** for official Q&A and early-compliance support.
+
+Links to all of these are in the **["Related Resources" section of the README](../README.md#related-resources)**.
+
+## 9. Where to go next
 
 - Find your role in the **["Which Documents Apply to Me?" table](../README.md)** in the README.
 - See every document at a glance in **[docs/INDEX.md](INDEX.md)**.
