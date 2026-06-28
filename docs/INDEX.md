@@ -75,6 +75,14 @@ main [README](../README.md).
 - **Operate** — ongoing monitoring, incidents, registration, enforcement readiness (Docs 05, 06, 08, 09, 22, 28).
 - **Reference** — worked examples and supporting material.
 
+## Official EU guidance these documents align to
+
+The toolkit is mapped to the binding text (Regulation (EU) 2024/1689) and to the Commission's official guidance. The full list with links is in the README's [Recent Official Guidance & Developments](../README.md#recent-official-guidance--developments) section. In short:
+
+- **Guidelines on prohibited AI practices** and **on the AI system definition** (Feb 2025) → use with Docs 01 and 25.
+- **General-Purpose AI Code of Practice** (Jul 2025) → Transparency & Copyright chapters with Docs 06 and 11 (Art. 53); Safety & Security chapter with Doc 27 (Art. 55).
+- **Code of Practice on marking and labelling AI-generated content** (Jun 2026) → use with Doc 06 (Art. 50).
+
 ---
 
 *Part of the EU AI Act Compliance Toolkit. This document does not constitute legal advice.*
