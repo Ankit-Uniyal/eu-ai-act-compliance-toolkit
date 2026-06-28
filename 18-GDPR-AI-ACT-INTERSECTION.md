@@ -24,7 +24,7 @@ The EU AI Act and GDPR operate in parallel for any AI system that processes pers
 | Issue | Position |
 |---|---|
 | Do both regulations apply simultaneously? | Yes — they are independent regulations with separate requirements and supervisory authorities |
-| Does the AI Act override GDPR? | No — Recital 9 EU AI Act states that the Act complements GDPR without prejudice to it |
+| Does the AI Act override GDPR? | No — Recital 10 EU AI Act states that the Act is without prejudice to and complements GDPR |
 | Can compliance with one satisfy obligations under the other? | In some areas yes (e.g. DPIA and FRIA) — but this must be assessed for each requirement |
 | Are there conflicts between the two regulations? | Some tensions exist (e.g. data minimisation vs. need for representative training data) — these are addressed in this document |
 
@@ -79,7 +79,7 @@ GDPR Article 22 gives individuals the right not to be subject to solely automate
 |---|---|---|---|
 | Right to not be subject to solely automated decisions | Yes — Article 22(1) | Human oversight required — Articles 14, 26(2) | Human review must be genuine, not nominal — satisfies both if meaningful |
 | Exceptions | Art. 22(2): contract necessity, legal authorisation, explicit consent | No equivalent exception in AI Act | GDPR exception does not override AI Act human oversight requirement |
-| Right to explanation | Art. 22(3): right to obtain human intervention, express point of view, contest decision | Art. 13 AI Act: transparency to deployers; Art. 26 deployer transparency obligations | Provide explanation of AI role in decision AND human review mechanism |
+| Right to explanation | Art. 22(3): right to obtain human intervention, express point of view, contest decision | Art. 86 AI Act: right to explanation of individual decision-making for affected persons; Art. 13 transparency to deployers; Art. 26 deployer transparency | Provide explanation of AI role in decision AND human review mechanism |
 | Profiling | Art. 4(4) GDPR: automated processing to analyse personal aspects | Risk factor for high-risk classification (Annex III) | Profile-based AI decisions require both GDPR safeguards and AI Act conformity |
 
 ### 3.2 Joint Compliance for Automated Decision-Making Systems
@@ -89,7 +89,7 @@ Where an AI system makes or materially influences decisions about individuals:
 | Action | Satisfies GDPR? | Satisfies AI Act? |
 |---|---|---|
 | Document that decisions are not solely automated (human has genuine role) | Yes — Art. 22 exception / limitation | Yes — Art. 14 human oversight |
-| Inform individuals that AI is used in decision-making | Yes — Art. 13/14 disclosure | Yes — Art. 13 transparency to deployers; Art. 26 user-facing |
+| Inform individuals that AI is used in decision-making | Yes — Art. 13/14 disclosure | Yes — Art. 26(11) deployer informs affected persons |
 | Provide mechanism to request human review | Yes — Art. 22(3) | Yes — Art. 14 override requirement |
 | Conduct DPIA (see Part 5 below) | Yes — Art. 35 where high risk | Complementary to FRIA (Art. 27) |
 
@@ -102,11 +102,11 @@ Where an AI system makes or materially influences decisions about individuals:
 | Obligation | GDPR Reference | EU AI Act Reference | Who Must Act | Timing |
 |---|---|---|---|---|
 | Inform individuals that personal data is processed | Art. 13/14 — privacy notice | — | Data Controller (often Deployer) | At collection / first interaction |
-| Inform individuals that AI system is used | Implied in Art. 13/14 if AI affects decisions | Art. 13 (to deployers); Art. 26 (deployer to users) | Provider (to deployers); Deployer (to individuals) | Before interaction or use |
+| Inform individuals that AI system is used | Implied in Art. 13/14 if AI affects decisions | Art. 13 (to deployers); Art. 26(11) (deployer to affected persons) | Provider (to deployers); Deployer (to individuals) | Before interaction or use |
 | Disclose AI system interacts with them (chatbot) | Art. 13/14 — processing description | Art. 50(1) — conversational AI disclosure | Provider designs; Deployer discloses | At start of interaction |
 | Inform of emotion recognition or biometric categorisation | Art. 13/14 | Art. 50(3) | Deployer | Before processing |
-| Disclose deepfake / AI-generated content | Art. 13/14 if personal data involved | Art. 50(4)-(5) | Provider / Deployer | On output |
-| Provide meaningful information about automated logic | Art. 22(3) / Art. 13(2)(f) | Art. 13 instructions for use; Art. 26 transparency | Provider + Deployer | On request / proactively |
+| Disclose deepfake / AI-generated content | Art. 13/14 if personal data involved | Art. 50(4) | Provider / Deployer | On output |
+| Provide meaningful information about automated logic | Art. 22(3) / Art. 13(2)(f) | Art. 13 instructions for use; Art. 86 right to explanation | Provider + Deployer | On request / proactively |
 
 ### 4.2 Privacy Notice Requirements for AI Systems
 
@@ -130,7 +130,7 @@ When deploying an AI system that processes personal data, the privacy notice (GD
 | Data Protection Impact Assessment (DPIA) | GDPR Art. 35: processing likely to result in high risk to individuals, including systematic profiling, large-scale special category data, automated decisions with legal effects | Data Controller (typically Deployer) |
 | Fundamental Rights Impact Assessment (FRIA) | AI Act Art. 27: mandatory for certain deployers of high-risk AI (public bodies and private bodies providing public services) | Deployer |
 
-**Key rule:** A DPIA is required whenever the GDPR threshold is met. A FRIA is required whenever the AI Act threshold is met. They are separate assessments, but content overlaps significantly.
+**Key rule:** A DPIA is required whenever the GDPR threshold is met. A FRIA is required whenever the AI Act threshold is met. They are separate assessments, but content overlaps significantly. Under Art. 27(4), where a DPIA already covers some of the FRIA elements, the FRIA may complement that DPIA rather than duplicate it.
 
 ### 5.2 DPIA and FRIA — Overlap and Difference
 
@@ -141,7 +141,7 @@ When deploying an AI system that processes personal data, the privacy notice (GD
 | Covers fundamental rights? | Partially — privacy and data protection | Fully — all EU Charter rights |
 | DPO involvement | Mandatory (GDPR Art. 35(2)) | Recommended (good practice) |
 | Outcome | Residual risks accepted / mitigated / DPA consulted | Deployment approved / approved with conditions / deferred / rejected |
-| Can they be combined? | Yes — Article 35(10) GDPR permits integration where another EU law requires similar assessment | FRIA template (Document 03) includes GDPR dimensions and can reference DPIA |
+| Can they be combined? | Yes — Article 35(10) GDPR permits integration where another EU law requires similar assessment | Yes — Art. 27(4) allows the FRIA to complement an existing DPIA |
 
 ### 5.3 Joint DPIA / FRIA Approach
 
@@ -184,8 +184,10 @@ Where special category personal data is processed in training or operation of an
 |---|---|---|
 | Biometric data for identification | Art. 9(2)(g): substantial public interest; Art. 9(2)(a): explicit consent | High-risk Annex III Area 1 or prohibited (Art. 5) depending on use |
 | Health data (medical AI) | Art. 9(2)(h): healthcare purposes; Art. 9(2)(i): public health | High-risk Annex III Area 5 or medical device (MDR) |
-| Race / ethnicity for bias testing | Art. 9(2)(g): substantial public interest with safeguards | AI Act Art. 10(2)(f): bias examination permitted |
+| Race / ethnicity for bias testing | Art. 9(2)(g): substantial public interest with safeguards | AI Act Art. 10(5) permits special category data for bias detection/correction subject to strict conditions |
 | Trade union membership (employment AI) | Art. 9(2)(b): employment law; Art. 9(2)(g): public interest | High-risk Annex III Area 4 |
+
+> **Note on Art. 10(5):** The AI Act provides a specific, conditional legal pathway to process special categories of personal data **for the purpose of bias detection and correction** in high-risk systems, where strictly necessary and subject to safeguards (pseudonymisation, access restrictions, no transmission to third parties, deletion after correction). This operates alongside — not instead of — a GDPR Art. 9(2) basis.
 
 ---
 
@@ -199,7 +201,7 @@ Where special category personal data is processed in training or operation of an
 | Right to erasure | Art. 17 | AI Act does not override erasure right | Establish process to remove individual's data from training sets if erasure requested (note: may affect model — document approach) |
 | Right to object to profiling | Art. 21 | AI Act human oversight (Art. 14) | Accept objection; route to human decision-maker |
 | Right not to be subject to solely automated decisions | Art. 22 | Art. 14 human oversight | Ensure meaningful human review is available and documented |
-| Right to explanation of automated decisions | Art. 22(3) | Art. 13 instructions for use; deployer transparency | Provide individual with explanation of AI system's role and ability to contest |
+| Right to explanation of automated decisions | Art. 22(3) | Art. 86 AI Act right to explanation; Art. 13 instructions for use | Provide individual with explanation of AI system's role and ability to contest |
 | Right to portability | Art. 20 | No direct equivalent | Standard GDPR obligation |
 | Right to rectification | Art. 16 | May affect model performance if rectification changes training data | Document approach to rectification requests for training data |
 
@@ -220,15 +222,15 @@ Where special category personal data is processed in training or operation of an
 
 ### 8.2 Dual Incident Reporting — AI Act and GDPR
 
-Where a serious incident under the AI Act also involves a personal data breach:
+Where a serious incident under the AI Act also involves a personal data breach, two **separate** regimes apply with **different deadlines**:
 
 | Obligation | Deadline | Recipient | Document Reference |
 |---|---|---|---|
-| AI Act serious incident notification | Within 72 hours of awareness | National MSA | 08-INCIDENT-REPORTING-PROCEDURE.md |
-| GDPR personal data breach notification | Within 72 hours of awareness | National DPA (supervisory authority) | Standard GDPR breach procedure |
+| AI Act serious incident notification | Immediately, and no later than the applicable Art. 73 tier: **15 days** (general), **2 days** (widespread infringement / critical infrastructure), or **10 days** (death) | National MSA | 08-INCIDENT-REPORTING-PROCEDURE.md |
+| GDPR personal data breach notification | Without undue delay, and no later than **72 hours** of awareness | National DPA (supervisory authority) | Standard GDPR breach procedure (Art. 33) |
 | Notification to affected individuals (if high risk to their rights) | Without undue delay | Affected individuals | GDPR Art. 34 |
 
-> **Note:** The 72-hour window runs from when the organisation became aware. If the same incident triggers both, notifications should be coordinated but filed separately with the MSA and DPA.
+> **Key point — do not confuse the two clocks.** The 72-hour deadline is **GDPR only** (Art. 33). The AI Act uses the tiered 2 / 10 / 15-day deadlines in Article 73. Both clocks run from when the organisation became aware. If the same incident triggers both, the notifications should be coordinated but filed separately with the MSA and the DPA.
 
 ---
 
@@ -250,7 +252,7 @@ Where a serious incident under the AI Act also involves a personal data breach:
 
 | Tension | GDPR Right | AI Act Requirement | Resolution |
 |---|---|---|---|
-| Individuals' right to explanation of automated decisions | Art. 22(3): meaningful information about logic | Art. 13: instructions for use to deployers | Provide meaningful, accessible explanation at the individual level without disclosing proprietary model architecture; this is a documented governance decision |
+| Individuals' right to explanation of automated decisions | Art. 22(3): meaningful information about logic | Art. 86: right to explanation; Art. 13: instructions for use to deployers | Provide meaningful, accessible explanation at the individual level without disclosing proprietary model architecture; this is a documented governance decision |
 
 ---
 
@@ -262,15 +264,15 @@ Use this checklist to identify whether joint GDPR / AI Act compliance actions ha
 |---|---|---|---|
 | Personal data inventory completed for AI system | Art. 30 records of processing | Art. 10 / Art. 11 | Done / Pending |
 | Lawful basis for all processing identified and documented | Art. 6 / Art. 9 | Supports Art. 10 | Done / Pending |
-| Privacy notice updated to include AI processing | Art. 13/14 | Art. 13 / Art. 26 | Done / Pending |
+| Privacy notice updated to include AI processing | Art. 13/14 | Art. 13 / Art. 26(11) | Done / Pending |
 | Automated decision-making assessment completed | Art. 22 | Art. 14 | Done / Pending |
 | DPIA completed (where required) | Art. 35 | Complements FRIA | Done / Pending / N/A |
 | FRIA completed (where required) | Complementary | Art. 27 | Done / Pending / N/A |
 | DPO consulted on AI system deployment | Art. 35(2) | Doc 03 Part 7 | Done / Pending |
-| Data subject rights procedures updated for AI context | Arts. 15-22 | Arts. 13-14, 26 | Done / Pending |
+| Data subject rights procedures updated for AI context | Arts. 15-22 | Arts. 13-14, 26, 86 | Done / Pending |
 | Special category data legal basis identified | Art. 9 | Art. 10(5) | Done / Pending / N/A |
 | Retention schedules cover AI Act 10-year requirement | Art. 5(1)(e) | Art. 18 | Done / Pending |
-| Dual incident reporting procedure in place (MSA + DPA) | Art. 33 | Art. 73 | Done / Pending |
+| Dual incident reporting procedure in place (MSA + DPA, separate clocks) | Art. 33 | Art. 73 | Done / Pending |
 | Bias audit results reviewed by DPO | Arts. 5(1)(d), 9; Recital 71 | Art. 10(2)(f) | Done / Pending |
 
 ---
