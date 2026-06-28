@@ -1,6 +1,6 @@
-# 07 — Human Oversight Framework
+# 07: Human Oversight Framework
 
-**EU AI Act Reference:** Article 14 | Recitals 84–86  
+**EU AI Act Reference:** Article 14 | Recitals 84-86  
 **Applies to:** Providers (design obligations) and Deployers (operational obligations) of High-Risk AI Systems  
 **Last Updated:** April 2026
 
@@ -12,7 +12,7 @@ Article 14 requires that high-risk AI systems are designed and developed to be e
 
 ---
 
-## Part 1 — Oversight Design Principles (for Providers)
+## Part 1: Oversight Design Principles (for Providers)
 
 Providers must ensure systems are designed so that oversight persons can:
 
@@ -27,7 +27,7 @@ Providers must ensure systems are designed so that oversight persons can:
 
 ---
 
-## Part 2 — Oversight Persons — Roles and Responsibilities
+## Part 2: Oversight Persons: Roles and Responsibilities
 
 ### 2.1 Oversight Role Definitions
 
@@ -56,7 +56,7 @@ Deployers must assign oversight tasks only to persons who have:
 
 ---
 
-## Part 3 — Oversight Controls
+## Part 3: Oversight Controls
 
 ### 3.1 Pre-Deployment Oversight Controls
 
@@ -90,9 +90,9 @@ Deployers must assign oversight tasks only to persons who have:
 
 ---
 
-## Part 4 — Automation Bias Mitigation
+## Part 4: Automation Bias Mitigation
 
-Article 14(4)(c) requires that oversight persons are aware of the risk of automation bias — the tendency to over-rely on automated system outputs.
+Article 14(4)(c) requires that oversight persons are aware of the risk of automation bias, the tendency to over-rely on automated system outputs.
 
 ### Mitigation Measures
 
@@ -107,7 +107,7 @@ Article 14(4)(c) requires that oversight persons are aware of the risk of automa
 
 ---
 
-## Part 5 — Human Oversight in Decision Workflows
+## Part 5: Human Oversight in Decision Workflows
 
 ### 5.1 Decision Workflow Classification
 
@@ -134,7 +134,7 @@ Article 14(4)(c) requires that oversight persons are aware of the risk of automa
 
 ---
 
-## Part 6 — Oversight Monitoring and Reporting
+## Part 6: Oversight Monitoring and Reporting
 
 ### 6.1 Key Oversight Metrics
 
@@ -154,7 +154,7 @@ Article 14(4)(c) requires that oversight persons are aware of the risk of automa
 
 ---
 
-## Part 7 — Oversight Framework Review
+## Part 7: Oversight Framework Review
 
 | Review Date | Trigger | Outcome | Next Review |
 |------------|---------|---------|------------|
