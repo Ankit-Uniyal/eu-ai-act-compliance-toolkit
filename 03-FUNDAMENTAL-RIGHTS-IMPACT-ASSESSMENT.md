@@ -1,4 +1,4 @@
-# 03 — Fundamental Rights Impact Assessment (FRIA)
+# 03: Fundamental Rights Impact Assessment (FRIA)
 
 **EU AI Act Reference:** Article 27
 **Applies to:** Deployers of High-Risk AI Systems (in the public sector or private bodies providing public services)
@@ -13,7 +13,7 @@ Article 27 requires certain deployers of high-risk AI systems to carry out a Fun
 
 ---
 
-## Part 0 — FRIA Scoping: Do You Need This Assessment?
+## Part 0: FRIA Scoping: Do You Need This Assessment?
 
 Complete this section before starting Parts 1-8. If FRIA is not required, you may stop here and document the scoping outcome.
 
@@ -21,9 +21,9 @@ Complete this section before starting Parts 1-8. If FRIA is not required, you ma
 
 | # | Question | YES | NO |
 |---|---|---|---|
-| 1 | Is your organisation a **body governed by public law** (as defined in Art. 4(8) of Directive 2014/24/EU on public procurement — e.g. government ministry, local authority, publicly funded body)? | FRIA **MANDATORY** — proceed to Part 1 | Continue to Q2 |
-| 2 | Is your organisation a **private body providing services in the public interest** in any of the following regulated sectors: banking and credit, insurance, social security/benefits, healthcare, education or vocational training? | FRIA **MANDATORY** — proceed to Part 1 | Continue to Q3 |
-| 3 | Is the AI system classified as **High-Risk** under Article 6 of the EU AI Act (after excluding Art. 6(3) systems)? | FRIA **VOLUNTARY** — strongly recommended as governance best practice; complete if resources allow | FRIA **NOT REQUIRED** — document outcome and sign off below |
+| 1 | Is your organisation a **body governed by public law** (as defined in Art. 4(8) of Directive 2014/24/EU on public procurement, e.g. government ministry, local authority, publicly funded body)? | FRIA **MANDATORY:** proceed to Part 1 | Continue to Q2 |
+| 2 | Is your organisation a **private body providing services in the public interest** in any of the following regulated sectors: banking and credit, insurance, social security/benefits, healthcare, education or vocational training? | FRIA **MANDATORY:** proceed to Part 1 | Continue to Q3 |
+| 3 | Is the AI system classified as **High-Risk** under Article 6 of the EU AI Act (after excluding Art. 6(3) systems)? | FRIA **VOLUNTARY:** strongly recommended as governance best practice; complete if resources allow | FRIA **NOT REQUIRED:** document outcome and sign off below |
 
 ### Scoping Outcome
 
@@ -36,13 +36,13 @@ Complete this section before starting Parts 1-8. If FRIA is not required, you ma
 | **FRIA obligation** | Mandatory / Voluntary / Not required |
 | Scoping completed by | Name / Role |
 | Scoping date | |
-| If NOT required, stop here — basis: | |
+| If NOT required, stop here, basis: | |
 
 > **Cross-reference:** See **01-RISK-CLASSIFICATION-GUIDE.md Part 0** for the full FRIA scoping decision table aligned with risk classification. If you have not yet classified the AI system, complete that guide first.
 
 ---
 
-## Part 1 — Deployer and System Information
+## Part 1: Deployer and System Information
 
 | Field | Entry |
 |---|---|
@@ -60,7 +60,7 @@ Complete this section before starting Parts 1-8. If FRIA is not required, you ma
 
 ---
 
-## Part 2 — Description of Deployment
+## Part 2: Description of Deployment
 
 ### 2.1 Intended Purpose
 
@@ -91,7 +91,7 @@ Estimated number of individuals affected: _______________
 
 ---
 
-## Part 3 — Fundamental Rights Assessment
+## Part 3: Fundamental Rights Assessment
 
 For each right, assess whether the system's deployment may positively or negatively affect it.
 
@@ -153,7 +153,7 @@ For each right, assess whether the system's deployment may positively or negativ
 
 ---
 
-## Part 4 — Bias and Discrimination Assessment
+## Part 4: Bias and Discrimination Assessment
 
 ### 4.1 Protected Characteristics at Risk
 
@@ -173,14 +173,14 @@ For each right, assess whether the system's deployment may positively or negativ
 
 | Question | Response |
 |---|---|
-| Has training data been tested for bias? | Yes / No — Details: |
-| Are protected characteristics (or proxies) used as inputs? | Yes / No — Details: |
-| Have disparate impact analyses been conducted? | Yes / No — Details: |
-| Are underrepresented groups identified in test data? | Yes / No — Details: |
+| Has training data been tested for bias? | Yes / No, Details: |
+| Are protected characteristics (or proxies) used as inputs? | Yes / No, Details: |
+| Have disparate impact analyses been conducted? | Yes / No, Details: |
+| Are underrepresented groups identified in test data? | Yes / No, Details: |
 
 ---
 
-## Part 5 — Risk Summary and Mitigation Plan
+## Part 5: Risk Summary and Mitigation Plan
 
 | # | Fundamental Right at Risk | Risk Level | Root Cause | Mitigation Measure | Owner | Deadline | Status |
 |---|---|---|---|---|---|---|---|
@@ -190,36 +190,36 @@ For each right, assess whether the system's deployment may positively or negativ
 
 ---
 
-## Part 6 — Human Oversight and Redress
+## Part 6: Human Oversight and Redress
 
 | Question | Response |
 |---|---|
 | Can affected individuals request human review of automated decisions? | Yes / No |
-| Is there a documented complaints / redress procedure? | Yes / No — Reference: |
+| Is there a documented complaints / redress procedure? | Yes / No, Reference: |
 | Are oversight persons trained to identify rights violations? | Yes / No |
 | Can the system be overridden or suspended if rights violations are detected? | Yes / No |
 
 ---
 
-## Part 7 — Consultation
+## Part 7: Consultation
 
 | Question | Response |
 |---|---|
-| Were affected communities / representatives consulted? | Yes / No — Details: |
-| Were civil society or advocacy groups engaged? | Yes / No — Details: |
+| Were affected communities / representatives consulted? | Yes / No, Details: |
+| Were civil society or advocacy groups engaged? | Yes / No, Details: |
 | Was a Data Protection Officer (DPO) consulted? | Yes / No |
 | Was a legal / human rights expert consulted? | Yes / No |
 
 ---
 
-## Part 8 — Overall Assessment and Decision
+## Part 8: Overall Assessment and Decision
 
 **Overall FRIA Result:**
 
-- [ ] APPROVED — No significant fundamental rights impacts identified. Proceed with deployment.
-- [ ] APPROVED WITH CONDITIONS — Impacts identified and mitigations agreed. Deploy after mitigations implemented.
-- [ ] DEFERRED — Significant impacts identified. Further assessment required before deployment.
-- [ ] REJECTED — Unacceptable fundamental rights risks. Deployment not approved.
+- [ ] APPROVED, No significant fundamental rights impacts identified. Proceed with deployment.
+- [ ] APPROVED WITH CONDITIONS, Impacts identified and mitigations agreed. Deploy after mitigations implemented.
+- [ ] DEFERRED, Significant impacts identified. Further assessment required before deployment.
+- [ ] REJECTED, Unacceptable fundamental rights risks. Deployment not approved.
 
 **Rationale:**
 
