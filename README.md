@@ -1,11 +1,11 @@
 # EU AI Act Compliance Toolkit
-## Version 3.2.0 | April 2026
+## Version 3.3.0 | June 2026
 
 A practical, practitioner-built compliance toolkit for the EU Artificial Intelligence Act (Regulation (EU) 2024/1689). Now with **28 compliance documents**, 2 worked examples, and GRC automation scripts — covering every major obligation from risk classification through market surveillance response.
 
 **New here?** Start with **[docs/QUICKSTART.md](docs/QUICKSTART.md)** — a plain-language, 10-minute overview of the four risk tiers, the real compliance deadlines, and the first three things to do.
 
-**New in v3.2.0:** 4 new documents closing the final coverage gaps: Article 5 Prohibited Practices Assessment (Doc 25), Article 9 Risk Management System Template (Doc 26), GPAI Systemic Risk Compliance Guide (Doc 27), and Market Surveillance & Regulatory Response Procedure (Doc 28).
+**New in v3.3.0:** Updated to reflect official EU developments through mid-2026 — the Commission's February 2025 guidelines on prohibited practices and on the AI system definition, the **General-Purpose AI Code of Practice** (published 10 July 2025), and the Code of Practice on marking and labelling AI-generated content (June 2026). See **[Recent Official Guidance & Developments](#recent-official-guidance--developments)** below.
 
 ---
 
@@ -25,10 +25,27 @@ This toolkit translates the Act's Articles and Annexes into actionable templates
 | Prohibited practices (Art. 5) banned; AI literacy (Art. 4) applies | **2 February 2025** |
 | GPAI model obligations + governance/penalties apply | **2 August 2025** |
 | Annex III high-risk obligations + most of the Act apply | **2 August 2026** |
-| High-risk AI that are Annex I products (embedded safety components) apply | **2 August 2027** |
+| High-risk AI that are Annex I products (embedded safety components) apply (Art. 6(1)) | **2 August 2027** |
 | GPAI models already on the market before 2 Aug 2025 must be compliant | 2 August 2027 |
 
-> Note: some Article 6(1)/Annex I product-related obligations and certain provisions have extended transition periods. Always verify current dates against EUR-Lex, as delegated/implementing acts may adjust details.
+> Note: the 2 August 2026 date covers Annex III high-risk systems (Art. 6(2)); the obligations tied to Art. 6(1) (high-risk AI that are safety components of Annex I regulated products) apply from 2 August 2027. Legacy public-authority high-risk systems have until 2 August 2030. Always verify current dates against EUR-Lex, as delegated/implementing acts may adjust details.
+
+---
+
+## Recent Official Guidance & Developments
+
+The framework is now in force in stages, and the Commission and the European AI Office have published official guidance that this toolkit aligns to. Use these primary sources alongside the templates here:
+
+| Date | Development | What it means for you |
+|---|---|---|
+| Feb 2025 | **Guidelines on prohibited AI practices** (Art. 5) and **Guidelines on the AI system definition** | Authoritative, example-rich interpretation of the eight bans and of what counts as an "AI system." Read these before completing Doc 25. |
+| 10 Jul 2025 | **General-Purpose AI (GPAI) Code of Practice** — three chapters: Transparency, Copyright, and Safety & Security | Voluntary but Commission-endorsed route to demonstrate compliance. Transparency + Copyright chapters map to **Art. 53** (all GPAI providers); the Safety & Security chapter maps to **Art. 55** (GPAI with systemic risk). Includes a Model Documentation Form. Referenced by Docs 06, 11, and 27. |
+| 2 Aug 2025 | GPAI obligations, governance, notified bodies, confidentiality, and **penalties** (Arts. 99–100) became applicable | Enforcement architecture is live. National market surveillance authorities and the AI Office now have active powers. |
+| Jun 2026 | **Code of Practice on marking and labelling AI-generated content** (Art. 50) | Practical guidance for the transparency/labelling duties that become enforceable 2 August 2026. Relevant to Doc 06. |
+
+Supporting initiatives: the **AI Pact** (voluntary early-compliance pledge), the **AI Act Service Desk** and **Single Information Platform** (official Q&A and help), and the **European AI Office** (GPAI supervision and enforcement coordination). Links in [Related Resources](#related-resources).
+
+> These are the Commission's own materials. They are interpretive guidance, not amendments to the Act — the binding text remains Regulation (EU) 2024/1689 on EUR-Lex.
 
 ---
 
@@ -42,7 +59,7 @@ The EU AI Act classifies AI **systems** into four risk tiers. **General-purpose 
 | High Risk (Article 6, Annexes I and III) | Strict obligations: risk management, data governance, conformity assessment, registration, oversight | CV screening, credit scoring, medical devices with AI |
 | Limited Risk (Article 50) | Transparency obligations only (overlay — can also apply to higher tiers) | Chatbots, deepfakes, AI-generated content |
 | Minimal Risk (Article 95) | Voluntary codes of conduct | Spam filters, AI in games |
-| **GPAI models — separate regime (Arts. 51–56)** | **Baseline obligations for all GPAI (Arts. 53–54); additional systemic-risk obligations (Art. 55) if > 10^25 FLOP or designated** | **Foundation models / LLMs** |
+| **GPAI models — separate regime (Arts. 51–56)** | **Baseline obligations for all GPAI (Arts. 53–54); additional systemic-risk obligations (Art. 55) if > 10^25 FLOP or designated. The GPAI Code of Practice is the endorsed way to show compliance.** | **Foundation models / LLMs** |
 
 ---
 
@@ -80,7 +97,7 @@ Use this routing guide to find the documents most relevant to your role and situ
 | 03 | Fundamental Rights Impact Assessment | FRIA template for deployers of high-risk AI | Article 27 |
 | 04 | Technical Documentation Template | Annex IV-compliant technical documentation | Article 11 + Annex IV |
 | 05 | AI System Register | Inventory of AI systems with risk classification | Articles 49, 71 |
-| 06 | Transparency Obligations Checklist | Obligations for limited-risk and GPAI systems | Articles 50, 53 |
+| 06 | Transparency Obligations Checklist | Obligations for limited-risk and GPAI systems (aligned to the GPAI Code of Practice Transparency chapter and the AI-generated-content labelling Code) | Articles 50, 53 |
 | 07 | Human Oversight Framework | Design and operational human oversight controls | Article 14 |
 | 08 | Incident Reporting Procedure | Serious incident reporting (tiered 2/10/15-day deadlines) | Article 73 |
 | 09 | Post-Market Monitoring Plan | Ongoing monitoring and logging obligations | Article 72 |
@@ -90,7 +107,7 @@ Use this routing guide to find the documents most relevant to your role and situ
 
 | # | Document | Purpose | EU AI Act Reference |
 |---|---|---|---|
-| 11 | GPAI Technical Documentation | Annex XI/XII template for foundation/LLM model providers | Articles 51, 53-55, Annexes XI, XII |
+| 11 | GPAI Technical Documentation | Annex XI/XII template for foundation/LLM model providers (aligned to the GPAI Code of Practice Transparency & Copyright chapters, Art. 53) | Articles 51, 53-55, Annexes XI, XII |
 | 12 | EU Declaration of Conformity | Article 47 DoC template with all required fields | Article 47, Annex V |
 | 13 | Authorised Representative | Article 22 designation agreement for non-EU providers | Article 22 |
 | 14 | CE Marking Guide | When CE marking is required and how to affix it | Article 48, Annex I |
@@ -119,9 +136,9 @@ Use this routing guide to find the documents most relevant to your role and situ
 
 | # | Document | Purpose | Reference |
 |---|---|---|---|
-| 25 | Prohibited Practices Assessment | Structured decision framework for all 8 Article 5 prohibitions with exemption tests and clearance certificate | Article 5, Recitals 28-45 |
+| 25 | Prohibited Practices Assessment | Structured decision framework for all 8 Article 5 prohibitions with exemption tests and clearance certificate (use with the Commission's Feb 2025 prohibited-practices guidelines) | Article 5, Recitals 28-45 |
 | 26 | Article 9 Risk Management System | Standalone 8-step RMS: risk identification, estimation, evaluation, treatment, residual risk acceptance, testing, post-market integration | Article 9 |
-| 27 | GPAI Systemic Risk Compliance Guide | Adversarial testing (red-teaming), systemic-risk mitigation, incident reporting, cybersecurity, EU supervision/enforcement, post-training measures | Articles 51, 55-56, 88-94, Annex XIII |
+| 27 | GPAI Systemic Risk Compliance Guide | Adversarial testing (red-teaming), systemic-risk mitigation, incident reporting, cybersecurity, EU supervision/enforcement, post-training measures (aligned to the GPAI Code of Practice Safety & Security chapter, Art. 55) | Articles 51, 55-56, 88-94, Annex XIII |
 | 28 | Market Surveillance & Regulatory Response | Document retention schedule, competent authority response protocol, on-site inspection procedure, enforcement readiness checklist | Articles 74-99 (incl. 88-94 for GPAI) |
 
 ---
@@ -139,7 +156,7 @@ Use this routing guide to find the documents most relevant to your role and situ
 
 | Script | Purpose | Automates |
 |---|---|---|
-| scripts/risk_classifier.py (v2.1) | CLI tool to classify AI systems by EU AI Act risk tier | Risk classification with Art. 6(3) exclusion logic; txt/json/csv output; CI exit-code gate on banned systems |
+| scripts/risk_classifier.py (v2.2) | CLI tool to classify AI systems by EU AI Act risk tier | Risk classification with Art. 6(3) exclusion logic and GPAI as a parallel regime; txt/json/csv output; CI exit-code gate on banned systems |
 | scripts/sample_ai_inventory.csv | Sample 15-system AI inventory covering all risk tiers | Input for risk_classifier.py |
 
 ---
@@ -150,7 +167,7 @@ Use this routing guide to find the documents most relevant to your role and situ
 If you are new, read **docs/QUICKSTART.md** first.
 
 **Step 1 — Screen for prohibited practices**
-Before anything else, run every AI system through Doc 25 (Article 5 Prohibited Practices Assessment). Any system that triggers a prohibition without a valid exemption must not proceed.
+Before anything else, run every AI system through Doc 25 (Article 5 Prohibited Practices Assessment), alongside the Commission's Feb 2025 guidelines on prohibited practices. Any system that triggers a prohibition without a valid exemption must not proceed.
 
 **Step 2 — Establish your position**
 Complete the Master Compliance Scorecard (Doc 19) for an immediate gap analysis across all 118 requirements.
@@ -187,12 +204,12 @@ Use 01-RISK-CLASSIFICATION-GUIDE.md or run `scripts/risk_classifier.py`
 - Importers and Distributors: follow 15-IMPORTER-DISTRIBUTOR-CHECKLISTS.md
 
 **Step 9 — GPAI/LLM model providers**
-- Complete 11-GPAI-TECHNICAL-DOCUMENTATION.md
-- If systemic risk model: complete 27-GPAI-SYSTEMIC-RISK-COMPLIANCE.md
+- Complete 11-GPAI-TECHNICAL-DOCUMENTATION.md and consider signing the GPAI Code of Practice (Transparency & Copyright chapters) to demonstrate Art. 53 compliance
+- If systemic risk model: complete 27-GPAI-SYSTEMIC-RISK-COMPLIANCE.md and apply the Code's Safety & Security chapter (Art. 55)
 
 ---
 
-## GRC Automation — risk_classifier.py v2.1
+## GRC Automation — risk_classifier.py v2.2
 
 ```bash
 # Basic run with sample inventory
@@ -218,7 +235,7 @@ CSV columns for complete classification:
 | exclusion_no_individual | yes / no | Article 6(3)(c): detects patterns without influencing individuals |
 | exclusion_preparatory | yes / no | Article 6(3)(d): preparatory task only |
 
-> **Important:** Classifier output is a triage aid. Human compliance review is mandatory before acting on any classification. The `--format json|csv` outputs and a CI exit-code gate (exit 1 on any banned system) were added in v2.1.
+> **Important:** Classifier output is a triage aid. Human compliance review is mandatory before acting on any classification. The `--format json|csv` outputs and a CI exit-code gate (exit 1 on any banned system) were added in v2.1; GPAI is handled as a parallel regime in v2.2.
 
 ---
 
@@ -243,9 +260,16 @@ CSV columns for complete classification:
 
 ## Related Resources
 
+**Primary EU sources**
 - [EU AI Act Full Text (EUR-Lex)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+- [AI Act — European Commission overview & Single Information Platform](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
 - [EU AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)
+- [Guidelines on prohibited AI practices (Feb 2025)](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act)
+- [General-Purpose AI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai)
+- [AI Pact](https://digital-strategy.ec.europa.eu/en/policies/ai-pact)
 - [NANDO Database — Notified Bodies](https://ec.europa.eu/growth/tools-databases/nando/)
+
+**Standards**
 - [ISO/IEC 42001:2023 AI Governance](https://www.iso.org/standard/81230.html)
 - [ISO/IEC 23894:2023 AI Risk Management](https://www.iso.org/standard/77304.html)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
@@ -256,13 +280,13 @@ CSV columns for complete classification:
 
 See CHANGELOG.md for full version history, regulatory coverage tracking, and planned updates.
 
-**Current version: v3.2.0 (April 2026)** — see CHANGELOG.md for what's new.
+**Current version: v3.3.0 (June 2026)** — see CHANGELOG.md for what's new.
 
 ---
 
 ## Disclaimer
 
-This toolkit is provided for informational and educational purposes. It does not constitute legal advice. Always consult qualified legal counsel for compliance decisions.
+This toolkit is provided for informational and educational purposes. It does not constitute legal advice. The official Commission guidance referenced here is interpretive and the binding text remains Regulation (EU) 2024/1689. Always consult qualified legal counsel for compliance decisions, and verify dates and obligations against EUR-Lex.
 
 Maintained by Ankit Uniyal | AI Governance and GRC Engineering
 
