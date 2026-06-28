@@ -1,6 +1,6 @@
-# 11 — GPAI Model Technical Documentation Template (Annex XI / Annex XII)
+# 11: GPAI Model Technical Documentation Template (Annex XI / Annex XII)
 
-**EU AI Act Reference:** Articles 53–55 | Annex XI | Annex XII | Article 51 (Systemic Risk)
+**EU AI Act Reference:** Articles 53-55 | Annex XI | Annex XII | Article 51 (Systemic Risk)
 **Applies to:** Providers of General-Purpose AI (GPAI) Models
 **Retention Period:** Keep up to date throughout model lifecycle; available to EU AI Office on request
 **Last Updated:** April 2026
@@ -9,9 +9,11 @@
 
 ## Purpose
 
-Articles 53–55 impose a distinct set of obligations on providers of **General-Purpose AI (GPAI) models** — foundation models, large language models, and multimodal models that can be used for a wide range of downstream tasks. These obligations differ substantially from high-risk AI system requirements under Annex IV and require separate documentation under **Annex XI** (standard GPAI) and **Annex XII** (systemic risk GPAI).
+Articles 53-55 impose a distinct set of obligations on providers of **General-Purpose AI (GPAI) models:** foundation models, large language models, and multimodal models that can be used for a wide range of downstream tasks. These obligations differ substantially from high-risk AI system requirements under Annex IV and require separate documentation under **Annex XI** (standard GPAI) and **Annex XII** (systemic risk GPAI).
 
 This template covers both tiers. Complete Part A for all GPAI models. Complete Part B additionally if your model meets the systemic risk threshold (Article 51: >10²⁵ FLOPs training compute, or designated by EU AI Office).
+
+> **Tip:** the EU AI Office's [GPAI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai) is the endorsed way to show compliance with Article 53 (Transparency and Copyright chapters) and Article 55 (Safety and Security chapter). You can also draft the model card itself on the [AI Model Card Whiteboard](https://ai-modelcard-whiteboard.lovable.app).
 
 ---
 
@@ -19,7 +21,7 @@ This template covers both tiers. Complete Part A for all GPAI models. Complete P
 
 | Field | Entry |
 |---|---|
-| Document Title | GPAI Technical Documentation — [Model Name] |
+| Document Title | GPAI Technical Documentation, [Model Name] |
 | Model ID | |
 | Version / Release | |
 | Classification | CONFIDENTIAL / RESTRICTED |
@@ -32,9 +34,9 @@ This template covers both tiers. Complete Part A for all GPAI models. Complete P
 
 ---
 
-## PART A — Standard GPAI Model Documentation (Annex XI, all GPAI providers)
+## PART A: Standard GPAI Model Documentation (Annex XI, all GPAI providers)
 
-### A1 — General Description of the Model
+### A1: General Description of the Model
 
 #### A1.1 Model Identity
 
@@ -50,13 +52,13 @@ This template covers both tiers. Complete Part A for all GPAI models. Complete P
 | Context window / input length | |
 | Release date | |
 | Deployment form | API / Open weights / Embedded / Other: |
-| Open source? | Yes / No — Licence: |
+| Open source? | Yes / No, Licence: |
 
 #### A1.2 Intended Use and Downstream Applications
 
 Describe the intended purposes for which the GPAI model is placed on the market, including the tasks it is designed to perform and the reasonably foreseeable downstream use cases:
 
-[Describe general intended use — e.g. text generation, code completion, question answering, image generation, etc.]
+[Describe general intended use, e.g. text generation, code completion, question answering, image generation, etc.]
 
 **Reasonably foreseeable downstream high-risk use cases:**
 
@@ -83,7 +85,7 @@ Describe the intended purposes for which the GPAI model is placed on the market,
 
 ---
 
-### A2 — Training Data (Annex XI, Section 2)
+### A2: Training Data (Annex XI, Section 2)
 
 #### A2.1 Training Data Overview
 
@@ -124,11 +126,11 @@ Article 53 requires providers to publish a sufficiently detailed summary of the 
 
 **Summary (suitable for publication):**
 
-> [Model Name] was trained on approximately [X] tokens of data drawn from [general description of sources — e.g. publicly available web text, licensed books, code repositories, and curated datasets]. Training data collection spanned [date range]. The dataset includes content in [N] languages. [Describe any filtering, deduplication, or quality measures applied.]
+> [Model Name] was trained on approximately [X] tokens of data drawn from [general description of sources, e.g. publicly available web text, licensed books, code repositories, and curated datasets]. Training data collection spanned [date range]. The dataset includes content in [N] languages. [Describe any filtering, deduplication, or quality measures applied.]
 
 ---
 
-### A3 — Training Process
+### A3: Training Process
 
 #### A3.1 Compute and Infrastructure
 
@@ -157,7 +159,7 @@ Article 53 requires providers to publish a sufficiently detailed summary of the 
 
 ---
 
-### A4 — Evaluation and Testing (Annex XI, Section 4)
+### A4: Evaluation and Testing (Annex XI, Section 4)
 
 #### A4.1 Capability Evaluations
 
@@ -173,10 +175,10 @@ Describe known limitations of the model, including circumstances under which it 
 | Limitation | Description | Impact | Mitigation |
 |---|---|---|---|
 | Hallucination / factual errors | | High | |
-| Bias in outputs | | Medium–High | |
+| Bias in outputs | | Medium-High | |
 | Language / dialect gaps | | Medium | |
 | Temporal knowledge cutoff | Date: | Medium | |
-| Context window limits | | Low–Medium | |
+| Context window limits | | Low-Medium | |
 | Other: | | | |
 
 #### A4.3 Safety and Misuse Evaluations
@@ -192,7 +194,7 @@ Describe known limitations of the model, including circumstances under which it 
 
 ---
 
-### A5 — Information for Downstream Providers (Article 53(1)(b))
+### A5: Information for Downstream Providers (Article 53(1)(b))
 
 GPAI model providers must provide downstream providers (who build applications on top of the model) with sufficient information to enable their own compliance.
 
@@ -213,11 +215,11 @@ GPAI model providers must provide downstream providers (who build applications o
 
 Describe any contractual or terms-of-service obligations placed on downstream providers to ensure responsible deployment:
 
-[Describe — e.g. prohibitions on high-risk use without additional safeguards, requirement to maintain acceptable use policies, etc.]
+[Describe, e.g. prohibitions on high-risk use without additional safeguards, requirement to maintain acceptable use policies, etc.]
 
 ---
 
-### A6 — Post-Training Safety Measures
+### A6: Post-Training Safety Measures
 
 | Measure | Implemented? | Description |
 |---|---|---|
@@ -230,11 +232,11 @@ Describe any contractual or terms-of-service obligations placed on downstream pr
 
 ---
 
-## PART B — Systemic Risk GPAI Model Documentation (Annex XII — Article 51 models only)
+## PART B: Systemic Risk GPAI Model Documentation (Annex XII: Article 51 models only)
 
 > Complete this section **only** if your model has training compute >10²⁵ FLOPs or has been designated as systemic risk by the EU AI Office under Article 51(2).
 
-### B1 — Systemic Risk Assessment
+### B1: Systemic Risk Assessment
 
 | Field | Entry |
 |---|---|
@@ -258,7 +260,7 @@ Assess the model's potential contribution to each systemic risk category:
 
 ---
 
-### B2 — Adversarial Testing / Red-Teaming (Article 55(1)(a))
+### B2: Adversarial Testing / Red-Teaming (Article 55(1)(a))
 
 Providers of systemic risk GPAI models must perform adversarial testing (red-teaming) to identify and mitigate systemic risks.
 
@@ -271,7 +273,7 @@ Providers of systemic risk GPAI models must perform adversarial testing (red-tea
 | Scope of red-teaming | |
 | Critical findings summary | |
 | Mitigations implemented | |
-| Follow-up red-team scheduled? | ☐ Yes — Date: / ☐ No |
+| Follow-up red-team scheduled? | ☐ Yes, Date: / ☐ No |
 
 Red-Team Exercise Log:
 
@@ -281,7 +283,7 @@ Red-Team Exercise Log:
 
 ---
 
-### B3 — Serious Incident Reporting (Article 55(1)(b))
+### B3: Serious Incident Reporting (Article 55(1)(b))
 
 Providers of systemic risk GPAI models must report serious incidents to the EU AI Office without undue delay.
 
@@ -302,7 +304,7 @@ Serious Incident Log:
 
 ---
 
-### B4 — Cybersecurity Measures (Article 55(1)(c))
+### B4: Cybersecurity Measures (Article 55(1)(c))
 
 | Measure | Implemented? | Description |
 |---|---|---|
@@ -316,7 +318,7 @@ Serious Incident Log:
 
 ---
 
-### B5 — Energy Efficiency Reporting (Article 55(1)(d))
+### B5: Energy Efficiency Reporting (Article 55(1)(d))
 
 | Field | Value |
 |---|---|
@@ -330,7 +332,7 @@ Serious Incident Log:
 
 ---
 
-### B6 — Codes of Practice (Article 56)
+### B6: Codes of Practice (Article 56)
 
 | Field | Entry |
 |---|---|
