@@ -1,8 +1,8 @@
-# /scripts — GRC Engineering Automation
+# /scripts: GRC Engineering Automation
 
-**Bridging EU AI Act Policy and Engineering** — turning regulatory requirements into executable, repeatable checks.
+**Bridging EU AI Act Policy and Engineering:** turning regulatory requirements into executable, repeatable checks.
 
-This folder contains automation scripts that operationalise EU AI Act compliance controls. Rather than treating the regulation as a static document exercise, these scripts enable continuous compliance monitoring — a core principle of GRC Engineering.
+This folder contains automation scripts that operationalise EU AI Act compliance controls. Rather than treating the regulation as a static document exercise, these scripts enable continuous compliance monitoring, a core principle of GRC Engineering.
 
 ## Scripts
 
@@ -11,7 +11,7 @@ This folder contains automation scripts that operationalise EU AI Act compliance
 | `risk_classifier.py` | Classifies AI systems by EU AI Act risk tier from a CSV inventory | Articles 5, 6, 50 |
 | `sample_ai_inventory.csv` | Sample 16-system AI inventory covering all risk tiers | Input for risk_classifier.py |
 | `sample_ai_inventory_TEMPLATE.csv` | Header-only template (with guidance comments) for your own inventory | Input template |
-| `test_risk_classifier.py` | Unit tests for the classifier (stdlib unittest) | — |
+| `test_risk_classifier.py` | Unit tests for the classifier (stdlib unittest) |, |
 
 ## risk_classifier.py
 
@@ -21,8 +21,8 @@ Reads a CSV inventory of AI systems and applies the EU AI Act's four-tier risk c
 
 | Risk Tier | Classification Logic | Key Obligations |
 |-----------|----------------------|-----------------|
-| **UNACCEPTABLE RISK** | Explicit `prohibited_practice` flag OR Article 5 keyword match | System banned — immediate action required |
-| **HIGH RISK** | Annex I safety component OR Annex III use case (unless an Art. 6(3) exclusion applies) | Full conformity obligations (Articles 9–17, 43–49) |
+| **UNACCEPTABLE RISK** | Explicit `prohibited_practice` flag OR Article 5 keyword match | System banned, immediate action required |
+| **HIGH RISK** | Annex I safety component OR Annex III use case (unless an Art. 6(3) exclusion applies) | Full conformity obligations (Articles 9-17, 43-49) |
 | **LIMITED RISK** | Transparency obligation or GPAI model | Disclosure obligations (Articles 50, 53) |
 | **MINIMAL RISK** | None of the above | Voluntary codes of conduct |
 
@@ -31,7 +31,7 @@ The script also:
 - Applies **Article 6(3) exclusion logic** to downgrade Annex III systems that qualify (with a documented-justification warning)
 - Lists the specific obligations triggered for each system
 - Saves a full classification report to file (txt, json, or csv)
-- **Exits with code 1** if any UNACCEPTABLE RISK (prohibited) systems are detected — enabling CI/CD pipeline enforcement
+- **Exits with code 1** if any UNACCEPTABLE RISK (prohibited) systems are detected, enabling CI/CD pipeline enforcement
 
 > **DISCLAIMER:** Classifier output is a **triage aid**, not a legal determination. Human compliance review is mandatory before acting on any classification.
 
@@ -70,7 +70,7 @@ Your inventory CSV must contain the following **required** columns:
 | `system_name` | System name | Text |
 | `owner` | Accountable team/person | Text |
 | `use_case_category` | Plain-text description of use case | Text (scanned for Article 5 keywords) |
-| `annex_iii_area` | Annex III area number (1–8) if applicable | 1 to 8 or blank |
+| `annex_iii_area` | Annex III area number (1-8) if applicable | 1 to 8 or blank |
 | `annex_i_product` | Is it a safety component of an Annex I product? | yes / no |
 | `transparency_obligation` | Does Article 50 apply (chatbot, deepfake, etc.)? | yes / no |
 | `gpai_model` | Is it a General-Purpose AI model? | yes / no |
@@ -158,8 +158,8 @@ python -m unittest discover -s scripts -p "test_*.py"
 | Article 6(3) exclusion logic | Article 6(3) | Downgrades qualifying Annex III systems, with justification warning |
 | Transparency obligation detection | Article 50 | Flags limited-risk disclosure requirements |
 | GPAI model identification | Article 53 | Surfaces GPAI-specific obligations |
-| Obligation list per system | Articles 9–17, 26, 27, 43–49, 72, 73 | Actionable compliance requirements |
-| CI/CD integration | — | Continuous compliance — not point-in-time |
+| Obligation list per system | Articles 9-17, 26, 27, 43-49, 72, 73 | Actionable compliance requirements |
+| CI/CD integration |, | Continuous compliance, not point-in-time |
 
 ---
 
