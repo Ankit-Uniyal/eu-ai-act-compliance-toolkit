@@ -234,6 +234,8 @@ CSV columns for complete classification:
 | exclusion_human_result | yes / no | Article 6(3)(b): improves result of prior human activity |
 | exclusion_no_individual | yes / no | Article 6(3)(c): detects patterns without influencing individuals |
 | exclusion_preparatory | yes / no | Article 6(3)(d): preparatory task only |
+| profiling | yes / no | Article 6(3) final subparagraph: profiling of natural persons — overrides any exclusion (always high-risk) |
+| gpai_systemic | yes / no | Article 55: GPAI model with systemic risk (> 10^25 FLOP or designated) — adds Art. 55 obligations |
 
 > **Important:** Classifier output is a triage aid. Human compliance review is mandatory before acting on any classification. The `--format json|csv` outputs and a CI exit-code gate (exit 1 on any banned system) were added in v2.1; GPAI is handled as a parallel regime in v2.2.
 
