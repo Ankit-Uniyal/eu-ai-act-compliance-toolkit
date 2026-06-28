@@ -1,4 +1,4 @@
-# 19 — Master Compliance Scorecard
+# 19: Master Compliance Scorecard
 
 **EU AI Act Reference:** All Articles
 **Applies to:** All organisations providing or deploying AI systems in the EU
@@ -13,7 +13,7 @@ This Master Compliance Scorecard provides a single consolidated view of your org
 - Prepare for regulatory review or audit
 - Identify priority actions based on risk tier and compliance deadline
 
-**How to use:** Complete the scorecard for each AI system in scope. Systems at different risk tiers will have different applicable requirements — the scorecard identifies N/A items automatically via the tier columns.
+**How to use:** Complete the scorecard for each AI system in scope. Systems at different risk tiers will have different applicable requirements, the scorecard identifies N/A items automatically via the tier columns.
 
 ## Document Control
 
@@ -29,7 +29,7 @@ This Master Compliance Scorecard provides a single consolidated view of your org
 
 ---
 
-## Part 1 — AI System Portfolio Summary
+## Part 1: AI System Portfolio Summary
 
 Complete one row per AI system identified in your AI System Register (Document 05).
 
@@ -41,14 +41,14 @@ Complete one row per AI system identified in your AI System Register (Document 0
 
 | Risk Tier | Count | % of Portfolio | Priority Level |
 |---|---|---|---|
-| Unacceptable (must be withdrawn) | | | CRITICAL — immediate action |
-| High Risk | | | HIGH — August 2026 / 2027 |
-| Limited Risk | | | MEDIUM — ongoing obligations |
-| Minimal Risk | | | LOW — voluntary only |
+| Unacceptable (must be withdrawn) | | | CRITICAL, immediate action |
+| High Risk | | | HIGH, August 2026 / 2027 |
+| Limited Risk | | | MEDIUM, ongoing obligations |
+| Minimal Risk | | | LOW, voluntary only |
 
 ---
 
-## Part 2 — Scorecard Scoring Guide
+## Part 2: Scorecard Scoring Guide
 
 Use the following status codes throughout the scorecard:
 
@@ -64,22 +64,22 @@ Priority codes:
 
 | Code | Meaning |
 |---|---|
-| P1 | Critical — blocks market placement or continued operation |
-| P2 | High — required before or immediately after market placement |
-| P3 | Medium — ongoing obligation; address within 90 days |
-| P4 | Low — best practice or periodic obligation |
+| P1 | Critical, blocks market placement or continued operation |
+| P2 | High, required before or immediately after market placement |
+| P3 | Medium, ongoing obligation; address within 90 days |
+| P4 | Low, best practice or periodic obligation |
 
 ---
 
-## Part 3 — Foundation: Risk Classification and Scoping
+## Part 3: Foundation: Risk Classification and Scoping
 
 **Applies to:** All organisations, all AI systems
-**Reference:** Document 01 — 01-RISK-CLASSIFICATION-GUIDE.md
+**Reference:** Document 01, 01-RISK-CLASSIFICATION-GUIDE.md
 
 | # | Requirement | Status | Priority | Evidence / Notes | Owner | Due Date |
 |---|---|---|---|---|---|---|
 | 1.1 | All AI systems identified and inventoried | | P1 | | | |
-| 1.2 | Each system assessed under Article 3(1) — is it an AI system? | | P1 | | | |
+| 1.2 | Each system assessed under Article 3(1), is it an AI system? | | P1 | | | |
 | 1.3 | Each system checked against Article 5 prohibited practices | | P1 | | | |
 | 1.4 | Each system assessed for Annex I high-risk (Article 6(1)) | | P1 | | | |
 | 1.5 | Each system assessed for Annex III high-risk (Article 6(2)) | | P1 | | | |
@@ -93,7 +93,7 @@ Priority codes:
 
 ---
 
-## Part 4 — High-Risk AI: Pre-Market Requirements
+## Part 4: High-Risk AI: Pre-Market Requirements
 
 **Applies to:** Providers of High-Risk AI Systems (all Annex I and Annex III systems)
 
@@ -184,7 +184,7 @@ Priority codes:
 
 ---
 
-## Part 5 — High-Risk AI: Conformity and Market Placement
+## Part 5: High-Risk AI: Conformity and Market Placement
 
 ### 5.1 Conformity Assessment (Articles 43-48)
 **Reference:** Document 02
@@ -226,7 +226,7 @@ Priority codes:
 
 ---
 
-## Part 6 — Deployer Obligations
+## Part 6: Deployer Obligations
 
 **Applies to:** Deployers of High-Risk AI Systems
 **Reference:** Document 10
@@ -246,7 +246,7 @@ Priority codes:
 
 ---
 
-## Part 7 — FRIA (Article 27)
+## Part 7: FRIA (Article 27)
 
 **Applies to:** Public sector deployers and private bodies providing public services in regulated sectors
 **Reference:** Document 03
@@ -254,7 +254,7 @@ Priority codes:
 | # | Requirement | Status | Priority | Evidence / Notes | Owner |
 |---|---|---|---|---|---|
 | 15.1 | FRIA scoping decision completed | | P1 | | |
-| 15.2 | FRIA mandatory — public body or public-service deployer | | P1 | N/A if not applicable | |
+| 15.2 | FRIA mandatory, public body or public-service deployer | | P1 | N/A if not applicable | |
 | 15.3 | FRIA completed before deployment | | P1 | | |
 | 15.4 | FRIA outcome: APPROVED / APPROVED WITH CONDITIONS / DEFERRED / REJECTED | | P1 | | |
 | 15.5 | Conditions / mitigations from FRIA implemented | | P1 | | |
@@ -264,7 +264,7 @@ Priority codes:
 
 ---
 
-## Part 8 — Limited Risk: Transparency Obligations (Article 50)
+## Part 8: Limited Risk: Transparency Obligations (Article 50)
 
 **Applies to:** All providers/deployers of chatbots, deepfake AI, emotion recognition, GPAI
 **Reference:** Document 06
@@ -280,7 +280,7 @@ Priority codes:
 
 ---
 
-## Part 9 — GPAI Model Obligations (Articles 51-56)
+## Part 9: GPAI Model Obligations (Articles 51-56)
 
 **Applies to:** Providers of GPAI models (foundation models, LLMs)
 **Reference:** Document 11
@@ -300,7 +300,7 @@ Priority codes:
 
 ---
 
-## Part 10 — Ongoing Obligations: Post-Market and Incidents
+## Part 10: Ongoing Obligations: Post-Market and Incidents
 
 **Applies to:** Providers of High-Risk AI Systems (ongoing)
 
@@ -318,7 +318,7 @@ Priority codes:
 
 ---
 
-## Part 11 — Supply Chain: Non-EU Providers, Importers, Distributors
+## Part 11: Supply Chain: Non-EU Providers, Importers, Distributors
 
 **Reference:** Documents 13, 14, 15
 
@@ -334,7 +334,7 @@ Priority codes:
 
 ---
 
-## Part 12 — AI Literacy and Competency (Article 4)
+## Part 12: AI Literacy and Competency (Article 4)
 
 **Applies to:** All providers and deployers
 **Reference:** Document 17
@@ -351,7 +351,7 @@ Priority codes:
 
 ---
 
-## Part 13 — GDPR and AI Act Joint Compliance
+## Part 13: GDPR and AI Act Joint Compliance
 
 **Applies to:** All organisations processing personal data in AI systems
 **Reference:** Document 18
@@ -371,7 +371,7 @@ Priority codes:
 
 ---
 
-## Part 14 — Consolidated Gap Summary
+## Part 14: Consolidated Gap Summary
 
 After completing all sections, summarise your compliance position here.
 
@@ -381,17 +381,17 @@ After completing all sections, summarise your compliance position here.
 
 | Section | Total Items | DONE | IN PROGRESS | GAP | N/A | % Complete |
 |---|---|---|---|---|---|---|
-| 3 — Risk Classification | 10 | | | | | |
-| 4 — Pre-Market (High Risk) | 35 | | | | | |
-| 5 — Conformity and Placement | 12 | | | | | |
-| 6 — Deployer Obligations | 8 | | | | | |
-| 7 — FRIA | 6 | | | | | |
-| 8 — Limited Risk Transparency | 4 | | | | | |
-| 9 — GPAI | 8 | | | | | |
-| 10 — Post-Market and Incidents | 7 | | | | | |
-| 11 — Supply Chain | 5 | | | | | |
-| 12 — AI Literacy | 5 | | | | | |
-| 13 — GDPR Intersection | 8 | | | | | |
+| 3, Risk Classification | 10 | | | | | |
+| 4, Pre-Market (High Risk) | 35 | | | | | |
+| 5, Conformity and Placement | 12 | | | | | |
+| 6, Deployer Obligations | 8 | | | | | |
+| 7, FRIA | 6 | | | | | |
+| 8, Limited Risk Transparency | 4 | | | | | |
+| 9, GPAI | 8 | | | | | |
+| 10, Post-Market and Incidents | 7 | | | | | |
+| 11, Supply Chain | 5 | | | | | |
+| 12, AI Literacy | 5 | | | | | |
+| 13, GDPR Intersection | 8 | | | | | |
 | **TOTAL** | **118** | | | | | |
 
 ### 14.2 P1 Critical Gaps (Action Required Before Market Placement)
@@ -414,7 +414,7 @@ After completing all sections, summarise your compliance position here.
 
 ---
 
-## Part 15 — Executive Summary Dashboard
+## Part 15: Executive Summary Dashboard
 
 Designed for presentation to senior leadership and the board:
 
@@ -446,7 +446,7 @@ Designed for presentation to senior leadership and the board:
 
 ---
 
-## Part 16 — Scorecard Review History
+## Part 16: Scorecard Review History
 
 | Version | Date | Scored By | Key Findings | Approved By |
 |---|---|---|---|---|
