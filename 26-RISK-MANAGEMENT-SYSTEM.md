@@ -1,4 +1,4 @@
-# 26 — Article 9 Risk Management System Template
+# 26: Article 9 Risk Management System Template
 ## EU AI Act Compliance Toolkit | v3.2.0 | April 2026
 ### Regulatory Reference: Article 9 | Applicable to: All High-Risk AI Systems (Article 6 + Annex I/III)
 
@@ -6,7 +6,7 @@
 
 ## Purpose and Scope
 
-This document is a **standalone Risk Management System (RMS) template** for high-risk AI systems under Article 9 of Regulation (EU) 2024/1689. The RMS is a **mandatory, continuous, iterative process** that must be established, implemented, documented, and maintained throughout the entire lifecycle of the system — from design through decommissioning.
+This document is a **standalone Risk Management System (RMS) template** for high-risk AI systems under Article 9 of Regulation (EU) 2024/1689. The RMS is a **mandatory, continuous, iterative process** that must be established, implemented, documented, and maintained throughout the entire lifecycle of the system, from design through decommissioning.
 
 **Critical distinction from the Quality Management System (Doc 16):** The QMS (Article 17) governs organisational processes and procedures. The RMS (Article 9) governs system-level risk identification, estimation, evaluation, and mitigation. Both are required. Both must be documented separately for Notified Body review.
 
@@ -15,12 +15,12 @@ This document is a **standalone Risk Management System (RMS) template** for high
 **This template is distinct from:**
 - Doc 02: Conformity Assessment Checklist (covers all conformity obligations, not just risk management)
 - Doc 03: FRIA (focuses on fundamental rights, not technical risks)
-- Doc 04: Technical Documentation (Annex IV — RMS evidence is submitted as part of technical docs)
+- Doc 04: Technical Documentation (Annex IV, RMS evidence is submitted as part of technical docs)
 - Doc 09: Post-Market Monitoring Plan (ongoing monitoring feeds into the RMS but is a separate obligation)
 
 ---
 
-## RMS Overview — The Article 9 Cycle
+## RMS Overview: The Article 9 Cycle
 
 Article 9 requires a risk management process consisting of the following steps, which must operate as a continuous loop throughout the system lifecycle:
 
@@ -38,7 +38,7 @@ All steps must be documented. The RMS record forms part of the technical documen
 
 ---
 
-## Part 1 — RMS Establishment and Governance
+## Part 1: RMS Establishment and Governance
 
 ### 1.1 System Identification
 
@@ -46,7 +46,7 @@ All steps must be documented. The RMS record forms part of the technical documen
 |---|---|
 | AI system name | |
 | Version / build | |
-| Annex I/III category | (e.g., Annex III, Area 4 — Employment: CV screening) |
+| Annex I/III category | (e.g., Annex III, Area 4, Employment: CV screening) |
 | Provider organisation | |
 | RMS Owner (name and role) | |
 | RMS Establishment Date | |
@@ -86,7 +86,7 @@ _______________________________________________
 
 ---
 
-## Part 2 — Step 1: Known and Foreseeable Risk Identification
+## Part 2: Step 1: Known and Foreseeable Risk Identification
 
 **Article 9(2)(a)** requires identification of risks the AI system can pose to health, safety, and fundamental rights considering its intended purpose **and** reasonably foreseeable misuse.
 
@@ -94,7 +94,7 @@ _______________________________________________
 
 For each risk category below, document identified risks specific to this system:
 
-#### Category A — Technical Performance Risks
+#### Category A: Technical Performance Risks
 
 | Risk ID | Risk Description | Trigger Scenario | Affected Persons |
 |---|---|---|---|
@@ -104,7 +104,7 @@ For each risk category below, document identified risks specific to this system:
 | A-004 | Failure under distribution shift (real-world data differs from training data) | | |
 | A-005 | [Add system-specific technical risk] | | |
 
-#### Category B — Data and Bias Risks
+#### Category B: Data and Bias Risks
 
 | Risk ID | Risk Description | Trigger Scenario | Affected Persons |
 |---|---|---|---|
@@ -114,17 +114,17 @@ For each risk category below, document identified risks specific to this system:
 | B-004 | Personal data leakage through model outputs (memorisation) | | |
 | B-005 | [Add system-specific data risk] | | |
 
-#### Category C — Human Oversight Risks
+#### Category C: Human Oversight Risks
 
 | Risk ID | Risk Description | Trigger Scenario | Affected Persons |
 |---|---|---|---|
-| C-001 | Automation bias — operators over-relying on AI output | | |
+| C-001 | Automation bias, operators over-relying on AI output | | |
 | C-002 | Insufficient operator training to identify errors | | |
 | C-003 | Override mechanism not used due to time pressure | | |
 | C-004 | High workload reducing effective oversight | | |
 | C-005 | [Add system-specific oversight risk] | | |
 
-#### Category D — Security and Adversarial Risks
+#### Category D: Security and Adversarial Risks
 
 | Risk ID | Risk Description | Trigger Scenario | Affected Persons |
 |---|---|---|---|
@@ -134,7 +134,7 @@ For each risk category below, document identified risks specific to this system:
 | D-004 | Prompt injection (for LLM-based components) | | |
 | D-005 | [Add system-specific security risk] | | |
 
-#### Category E — Fundamental Rights Risks
+#### Category E: Fundamental Rights Risks
 
 | Risk ID | Risk Description | Trigger Scenario | Affected Persons |
 |---|---|---|---|
@@ -144,7 +144,7 @@ For each risk category below, document identified risks specific to this system:
 | E-004 | Unjustified restriction of access to services or opportunities | | |
 | E-005 | [Add system-specific rights risk] | | |
 
-#### Category F — Operational and Deployment Risks
+#### Category F: Operational and Deployment Risks
 
 | Risk ID | Risk Description | Trigger Scenario | Affected Persons |
 |---|---|---|---|
@@ -168,7 +168,7 @@ For each risk category below, document identified risks specific to this system:
 
 ---
 
-## Part 3 — Step 2: Risk Estimation
+## Part 3: Step 2: Risk Estimation
 
 **Article 9(2)(b)** requires estimation of the severity and likelihood of each identified risk, informed by the nature of the AI system, the severity of potential harm, the number of persons potentially affected, and the reversibility of harm.
 
@@ -204,14 +204,14 @@ For each risk category below, document identified risks specific to this system:
 | Large | 4 | Affects 10,000-1,000,000 persons |
 | Widespread | 5 | Affects over 1,000,000 persons or a protected group systemically |
 
-**Risk Score = Likelihood × Severity**
-**Risk Priority Score = Likelihood × Severity × Breadth**
+**Risk Score = Likelihood x Severity**
+**Risk Priority Score = Likelihood x Severity x Breadth**
 
 ### 3.2 Risk Register
 
 Complete for all risks identified in Part 2:
 
-| Risk ID | Risk Description | Likelihood (1-5) | Severity (1-5) | Breadth (1-5) | Risk Score (L×S) | Priority Score (L×S×B) | Inherent Risk Level | Treatment Required |
+| Risk ID | Risk Description | Likelihood (1-5) | Severity (1-5) | Breadth (1-5) | Risk Score (LxS) | Priority Score (LxSxB) | Inherent Risk Level | Treatment Required |
 |---|---|---|---|---|---|---|---|---|
 | A-001 | | | | | | | ☐ Low ☐ Med ☐ High ☐ Critical | ☐ YES ☐ NO |
 | A-002 | | | | | | | ☐ Low ☐ Med ☐ High ☐ Critical | ☐ YES ☐ NO |
@@ -242,7 +242,7 @@ Complete for all risks identified in Part 2:
 
 ---
 
-## Part 4 — Step 3: Risk Evaluation Against Acceptable Thresholds
+## Part 4: Step 3: Risk Evaluation Against Acceptable Thresholds
 
 **Article 9(4)** requires that the risk management measures result in residual risks being judged acceptable, considering the generally acknowledged state of the art and the specific benefits of the AI system.
 
@@ -269,7 +269,7 @@ For each risk assessed as Medium or above, document the evaluation decision:
 
 ---
 
-## Part 5 — Step 4: Risk Treatment Measures
+## Part 5: Step 4: Risk Treatment Measures
 
 **Article 9(2)(c)** requires adoption of appropriate risk management measures. **Article 9(3)** specifies that where feasible, technical measures should be addressed during design and development before information and training measures.
 
@@ -350,7 +350,7 @@ Use these as starting points when developing treatment plans:
 
 ---
 
-## Part 6 — Step 5: Residual Risk Assessment and Acceptance
+## Part 6: Step 5: Residual Risk Assessment and Acceptance
 
 **Article 9(4)** requires that residual risks remaining after treatment be judged acceptable.
 
@@ -368,7 +368,7 @@ Use these as starting points when developing treatment plans:
 
 Provide an overall narrative assessment of residual risk in the context of Article 9(4):
 
-*Considering the nature, context, and intended purpose of the [system name], and the benefits provided by this system, the aggregate residual risk — following application of all treatment measures documented above — is judged to be [acceptable / not yet acceptable] because:*
+*Considering the nature, context, and intended purpose of the [system name], and the benefits provided by this system, the aggregate residual risk, following application of all treatment measures documented above, is judged to be [acceptable / not yet acceptable] because:*
 
 _______________________________________________
 _______________________________________________
@@ -385,9 +385,9 @@ _______________________________________________
 
 ---
 
-## Part 7 — Step 6: Testing and Validation
+## Part 7: Step 6: Testing and Validation
 
-**Article 9(5)–(9)** imposes specific requirements on testing, including testing prior to placement on the market, testing on real-world conditions where possible (Article 9(6)), and testing for bias (Article 9(7)).
+**Article 9(5)-(9)** imposes specific requirements on testing, including testing prior to placement on the market, testing on real-world conditions where possible (Article 9(6)), and testing for bias (Article 9(7)).
 
 ### 7.1 Pre-Market Testing Requirements
 
@@ -411,7 +411,7 @@ _______________________________________________
 | Disability status | | | | | ☐ YES ☐ NO |
 | [Other relevant characteristic] | | | | | ☐ YES ☐ NO |
 
-### 7.3 Testing Against Article 9(8) — Real-World Performance Thresholds
+### 7.3 Testing Against Article 9(8): Real-World Performance Thresholds
 
 Article 9(8) requires that the level of accuracy, robustness, and cybersecurity against which the high-risk AI system has been tested and the limits of accuracy are described in the accompanying documentation.
 
@@ -427,7 +427,7 @@ Article 9(8) requires that the level of accuracy, robustness, and cybersecurity 
 
 ---
 
-## Part 8 — Step 7: Post-Market Monitoring Integration
+## Part 8: Step 7: Post-Market Monitoring Integration
 
 **Article 9(2)(d)** requires that the risk management system be updated based on data gathered from post-market monitoring. This section links the RMS to Doc 09 (Post-Market Monitoring Plan).
 
@@ -454,7 +454,7 @@ The RMS must be reviewed and updated when any of the following occur:
 
 ---
 
-## Part 9 — RMS Summary and Conformity Statement
+## Part 9: RMS Summary and Conformity Statement
 
 ### 9.1 RMS Completeness Checklist
 
@@ -478,11 +478,11 @@ This RMS, when complete, must be incorporated into or referenced from the Techni
 
 | Technical Documentation Section (Annex IV) | RMS Content Referenced | Complete? |
 |---|---|---|
-| Annex IV, §1 — General description (capabilities and limitations) | Part 2 risk register — limitations | ☐ |
-| Annex IV, §2 — Detailed description (technical specs) | Part 7.3 performance thresholds | ☐ |
-| Annex IV, §4 — Validation and testing | Part 7 testing records | ☐ |
-| Annex IV, §6 — Risk management system description | This document (Part 1 + Part 9) | ☐ |
-| Annex IV, §8 — Instructions for use | Part 5 operational treatment measures | ☐ |
+| Annex IV, §1, General description (capabilities and limitations) | Part 2 risk register, limitations | ☐ |
+| Annex IV, §2, Detailed description (technical specs) | Part 7.3 performance thresholds | ☐ |
+| Annex IV, §4, Validation and testing | Part 7 testing records | ☐ |
+| Annex IV, §6, Risk management system description | This document (Part 1 + Part 9) | ☐ |
+| Annex IV, §8, Instructions for use | Part 5 operational treatment measures | ☐ |
 
 ### 9.3 RMS Sign-Off
 
@@ -491,7 +491,7 @@ This RMS, when complete, must be incorporated into or referenced from the Techni
 | RMS Version | |
 | Date of approval | |
 | Next scheduled review date | |
-| Conformity status | ☐ Compliant with Art. 9 ☐ Partially compliant — open actions remain ☐ Non-compliant — do not deploy |
+| Conformity status | ☐ Compliant with Art. 9 ☐ Partially compliant, open actions remain ☐ Non-compliant, do not deploy |
 
 | Role | Name | Date | Signature |
 |---|---|---|---|
@@ -506,7 +506,7 @@ This RMS, when complete, must be incorporated into or referenced from the Techni
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.0 | April 2026 | Initial release — complete Article 9 RMS framework | Toolkit Team |
+| 1.0 | April 2026 | Initial release, complete Article 9 RMS framework | Toolkit Team |
 
 ---
 
