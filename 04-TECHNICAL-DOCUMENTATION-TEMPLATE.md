@@ -1,4 +1,4 @@
-# 04 — Technical Documentation Template (Annex IV)
+# 04: Technical Documentation Template (Annex IV)
 
 **EU AI Act Reference:** Article 11 | Annex IV
 **Applies to:** Providers of High-Risk AI Systems
@@ -11,11 +11,13 @@ Article 11 requires providers of high-risk AI systems to draw up technical docum
 
 This template follows the structure prescribed in **Annex IV** of the EU AI Act.
 
+> **Tip:** to draft the model documentation interactively, try the [AI Model Card Whiteboard](https://ai-modelcard-whiteboard.lovable.app). It walks you through each section and exports to PDF, which you can then fold into the Annex IV structure below.
+
 ## Document Control
 
 | Field | Entry |
 |---|---|
-| Document Title | Technical Documentation — [System Name] |
+| Document Title | Technical Documentation, [System Name] |
 | System ID | |
 | Version | |
 | Classification | CONFIDENTIAL / RESTRICTED |
@@ -27,7 +29,7 @@ This template follows the structure prescribed in **Annex IV** of the EU AI Act.
 
 ---
 
-## Annex IV, Section 1 — General Description
+## Annex IV, Section 1: General Description
 
 ### 1.1 Intended Purpose
 
@@ -66,7 +68,7 @@ Provide the instructions for use, including: a concise general description of th
 
 ---
 
-## Annex IV, Section 2 — Detailed Description of Elements
+## Annex IV, Section 2: Detailed Description of Elements
 
 ### 2.1 Methods and Steps for System Development
 
@@ -113,7 +115,7 @@ Provide an architectural diagram or description showing all components and their
 | Personal data included? | Yes / No |
 | Special category data? | Yes / No |
 | Data governance measures | |
-| Bias assessment conducted? | Yes / No — Reference: |
+| Bias assessment conducted? | Yes / No, Reference: |
 
 **Validation Data**
 
@@ -157,7 +159,7 @@ Describe the data labelling procedures and any annotation instructions used.
 
 ---
 
-## Annex IV, Section 3 — Monitoring, Functioning, and Control
+## Annex IV, Section 3: Monitoring, Functioning, and Control
 
 ### 3.1 Capabilities and Limitations
 
@@ -194,7 +196,7 @@ Describe the measures put in place to enable humans to oversee the AI system, in
 
 ---
 
-## Annex IV, Section 4 — Risk Management
+## Annex IV, Section 4: Risk Management
 
 ### 4.1 Risk Management System Overview
 
@@ -213,7 +215,7 @@ Describe the measures implemented to address cybersecurity risks, including resi
 
 ---
 
-## Annex IV, Section 5 — Changes Made Over Lifecycle
+## Annex IV, Section 5: Changes Made Over Lifecycle
 
 | Version | Date | Changes Made | Change Reason | Approved By |
 |---|---|---|---|---|
@@ -221,7 +223,7 @@ Describe the measures implemented to address cybersecurity risks, including resi
 
 ---
 
-## Annex IV, Section 6 — Standards Applied
+## Annex IV, Section 6: Standards Applied
 
 | Standard | Version | Scope of Application |
 |---|---|---|
@@ -232,7 +234,7 @@ Describe the measures implemented to address cybersecurity risks, including resi
 
 ---
 
-## Annex IV, Section 7 — EU Declaration of Conformity
+## Annex IV, Section 7: EU Declaration of Conformity
 
 Reference or attach the EU Declaration of Conformity drawn up in accordance with Article 47.
 
@@ -243,7 +245,7 @@ Reference or attach the EU Declaration of Conformity drawn up in accordance with
 
 ---
 
-## Annex IV, Section 8 — Post-Market Monitoring
+## Annex IV, Section 8: Post-Market Monitoring
 
 Article 72 of the EU AI Act requires providers of high-risk AI systems to establish a post-market monitoring system proportionate to the nature of the AI technology and its risks. This section of the technical documentation must describe that system.
 
@@ -298,12 +300,12 @@ A reactive review of the AI system's performance must be triggered upon any of t
 
 If PMM identifies that the system no longer meets requirements, the provider must:
 
-1. **Classify severity** — minor, moderate, or critical
-2. **Notify deployers** — provide guidance without undue delay
-3. **Assess notifiable incident** — determine if Article 73 serious incident reporting applies
-4. **Implement corrective action** — software update, additional instructions, or market withdrawal
-5. **Update documentation** — revise technical documentation, risk register, and instructions for use
-6. **Assess substantial modification** — determine if a new conformity assessment is required under Article 25
+1. **Classify severity:** minor, moderate, or critical
+2. **Notify deployers:** provide guidance without undue delay
+3. **Assess notifiable incident:** determine if Article 73 serious incident reporting applies
+4. **Implement corrective action:** software update, additional instructions, or market withdrawal
+5. **Update documentation:** revise technical documentation, risk register, and instructions for use
+6. **Assess substantial modification:** determine if a new conformity assessment is required under Article 25
 
 ### 8.6 PMM Record-Keeping
 
