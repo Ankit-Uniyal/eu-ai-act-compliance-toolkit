@@ -1,25 +1,27 @@
-# 27 — GPAI Systemic Risk Compliance Guide
+# 27: GPAI Systemic Risk Compliance Guide
 ## EU AI Act Compliance Toolkit | v3.2.0 | April 2026
-### Regulatory Reference: Articles 51, 53–56, 88–94, Annex XIII | Applicable from: 2 August 2025
+### Regulatory Reference: Articles 51, 53-56, 88-94, Annex XIII | Applicable from: 2 August 2025
 
 ---
 
 ## Purpose and Scope
 
-This document addresses the **systemic risk obligations** that apply to providers of General-Purpose AI (GPAI) models that have been designated as posing **systemic risk** under Articles 51 and 55 of Regulation (EU) 2024/1689, together with the EU-level supervision and enforcement powers in Articles 88–94.
+This document addresses the **systemic risk obligations** that apply to providers of General-Purpose AI (GPAI) models that have been designated as posing **systemic risk** under Articles 51 and 55 of Regulation (EU) 2024/1689, together with the EU-level supervision and enforcement powers in Articles 88-94.
 
-**This document supplements Doc 11 (GPAI Technical Documentation).** Doc 11 covers the baseline obligations for all GPAI model providers (Articles 53–54). This document addresses the **additional, elevated obligations** triggered only when a GPAI model meets the systemic risk threshold.
+> **Tip:** the Safety and Security chapter of the EU AI Office's [GPAI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai) sets out state-of-the-art practices for managing systemic risk, and is the endorsed way to show compliance with Article 55.
+
+**This document supplements Doc 11 (GPAI Technical Documentation).** Doc 11 covers the baseline obligations for all GPAI model providers (Articles 53-54). This document addresses the **additional, elevated obligations** triggered only when a GPAI model meets the systemic risk threshold.
 
 **Relationship to other documents:**
 - Doc 11: All GPAI baseline obligations (training data, model card, transparency, copyright policy, energy/compute documentation, incidents)
-- Doc 27 (this document): Systemic risk-specific obligations (Art. 55) — model evaluation/adversarial testing, systemic-risk assessment & mitigation, enhanced incident reporting, cybersecurity — plus EU supervision/enforcement (Arts. 88–94)
+- Doc 27 (this document): Systemic risk-specific obligations (Art. 55), model evaluation/adversarial testing, systemic-risk assessment & mitigation, enhanced incident reporting, cybersecurity, plus EU supervision/enforcement (Arts. 88-94)
 - Doc 08: Incident reporting procedure (Art. 73 applies to high-risk AI systems; Art. 55(1)(c) imposes a distinct serious-incident tracking/reporting duty on systemic-risk GPAI providers to the AI Office)
 
-> **Note on article mapping (corrected in v3.2.x):** In Regulation (EU) 2024/1689, **Article 56 is "Codes of practice"** — it is *not* the source of the AI Office's investigatory and corrective powers. Those powers sit in **Chapter IX, Section 5 — Articles 88–94**: Art. 88 (enforcement of GPAI obligations), Art. 91 (power to request documentation and information), Art. 92 (power to conduct evaluations), and Art. 93 (power to request measures). This document cites those articles accordingly.
+> **Note on article mapping (corrected in v3.2.x):** In Regulation (EU) 2024/1689, **Article 56 is "Codes of practice":** it is *not* the source of the AI Office's investigatory and corrective powers. Those powers sit in **Chapter IX, Section 5, Articles 88-94**: Art. 88 (enforcement of GPAI obligations), Art. 91 (power to request documentation and information), Art. 92 (power to conduct evaluations), and Art. 93 (power to request measures). This document cites those articles accordingly.
 
 ---
 
-## Part 1 — Systemic Risk Classification
+## Part 1: Systemic Risk Classification
 
 ### 1.1 What is a GPAI Model with Systemic Risk?
 
@@ -30,7 +32,7 @@ A GPAI model is classified as having **systemic risk** when it meets one or more
 | **High-impact capabilities / training compute** | A GPAI model is presumed to have high-impact capabilities where the cumulative compute used for its training, measured in floating point operations (FLOP), is greater than **10²⁵** | Art. 51(1)(a) + Art. 51(2) |
 | **Commission designation** | The Commission, ex officio or following a qualified alert from the scientific panel, designates the model as having high-impact capabilities / systemic risk based on the criteria in Annex XIII | Art. 51(1)(b) |
 
-**Note on the compute threshold:** The 10²⁵ FLOP figure is a **rebuttable presumption** (Art. 51(2)). A provider whose model meets the threshold may submit arguments that, exceptionally, the model does not present systemic risks; the Commission decides (Art. 52(2)–(3)).
+**Note on the compute threshold:** The 10²⁵ FLOP figure is a **rebuttable presumption** (Art. 51(2)). A provider whose model meets the threshold may submit arguments that, exceptionally, the model does not present systemic risks; the Commission decides (Art. 52(2)-(3)).
 
 **Note on designation:** The Commission may designate models based on the criteria in **Annex XIII**, including: number of parameters, dataset size/quality, compute, input/output modalities, benchmarks and capabilities, degree of autonomy and scalability, and reach (e.g. number of registered EU business/end users).
 
@@ -42,7 +44,7 @@ A GPAI model is classified as having **systemic risk** when it meets one or more
 | Model version | |
 | Training compute (estimated FLOP) | |
 | Compute threshold met (> 10²⁵ FLOP)? | ☐ YES ☐ NO ☐ UNCERTAIN |
-| Commission designation received? | ☐ YES ☐ NO — If YES, date: |
+| Commission designation received? | ☐ YES ☐ NO, If YES, date: |
 | Systemic risk classification confirmed? | ☐ YES ☐ NO ☐ PENDING |
 
 **If Systemic Risk = NO:** Use Doc 11 only. Do not proceed with this document.
@@ -64,16 +66,16 @@ If the compute threshold is met but you believe the model does not pose systemic
 
 ---
 
-## Part 2 — Article 55 Obligations: Mandatory Systemic Risk Measures
+## Part 2: Article 55 Obligations: Mandatory Systemic Risk Measures
 
-Article 55(1) imposes four mandatory obligations on providers of GPAI models with systemic risk, **in addition** to the Article 53–54 baseline obligations:
+Article 55(1) imposes four mandatory obligations on providers of GPAI models with systemic risk, **in addition** to the Article 53-54 baseline obligations:
 
-- **Art. 55(1)(a)** — perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting **adversarial testing** to identify and mitigate systemic risks;
-- **Art. 55(1)(b)** — **assess and mitigate** possible systemic risks at Union level, including their sources;
-- **Art. 55(1)(c)** — keep track of, document and **report serious incidents** and possible corrective measures, without undue delay, to the AI Office and, as appropriate, national competent authorities;
-- **Art. 55(1)(d)** — ensure an adequate level of **cybersecurity** protection for the model and its physical infrastructure.
+- **Art. 55(1)(a):** perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting **adversarial testing** to identify and mitigate systemic risks;
+- **Art. 55(1)(b):** **assess and mitigate** possible systemic risks at Union level, including their sources;
+- **Art. 55(1)(c):** keep track of, document and **report serious incidents** and possible corrective measures, without undue delay, to the AI Office and, as appropriate, national competent authorities;
+- **Art. 55(1)(d):** ensure an adequate level of **cybersecurity** protection for the model and its physical infrastructure.
 
-### 2.1 Obligation 1 — Model Evaluation and Adversarial Testing (Red-Teaming)
+### 2.1 Obligation 1: Model Evaluation and Adversarial Testing (Red-Teaming)
 **Article 55(1)(a) | Annex XIII**
 
 #### 2.1.1 What is Required
@@ -87,7 +89,7 @@ Providers must conduct **model evaluations in accordance with standardised proto
 | Red-team exercise name/ID | |
 | Model version tested | |
 | Testing organisation (internal/external/both) | |
-| External red-team engaged? | ☐ YES ☐ NO — Name: |
+| External red-team engaged? | ☐ YES ☐ NO, Name: |
 | Date of testing | |
 | Next scheduled testing | |
 
@@ -97,14 +99,14 @@ The following risk areas should be covered in adversarial testing for systemic r
 
 | Risk Domain | Test Scenarios Developed | Tests Executed | Critical Findings | Mitigated? |
 |---|---|---|---|---|
-| **CBRN uplift** — Does the model provide meaningful technical uplift to development of chemical, biological, radiological, or nuclear weapons? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
-| **Cyberoffensive capabilities** — Can the model generate functional exploit code, malware, or novel cyberattack techniques? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
-| **Critical infrastructure attack** — Can the model provide actionable guidance on attacking power grids, water systems, financial infrastructure, transport networks? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
-| **Disinformation at scale** — Can the model generate highly convincing, scalable disinformation including synthetic media (deepfakes, fake news, fabricated evidence)? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
-| **Autonomous harmful action** — Can the model act autonomously in ways that could cause serious, widespread harm without human oversight? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
-| **Safety bypass** — Can the model be jailbroken, manipulated, or fine-tuned to circumvent safety measures? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
-| **Bias and discrimination at scale** — Does the model systematically generate biased, discriminatory, or harmful content about protected groups? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
-| **Privacy violation at scale** — Does the model memorise, reproduce, or enable inference of personal data at scale? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
+| **CBRN uplift:** Does the model provide meaningful technical uplift to development of chemical, biological, radiological, or nuclear weapons? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
+| **Cyberoffensive capabilities:** Can the model generate functional exploit code, malware, or novel cyberattack techniques? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
+| **Critical infrastructure attack:** Can the model provide actionable guidance on attacking power grids, water systems, financial infrastructure, transport networks? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
+| **Disinformation at scale:** Can the model generate highly convincing, scalable disinformation including synthetic media (deepfakes, fake news, fabricated evidence)? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
+| **Autonomous harmful action:** Can the model act autonomously in ways that could cause serious, widespread harm without human oversight? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
+| **Safety bypass:** Can the model be jailbroken, manipulated, or fine-tuned to circumvent safety measures? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
+| **Bias and discrimination at scale:** Does the model systematically generate biased, discriminatory, or harmful content about protected groups? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
+| **Privacy violation at scale:** Does the model memorise, reproduce, or enable inference of personal data at scale? | ☐ YES ☐ NO | ☐ YES ☐ NO | | ☐ YES ☐ N/A |
 
 #### 2.1.4 Red-Team Findings Summary
 
@@ -124,10 +126,10 @@ The following risk areas should be covered in adversarial testing for systemic r
 
 ---
 
-### 2.2 Obligation 2 — Systemic Risk Assessment and Mitigation
+### 2.2 Obligation 2: Systemic Risk Assessment and Mitigation
 **Article 55(1)(b)**
 
-Providers must assess and mitigate possible systemic risks at Union level — including their sources — that may stem from the development, the placing on the market, or the use of the model.
+Providers must assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of the model.
 
 | Step | Action | Status |
 |---|---|---|
@@ -139,7 +141,7 @@ Providers must assess and mitigate possible systemic risks at Union level — in
 
 ---
 
-### 2.3 Obligation 3 — Serious Incident Reporting to the AI Office
+### 2.3 Obligation 3: Serious Incident Reporting to the AI Office
 **Article 55(1)(c)**
 
 Providers of systemic-risk GPAI models must keep track of, document and **report, without undue delay, to the AI Office** (and, as appropriate, national competent authorities) relevant information about serious incidents and possible corrective measures.
@@ -148,12 +150,12 @@ Providers of systemic-risk GPAI models must keep track of, document and **report
 
 #### 2.3.1 Standard vs. Enhanced Obligations
 
-| Obligation | All GPAI Providers (Arts. 53–54) | Systemic Risk GPAI Providers (Art. 55) |
+| Obligation | All GPAI Providers (Arts. 53-54) | Systemic Risk GPAI Providers (Art. 55) |
 |---|---|---|
-| Track and report serious incidents to the AI Office, without undue delay | Not a standalone Art. 53 duty | ☐ Required — Art. 55(1)(c) |
-| Document possible corrective measures | — | ☐ Required — Art. 55(1)(c) |
-| Cooperate with the Commission / AI Office (documentation, evaluations, measures) | ☐ Required (Arts. 91–93) | ☐ Required (enhanced) |
-| Provide model documentation/access to the AI Office on request | Arts. 91–92 | Arts. 91–92 (enhanced) |
+| Track and report serious incidents to the AI Office, without undue delay | Not a standalone Art. 53 duty | ☐ Required, Art. 55(1)(c) |
+| Document possible corrective measures |, | ☐ Required, Art. 55(1)(c) |
+| Cooperate with the Commission / AI Office (documentation, evaluations, measures) | ☐ Required (Arts. 91-93) | ☐ Required (enhanced) |
+| Provide model documentation/access to the AI Office on request | Arts. 91-92 | Arts. 91-92 (enhanced) |
 
 #### 2.3.2 Systemic Risk Incident Categories
 
@@ -177,7 +179,7 @@ For systemic risk GPAI models, the following constitute reportable incidents (re
 
 ---
 
-### 2.4 Obligation 4 — Cybersecurity Protection
+### 2.4 Obligation 4: Cybersecurity Protection
 **Article 55(1)(d)**
 
 Providers of systemic risk GPAI models must ensure an **adequate level of cybersecurity protection** for the model and its physical infrastructure across the model lifecycle (including protection against model weight exfiltration, unauthorised access, and tampering).
@@ -221,11 +223,11 @@ Providers of systemic risk GPAI models must ensure an **adequate level of cybers
 
 ---
 
-## Part 3 — EU Supervision and Enforcement (Articles 88–94)
+## Part 3: EU Supervision and Enforcement (Articles 88-94)
 
 The Commission has **exclusive powers** to supervise and enforce the GPAI obligations of Chapter V (Art. 88). The AI Office acts on the Commission's behalf. Providers must cooperate with the following powers.
 
-### 3.1 AI Office / Commission Powers — Awareness Checklist
+### 3.1 AI Office / Commission Powers: Awareness Checklist
 
 | Power | Article | Provider Obligation |
 |---|---|---|
@@ -235,7 +237,7 @@ The Commission has **exclusive powers** to supervise and enforce the GPAI obliga
 | Provider may offer commitments (incl. codes of practice) | Art. 93 / Art. 56 | Optional; document if offered |
 | Procedural rights, confidentiality, penalties for GPAI providers | Arts. 94, 78, 101 | Observe; the Commission may impose fines up to **3% of global annual turnover or €15m** for GPAI infringements (Art. 101) |
 
-> **Penalty note:** GPAI-model providers are subject to the **Article 101** fine regime (up to 3% of worldwide annual turnover or €15 million), enforced by the Commission — distinct from the Article 99 fines applied by national authorities to other operators.
+> **Penalty note:** GPAI-model providers are subject to the **Article 101** fine regime (up to 3% of worldwide annual turnover or €15 million), enforced by the Commission, distinct from the Article 99 fines applied by national authorities to other operators.
 
 ### 3.2 Post-Training / Mitigation Measures (Article 55(1)(b))
 
@@ -260,7 +262,7 @@ Where adversarial testing or evaluation identifies systemic risk, providers must
 
 ---
 
-## Part 4 — Systemic Risk Governance
+## Part 4: Systemic Risk Governance
 
 ### 4.1 Governance Structure
 
@@ -270,7 +272,7 @@ Where adversarial testing or evaluation identifies systemic risk, providers must
 | Head of Red-Team | | Plans and executes adversarial testing programme |
 | CISO | | Cybersecurity measures (Art. 55(1)(d)); security incident response |
 | Head of Compliance | | Regulatory compliance; documentation; incident reporting (Art. 55(1)(c)) |
-| Legal Counsel | | Commission/AI Office cooperation (Arts. 91–93); remediation advice; privilege |
+| Legal Counsel | | Commission/AI Office cooperation (Arts. 91-93); remediation advice; privilege |
 | Downstream Provider Manager | | Manages API access; enforces terms of use; monitors abuse |
 
 ### 4.2 Downstream Provider Management
@@ -300,7 +302,7 @@ The Article 55 obligations must be reviewed at least annually, and whenever a ma
 
 ---
 
-## Part 5 — Voluntary Commitments and Codes of Practice (Article 56)
+## Part 5: Voluntary Commitments and Codes of Practice (Article 56)
 
 The EU AI Act encourages GPAI model providers (including systemic risk providers) to rely on **Codes of Practice** (Article 56) to demonstrate compliance until harmonised standards are available. The AI Office facilitates their drawing up.
 
@@ -308,12 +310,12 @@ The EU AI Act encourages GPAI model providers (including systemic risk providers
 |---|---|
 | Participation in the AI Office GPAI Code of Practice process | ☐ Participating ☐ Not participating ☐ Monitoring |
 | Signed GPAI Code of Practice | ☐ YES ☐ NO ☐ Pending |
-| Voluntary safety commitments with the AI Office | ☐ YES ☐ NO — describe: |
+| Voluntary safety commitments with the AI Office | ☐ YES ☐ NO, describe: |
 | Membership in AI standards body (e.g., ISO/IEC JTC 1/SC 42, CEN/CENELEC JTC 21) | ☐ YES ☐ NO |
 
 ---
 
-## Part 6 — Systemic Risk Compliance Summary
+## Part 6: Systemic Risk Compliance Summary
 
 ### 6.1 Article 55 Compliance Checklist
 
@@ -323,7 +325,7 @@ The EU AI Act encourages GPAI model providers (including systemic risk providers
 | Systemic risks assessed and mitigated at Union level | Art. 55(1)(b) | ☐ Complete ☐ In Progress ☐ Not Started | |
 | Serious incidents tracked and reported to AI Office without undue delay | Art. 55(1)(c) | ☐ Process in place ☐ Pending | |
 | Adequate cybersecurity protection implemented | Art. 55(1)(d) | ☐ Complete ☐ In Progress ☐ Not Started | |
-| Cooperation process for Arts. 91–93 requests documented | Arts. 91–93 | ☐ Complete ☐ In Progress ☐ Not Started | |
+| Cooperation process for Arts. 91-93 requests documented | Arts. 91-93 | ☐ Complete ☐ In Progress ☐ Not Started | |
 
 ### 6.2 Systemic Risk Compliance Sign-Off
 
@@ -332,7 +334,7 @@ The EU AI Act encourages GPAI model providers (including systemic risk providers
 | Model name | |
 | Model version | |
 | Systemic risk designation confirmed | ☐ YES (compute threshold) ☐ YES (Commission designation) |
-| All Art. 55 obligations complete | ☐ YES ☐ NO — open items: |
+| All Art. 55 obligations complete | ☐ YES ☐ NO, open items: |
 | Date of compliance sign-off | |
 | Next review date | |
 
@@ -345,7 +347,7 @@ The EU AI Act encourages GPAI model providers (including systemic risk providers
 
 ---
 
-## Appendix A — Key Definitions
+## Appendix A: Key Definitions
 
 | Term | Definition | Reference |
 |---|---|---|
@@ -357,12 +359,12 @@ The EU AI Act encourages GPAI model providers (including systemic risk providers
 
 ---
 
-## Appendix B — Regulatory Timeline for GPAI Systemic Risk
+## Appendix B: Regulatory Timeline for GPAI Systemic Risk
 
 | Date | Event |
 |---|---|
 | 1 August 2024 | EU AI Act entered into force |
-| 2 August 2025 | **GPAI model obligations (Arts. 53–55) become applicable; Commission GPAI enforcement powers (Arts. 88–94) apply** |
+| 2 August 2025 | **GPAI model obligations (Arts. 53-55) become applicable; Commission GPAI enforcement powers (Arts. 88-94) apply** |
 | 2 August 2027 | GPAI models already on the market before 2 Aug 2025 must be brought into compliance |
 | Ongoing | AI Office facilitates Codes of Practice (Art. 56) and may conduct evaluations (Art. 92) |
 | Ongoing | Commission maintains a public list of GPAI models with systemic risk (Art. 52(6)) |
@@ -373,7 +375,7 @@ The EU AI Act encourages GPAI model providers (including systemic risk providers
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.1 | April 2026 | Corrected article mapping: Art. 55(1)(d) = cybersecurity (not cooperation); AI Office/Commission supervisory powers cited to Arts. 88–94 (not Art. 56); incident reporting set to "without undue delay" (not 72h); penalties cited to Art. 101 | Toolkit Team |
+| 1.1 | April 2026 | Corrected article mapping: Art. 55(1)(d) = cybersecurity (not cooperation); AI Office/Commission supervisory powers cited to Arts. 88-94 (not Art. 56); incident reporting set to "without undue delay" (not 72h); penalties cited to Art. 101 | Toolkit Team |
 | 1.0 | April 2026 | Initial release | Toolkit Team |
 
 ---
