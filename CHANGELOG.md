@@ -8,6 +8,24 @@ Regulatory baseline: Regulation (EU) 2024/1689 as entered into force 1 August 20
 
 ---
 
+## [3.3.0] - 2026-06-28
+
+### Changed (currency update — official EU guidance)
+
+This release aligns the toolkit with official EU developments published after the Act's staged entry into application. No statutory templates were rewritten; references and orientation material were updated so users are pointed to the current, authoritative Commission and AI Office guidance.
+
+**README.md** — Bumped to v3.3.0. Added a new **"Recent Official Guidance & Developments"** section summarising, with primary-source links: the Commission's February 2025 Guidelines on prohibited AI practices and Guidelines on the AI system definition; the **General-Purpose AI Code of Practice** (published 10 July 2025) and its three chapters — Transparency and Copyright (demonstrating Art. 53 compliance for all GPAI providers) and Safety & Security (Art. 55, GPAI with systemic risk); the applicability of GPAI obligations, governance and penalties from 2 August 2025; and the June 2026 Code of Practice on marking and labelling AI-generated content (Art. 50). Clarified the timeline so that 2 August 2026 covers Annex III high-risk systems (Art. 6(2)) while Art. 6(1) Annex I product-embedded systems apply from 2 August 2027, and added the 2 August 2030 legacy public-authority date. Cross-referenced Docs 06, 11, 25 and 27 to the relevant guidance, expanded "Related Resources" into Primary EU sources and Standards, and noted the classifier is now v2.2.
+
+**docs/QUICKSTART.md** — Added Section 8 "Official guidance you can rely on" pointing newcomers to the Commission's free guidance (prohibited-practices and AI-system-definition guidelines, the GPAI Code of Practice, the AI-generated-content labelling Code, and the AI Pact / AI Act Service Desk). Extended the deadlines table to include Art. 50 transparency (2 Aug 2026), Art. 6(1) Annex I systems (2 Aug 2027) and legacy public-authority systems (2 Aug 2030).
+
+**docs/INDEX.md** — Added an "Official EU guidance these documents align to" section mapping each piece of Commission guidance to the specific toolkit documents it supports.
+
+### Verified against primary sources
+
+Statutory facts and dates in this release were checked against EUR-Lex (Regulation (EU) 2024/1689, CELEX:32024R1689) and the European Commission's AI Act pages (digital-strategy.ec.europa.eu), including the implementation timeline and the General-Purpose AI Code of Practice page. The Commission guidance referenced is interpretive; the binding text remains the Regulation.
+
+---
+
 ## [3.2.1] - 2026-04-30
 
 ### Fixed (regulatory accuracy)
@@ -204,7 +222,7 @@ The following updates are planned as EU AI Act implementation guidance develops:
 
 | Update | Trigger | Expected |
 |---|---|---|
-| EU AI Office GPAI Code of Practice adoption | Code of Practice finalised 2025-2026 | TBC |
+| EU AI Office GPAI Code of Practice — *published 10 July 2025* (Transparency, Copyright, Safety & Security chapters); Commission-endorsed | Done — see README Recent Official Guidance | Shipped v3.3.0 |
 | Delegated acts for Article 6(2) Annex III update | EU Commission adoption | TBC |
 | Common specifications for high-risk AI | CEN/CENELEC standards published | TBC |
 | EU AI Act database operational details | EU AI Office announcement 2026 | 2026 |
