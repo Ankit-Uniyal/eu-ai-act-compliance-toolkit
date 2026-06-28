@@ -1,4 +1,4 @@
-# 01 — EU AI Act Risk Classification Guide
+# 01: EU AI Act Risk Classification Guide
 
 **EU AI Act Reference:** Articles 5, 6, 50 | Annexes I, II, III
 **Applies to:** Providers, Deployers, Importers, Distributors
@@ -14,7 +14,7 @@ This guide helps organisations classify their AI systems under the EU AI Act fou
 
 ---
 
-## Part 0 — FRIA Scoping: Do You Need a Fundamental Rights Impact Assessment?
+## Part 0: FRIA Scoping: Do You Need a Fundamental Rights Impact Assessment?
 
 Before proceeding with risk classification, deployers should determine whether Article 27 mandates a Fundamental Rights Impact Assessment (FRIA).
 
@@ -22,10 +22,10 @@ Before proceeding with risk classification, deployers should determine whether A
 
 | Question | Answer | FRIA Obligation |
 |---|---|---|
-| Is your organisation a **body governed by public law**, or a private entity providing **public services**? | YES | **MANDATORY** — FRIA required before deploying a High-Risk AI system (Art. 27(1)) |
-| Is the High-Risk system used for **creditworthiness/credit scoring** (except fraud detection) or for **risk assessment and pricing in life and health insurance**? | YES | **MANDATORY** — FRIA required regardless of public/private status (Art. 27(1), second subparagraph) |
-| Is your organisation a private body NOT providing public services and NOT in the two use-cases above? | YES | **VOLUNTARY** — recommended for governance best practice, not legally required |
-| Does the AI system fall outside the High-Risk tier after completing Steps 1-3? | YES | **NOT REQUIRED** — FRIA applies only to High-Risk AI systems |
+| Is your organisation a **body governed by public law**, or a private entity providing **public services**? | YES | **MANDATORY:** FRIA required before deploying a High-Risk AI system (Art. 27(1)) |
+| Is the High-Risk system used for **creditworthiness/credit scoring** (except fraud detection) or for **risk assessment and pricing in life and health insurance**? | YES | **MANDATORY:** FRIA required regardless of public/private status (Art. 27(1), second subparagraph) |
+| Is your organisation a private body NOT providing public services and NOT in the two use-cases above? | YES | **VOLUNTARY:** recommended for governance best practice, not legally required |
+| Does the AI system fall outside the High-Risk tier after completing Steps 1-3? | YES | **NOT REQUIRED:** FRIA applies only to High-Risk AI systems |
 
 > **Key Rule (Article 27(1)):** The FRIA obligation applies to the **deployer**, not the provider. Even if the system is provided by a third party, the deploying organisation bears the FRIA obligation if it meets the criteria above. Where a DPIA already covers some elements, the FRIA may complement it (Art. 27(4)).
 
@@ -42,13 +42,13 @@ Under Article 3(1), an AI system is a machine-based system designed to operate w
 | Question | If YES | If NO |
 |---|---|---|
 | Does it infer outputs from inputs using ML, logic, or statistical approaches? | Continue to Step 2 | Not in scope |
-| Is it rule-based only (no learning/inference)? | Not an AI system | — |
+| Is it rule-based only (no learning/inference)? | Not an AI system |, |
 
 ---
 
 ## Step 2: Is It Prohibited? (Unacceptable Risk)
 
-Article 5(1) prohibits the following AI practices. If your system does ANY of the following, it is BANNED in the EU. (Sub-letters below match the enacted Regulation (EU) 2024/1689 — see Doc 25 for the full assessment.)
+Article 5(1) prohibits the following AI practices. If your system does ANY of the following, it is BANNED in the EU. (Sub-letters below match the enacted Regulation (EU) 2024/1689, see Doc 25 for the full assessment.)
 
 | # | Prohibited Practice | Article | Description |
 |---|---|---|---|
@@ -59,7 +59,7 @@ Article 5(1) prohibits the following AI practices. If your system does ANY of th
 | 5 | Untargeted facial scraping | 5(1)(e) | Building/expanding face recognition databases by untargeted scraping from the internet or CCTV |
 | 6 | Emotion recognition in workplace/education | 5(1)(f) | Inferring emotions in workplaces or education institutions (medical/safety exceptions) |
 | 7 | Biometric categorisation by protected characteristics | 5(1)(g) | Inferring race, political opinions, trade union membership, religion, sex life, or sexual orientation from biometric data |
-| 8 | Real-time remote biometric ID in public (law enforcement) | 5(1)(h) | Subject to narrow Art. 5(2)–(7) exemptions |
+| 8 | Real-time remote biometric ID in public (law enforcement) | 5(1)(h) | Subject to narrow Art. 5(2)-(7) exemptions |
 
 **If prohibited: STOP. System cannot be placed on EU market.** Use **Doc 25** for the full prohibited-practices assessment and clearance certificate.
 
@@ -69,11 +69,11 @@ Article 5(1) prohibits the following AI practices. If your system does ANY of th
 
 High-risk AI systems are defined under Article 6 and fall into two categories:
 
-### Category A — AI as Safety Component (Article 6(1))
+### Category A: AI as Safety Component (Article 6(1))
 
 AI systems that are themselves products, or are a safety component of products, covered by the EU harmonisation legislation listed in **Annex I**, and that are required to undergo a third-party conformity assessment under that legislation (e.g. machinery, medical devices, in-vitro diagnostics, aviation, vehicles, toys, radio equipment).
 
-### Category B — Standalone High-Risk Use Cases (Article 6(2) + Annex III)
+### Category B: Standalone High-Risk Use Cases (Article 6(2) + Annex III)
 
 | Annex III Area | Examples |
 |---|---|
@@ -90,27 +90,27 @@ AI systems that are themselves products, or are a safety component of products, 
 
 ### Article 6(3) Exclusion Decision Tree
 
-Even if a system falls within an Annex III category, it is **NOT high-risk** if it does not pose a significant risk of harm to health, safety, or fundamental rights — including by not materially influencing the outcome of decision-making — and it meets at least one of the four conditions under Article 6(3). Apply this decision tree sequentially:
+Even if a system falls within an Annex III category, it is **NOT high-risk** if it does not pose a significant risk of harm to health, safety, or fundamental rights, including by not materially influencing the outcome of decision-making, and it meets at least one of the four conditions under Article 6(3). Apply this decision tree sequentially:
 
 **START: Does the system appear in Annex III?**
 
 If YES, work through the four questions:
 
 **Q1:** Does it ONLY perform a **narrow procedural task** (e.g., routing a form, converting a format, scheduling)?
-- YES => may be excluded — go to the override check below
+- YES => may be excluded, go to the override check below
 - NO => proceed to Q2
 
 **Q2:** Does it ONLY **improve the result of a previously completed human activity**?
-- YES => may be excluded — go to the override check below
+- YES => may be excluded, go to the override check below
 - NO => proceed to Q3
 
 **Q3:** Does it ONLY **detect decision-making patterns or deviations from prior patterns** and is NOT meant to replace or influence the previously completed human assessment without proper human review?
-- YES => may be excluded — go to the override check below
+- YES => may be excluded, go to the override check below
 - NO => proceed to Q4
 
 **Q4:** Does it ONLY perform a **preparatory task** to an assessment relevant to an Annex III use case?
-- YES => may be excluded — go to the override check below
-- NO => **HIGH RISK confirmed** — full Chapter III Section 2 obligations apply
+- YES => may be excluded, go to the override check below
+- NO => **HIGH RISK confirmed:** full Chapter III Section 2 obligations apply
 
 **Override check (Article 6(3), final subparagraph):** An Annex III system is **ALWAYS high-risk** if it performs **profiling of natural persons**, regardless of the four conditions above.
 
@@ -128,14 +128,14 @@ If YES, work through the four questions:
 | Preparatory task only? | Yes / No | |
 | Does the system perform profiling of natural persons? (if Yes → always High-Risk) | Yes / No | |
 | **Exclusion conclusion** | Applies / Does Not Apply | |
-| Art. 49(2) database registration of exclusion completed | Yes / No — Reference: | |
+| Art. 49(2) database registration of exclusion completed | Yes / No, Reference: | |
 | Exclusion documented and approved by | Name / Date | |
 
 ---
 
-## Step 4: Is It Limited Risk? (Transparency — Article 50)
+## Step 4: Is It Limited Risk? (Transparency: Article 50)
 
-Article 50 imposes transparency obligations (these apply **in addition to** any tier above — a high-risk or excluded system can also carry Art. 50 duties):
+Article 50 imposes transparency obligations (these apply **in addition to** any tier above, a high-risk or excluded system can also carry Art. 50 duties):
 
 | System Type | Obligation | Reference |
 |---|---|---|
@@ -194,12 +194,12 @@ Complete this for each AI system:
 | Geography of Deployment | |
 | Is it an AI system per Article 3? | Yes / No |
 | Prohibited under Article 5? | Yes / No (specify sub-letter) |
-| High-Risk — Annex I product? | Yes / No |
-| High-Risk — Annex III use case? | Yes / No (specify area) |
+| High-Risk, Annex I product? | Yes / No |
+| High-Risk, Annex III use case? | Yes / No (specify area) |
 | Article 6(3) exclusion claimed? | Yes / No |
 | Exclusion basis (if claimed) | Procedural / Post-hoc / Pattern / Preparatory |
 | Profiling of natural persons? (if Yes → always High-Risk) | Yes / No |
-| Art. 49(2) exclusion registered in EU database? | Yes / No — Reference: |
+| Art. 49(2) exclusion registered in EU database? | Yes / No, Reference: |
 | Article 50 transparency obligations apply? | Yes / No (specify) |
 | FRIA required? | Yes / No (see Part 0 above) |
 | FRIA Status | Not started / In progress / Completed |
