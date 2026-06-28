@@ -1,19 +1,35 @@
 # EU AI Act Compliance Toolkit
-## Version 3.3.0 | June 2026
+## Version 3.4.0 | June 2026
 
-A practical, practitioner-built compliance toolkit for the EU Artificial Intelligence Act (Regulation (EU) 2024/1689). Now with **28 compliance documents**, 2 worked examples, and GRC automation scripts — covering every major obligation from risk classification through market surveillance response.
+A practical, practitioner-built compliance toolkit for the EU Artificial Intelligence Act (Regulation (EU) 2024/1689). Now with **28 compliance documents**, 2 worked examples, and GRC automation scripts, covering every major obligation from risk classification through market surveillance response.
 
-**New here?** Start with **[docs/QUICKSTART.md](docs/QUICKSTART.md)** — a plain-language, 10-minute overview of the four risk tiers, the real compliance deadlines, and the first three things to do.
+**New here?** Start with **[docs/QUICKSTART.md](docs/QUICKSTART.md):** a plain-language, 10-minute overview of the four risk tiers, the real compliance deadlines, and the first three things to do.
 
-**New in v3.3.0:** Updated to reflect official EU developments through mid-2026 — the Commission's February 2025 guidelines on prohibited practices and on the AI system definition, the **General-Purpose AI Code of Practice** (published 10 July 2025), and the Code of Practice on marking and labelling AI-generated content (June 2026). See **[Recent Official Guidance & Developments](#recent-official-guidance--developments)** below.
+**New in v3.4.0:** Three companion tools are now linked throughout, so you can go from filling in a template to practising on a live app. See [Companion tools (live)](#companion-tools-live).
+
+**New in v3.3.0:** Updated to reflect official EU developments through mid-2026, the Commission's February 2025 guidelines on prohibited practices and on the AI system definition, the **General-Purpose AI Code of Practice** (published 10 July 2025), and the Code of Practice on marking and labelling AI-generated content (June 2026). See **[Recent Official Guidance & Developments](#recent-official-guidance--developments)** below.
 
 ---
 
 ## Overview
 
-The EU AI Act (entered into force 1 August 2024) is the world's first comprehensive legal framework for artificial intelligence. It applies a risk-based approach, imposing obligations proportional to the potential harm an AI system can cause — to providers, deployers, importers, and distributors operating in or supplying to the EU market.
+The EU AI Act (entered into force 1 August 2024) is the world's first comprehensive legal framework for artificial intelligence. It applies a risk-based approach, imposing obligations proportional to the potential harm an AI system can cause, to providers, deployers, importers, and distributors operating in or supplying to the EU market.
 
 This toolkit translates the Act's Articles and Annexes into actionable templates, checklists, and automation scripts that GRC professionals, AI governance practitioners, and compliance teams can use immediately.
+
+---
+
+## Companion tools (live)
+
+The templates in this repository tell you *what* to produce. These three companion projects help you actually *do* it, on a live app or with a sister toolkit. All three are free and map across the same frameworks (EU AI Act, ISO/IEC 42001, NIST AI RMF).
+
+| Tool | What it is good for | Pair it with |
+|---|---|---|
+| [AI Model Card Whiteboard](https://ai-modelcard-whiteboard.lovable.app) | Draft a real AI model card section by section in the browser, get structured feedback, and export to PDF. No login. | Doc 04 (Technical Documentation), Doc 06 (Transparency), Doc 11 (GPAI Documentation) |
+| [AI Compliance Compass](https://iso-nist-euai.lovable.app) | Cross-walk a requirement across ISO/IEC 42001, NIST AI RMF and the EU AI Act so you only do the work once. | Doc 16 (QMS), Doc 18 (GDPR x AI Act), Doc 19 (Scorecard) |
+| [ISO 42001 AI Governance Toolkit](https://github.com/Ankit-Uniyal/iso-42001-ai-governance-toolkit) | A full ISO/IEC 42001:2023 AIMS implementation kit (all 10 clauses, 38 Annex A controls) by an ISO 42001 Lead Auditor. | Doc 16 (Art. 17 QMS maps cleanly onto ISO 42001) |
+
+If you are building a management system, the ISO 42001 toolkit is the natural sister to this one: Article 17 of the AI Act and ISO/IEC 42001 cover much of the same ground, so you can run them together rather than twice.
 
 ---
 
@@ -39,27 +55,27 @@ The framework is now in force in stages, and the Commission and the European AI 
 | Date | Development | What it means for you |
 |---|---|---|
 | Feb 2025 | **Guidelines on prohibited AI practices** (Art. 5) and **Guidelines on the AI system definition** | Authoritative, example-rich interpretation of the eight bans and of what counts as an "AI system." Read these before completing Doc 25. |
-| 10 Jul 2025 | **General-Purpose AI (GPAI) Code of Practice** — three chapters: Transparency, Copyright, and Safety & Security | Voluntary but Commission-endorsed route to demonstrate compliance. Transparency + Copyright chapters map to **Art. 53** (all GPAI providers); the Safety & Security chapter maps to **Art. 55** (GPAI with systemic risk). Includes a Model Documentation Form. Referenced by Docs 06, 11, and 27. |
-| 2 Aug 2025 | GPAI obligations, governance, notified bodies, confidentiality, and **penalties** (Arts. 99–100) became applicable | Enforcement architecture is live. National market surveillance authorities and the AI Office now have active powers. |
+| 10 Jul 2025 | **General-Purpose AI (GPAI) Code of Practice:** three chapters: Transparency, Copyright, and Safety & Security | Voluntary but Commission-endorsed route to demonstrate compliance. Transparency + Copyright chapters map to **Art. 53** (all GPAI providers); the Safety & Security chapter maps to **Art. 55** (GPAI with systemic risk). Includes a Model Documentation Form. Referenced by Docs 06, 11, and 27. |
+| 2 Aug 2025 | GPAI obligations, governance, notified bodies, confidentiality, and **penalties** (Arts. 99-100) became applicable | Enforcement architecture is live. National market surveillance authorities and the AI Office now have active powers. |
 | Jun 2026 | **Code of Practice on marking and labelling AI-generated content** (Art. 50) | Practical guidance for the transparency/labelling duties that become enforceable 2 August 2026. Relevant to Doc 06. |
 
 Supporting initiatives: the **AI Pact** (voluntary early-compliance pledge), the **AI Act Service Desk** and **Single Information Platform** (official Q&A and help), and the **European AI Office** (GPAI supervision and enforcement coordination). Links in [Related Resources](#related-resources).
 
-> These are the Commission's own materials. They are interpretive guidance, not amendments to the Act — the binding text remains Regulation (EU) 2024/1689 on EUR-Lex.
+> These are the Commission's own materials. They are interpretive guidance, not amendments to the Act, the binding text remains Regulation (EU) 2024/1689 on EUR-Lex.
 
 ---
 
 ## Risk Tier Framework
 
-The EU AI Act classifies AI **systems** into four risk tiers. **General-purpose AI (GPAI) models are governed by a separate, parallel regime** (Arts. 51–56) and are **not** a sub-tier of "limited risk" — a GPAI model can also be embedded inside a high-risk system.
+The EU AI Act classifies AI **systems** into four risk tiers. **General-purpose AI (GPAI) models are governed by a separate, parallel regime** (Arts. 51-56) and are **not** a sub-tier of "limited risk", a GPAI model can also be embedded inside a high-risk system.
 
 | Tier | Description | Examples |
 |---|---|---|
-| Unacceptable Risk (Article 5) | Prohibited — banned outright | Social scoring, manipulative/subliminal AI, untargeted facial scraping, real-time biometric ID in public spaces |
+| Unacceptable Risk (Article 5) | Prohibited, banned outright | Social scoring, manipulative/subliminal AI, untargeted facial scraping, real-time biometric ID in public spaces |
 | High Risk (Article 6, Annexes I and III) | Strict obligations: risk management, data governance, conformity assessment, registration, oversight | CV screening, credit scoring, medical devices with AI |
-| Limited Risk (Article 50) | Transparency obligations only (overlay — can also apply to higher tiers) | Chatbots, deepfakes, AI-generated content |
+| Limited Risk (Article 50) | Transparency obligations only (overlay, can also apply to higher tiers) | Chatbots, deepfakes, AI-generated content |
 | Minimal Risk (Article 95) | Voluntary codes of conduct | Spam filters, AI in games |
-| **GPAI models — separate regime (Arts. 51–56)** | **Baseline obligations for all GPAI (Arts. 53–54); additional systemic-risk obligations (Art. 55) if > 10^25 FLOP or designated. The GPAI Code of Practice is the endorsed way to show compliance.** | **Foundation models / LLMs** |
+| **GPAI models, separate regime (Arts. 51-56)** | **Baseline obligations for all GPAI (Arts. 53-54); additional systemic-risk obligations (Art. 55) if > 10^25 FLOP or designated. The GPAI Code of Practice is the endorsed way to show compliance.** | **Foundation models / LLMs** |
 
 ---
 
@@ -95,7 +111,7 @@ Use this routing guide to find the documents most relevant to your role and situ
 | 01 | Risk Classification Guide | Classify your AI system by risk tier | Articles 5, 6, 50 + Annexes I, III |
 | 02 | Conformity Assessment Checklist | Pre-market conformity checklist for high-risk AI | Articles 43-48, Annexes VI, VII |
 | 03 | Fundamental Rights Impact Assessment | FRIA template for deployers of high-risk AI | Article 27 |
-| 04 | Technical Documentation Template | Annex IV-compliant technical documentation | Article 11 + Annex IV |
+| 04 | Technical Documentation Template | Annex IV-compliant technical documentation (draft the model card on the [AI Model Card Whiteboard](https://ai-modelcard-whiteboard.lovable.app)) | Article 11 + Annex IV |
 | 05 | AI System Register | Inventory of AI systems with risk classification | Articles 49, 71 |
 | 06 | Transparency Obligations Checklist | Obligations for limited-risk and GPAI systems (aligned to the GPAI Code of Practice Transparency chapter and the AI-generated-content labelling Code) | Articles 50, 53 |
 | 07 | Human Oversight Framework | Design and operational human oversight controls | Article 14 |
@@ -117,9 +133,9 @@ Use this routing guide to find the documents most relevant to your role and situ
 
 | # | Document | Purpose | EU AI Act Reference |
 |---|---|---|---|
-| 16 | Quality Management System | Article 17 QMS template covering policy, design, data governance, documentation, PMM, incidents, and audit | Article 17 |
+| 16 | Quality Management System | Article 17 QMS template covering policy, design, data governance, documentation, PMM, incidents, and audit (Article 17 maps closely to ISO/IEC 42001, see the [ISO 42001 toolkit](https://github.com/Ankit-Uniyal/iso-42001-ai-governance-toolkit)) | Article 17 |
 | 17 | AI Literacy and Competency Framework | Role-based training programme, competency levels, assessment tool, Article 14(3) oversight person certification | Article 4, Article 14(3) |
-| 18 | GDPR × EU AI Act Intersection Map | Systematic mapping of GDPR and AI Act obligations: data governance, automated decisions, DPIA/FRIA, transparency, dual incident reporting | Articles 9, 10, 13, 26, 27, 86 |
+| 18 | GDPR x EU AI Act Intersection Map | Systematic mapping of GDPR and AI Act obligations: data governance, automated decisions, DPIA/FRIA, transparency, dual incident reporting (cross-framework view on the [AI Compliance Compass](https://iso-nist-euai.lovable.app)) | Articles 9, 10, 13, 26, 27, 86 |
 | 19 | Master Compliance Scorecard | Consolidated 118-item gap analysis across all documents; executive dashboard; P1-P4 priority tracking | All Articles |
 | 20 | Notified Body Engagement Guide | When a Notified Body is required, how to find and select one, assessment process, certificate maintenance | Articles 43-46, Annex VII |
 
@@ -152,7 +168,7 @@ Use this routing guide to find the documents most relevant to your role and situ
 
 ---
 
-## GRC Engineering — Automation Scripts
+## GRC Engineering: Automation Scripts
 
 | Script | Purpose | Automates |
 |---|---|---|
@@ -163,53 +179,53 @@ Use this routing guide to find the documents most relevant to your role and situ
 
 ## How to Use This Toolkit
 
-**Step 0 — Get oriented**
+**Step 0, Get oriented**
 If you are new, read **docs/QUICKSTART.md** first.
 
-**Step 1 — Screen for prohibited practices**
+**Step 1, Screen for prohibited practices**
 Before anything else, run every AI system through Doc 25 (Article 5 Prohibited Practices Assessment), alongside the Commission's Feb 2025 guidelines on prohibited practices. Any system that triggers a prohibition without a valid exemption must not proceed.
 
-**Step 2 — Establish your position**
+**Step 2, Establish your position**
 Complete the Master Compliance Scorecard (Doc 19) for an immediate gap analysis across all 118 requirements.
 
-**Step 3 — Classify your AI systems**
+**Step 3, Classify your AI systems**
 Use 01-RISK-CLASSIFICATION-GUIDE.md or run `scripts/risk_classifier.py`
 
-**Step 4 — High-Risk AI providers**
+**Step 4, High-Risk AI providers**
 - Confirm your conformity assessment route (Annex VI internal control vs Annex VII Notified Body) in Doc 02 Section 0
 - Complete 02-CONFORMITY-ASSESSMENT-CHECKLIST.md and 04-TECHNICAL-DOCUMENTATION-TEMPLATE.md
-- Build your Risk Management System using 26-RISK-MANAGEMENT-SYSTEM.md (Article 9 — mandatory, separate from QMS)
+- Build your Risk Management System using 26-RISK-MANAGEMENT-SYSTEM.md (Article 9, mandatory, separate from QMS)
 - Build your Quality Management System using 16-QUALITY-MANAGEMENT-SYSTEM.md (Article 17)
 - If Notified Body is required: follow 20-NOTIFIED-BODY-ENGAGEMENT-GUIDE.md and use 23-ANNEX-VII-ASSESSMENT-CHECKLIST.md to prepare
 
-**Step 5 — Deployers of High-Risk AI**
-- Complete the FRIA (Doc 03) — required for public bodies, public-service deployers, and credit/insurance use cases
+**Step 5, Deployers of High-Risk AI**
+- Complete the FRIA (Doc 03), required for public bodies, public-service deployers, and credit/insurance use cases
 - Implement the Human Oversight Framework (Doc 07)
 - Ensure staff are trained using 17-AI-LITERACY-COMPETENCY-FRAMEWORK.md
 - Provide workers with pre-deployment notice using 22-WORKER-INFORMATION-NOTICE.md
 
-**Step 6 — All AI systems**
+**Step 6, All AI systems**
 - Check 06-TRANSPARENCY-OBLIGATIONS.md and 07-HUMAN-OVERSIGHT-FRAMEWORK.md
 - Map GDPR obligations using 18-GDPR-AI-ACT-INTERSECTION.md
 - If processing personal data under Art. 6(1)(f), complete a LIA per 21-LEGITIMATE-INTEREST-ASSESSMENT.md
 - Register all systems in 05-AI-SYSTEM-REGISTER.md
 
-**Step 7 — Establish ongoing processes**
+**Step 7, Establish ongoing processes**
 - 08-INCIDENT-REPORTING-PROCEDURE.md and 09-POST-MARKET-MONITORING-PLAN.md
 - Prepare for market surveillance with 28-MARKET-SURVEILLANCE-RESPONSE.md
 
-**Step 8 — Supply chain**
+**Step 8, Supply chain**
 - Non-EU providers: complete 13-AUTHORISED-REPRESENTATIVE.md before market placement
 - Annex I product providers: follow 14-CE-MARKING-GUIDE.md and complete 12-EU-DECLARATION-OF-CONFORMITY.md
 - Importers and Distributors: follow 15-IMPORTER-DISTRIBUTOR-CHECKLISTS.md
 
-**Step 9 — GPAI/LLM model providers**
+**Step 9, GPAI/LLM model providers**
 - Complete 11-GPAI-TECHNICAL-DOCUMENTATION.md and consider signing the GPAI Code of Practice (Transparency & Copyright chapters) to demonstrate Art. 53 compliance
 - If systemic risk model: complete 27-GPAI-SYSTEMIC-RISK-COMPLIANCE.md and apply the Code's Safety & Security chapter (Art. 55)
 
 ---
 
-## GRC Automation — risk_classifier.py v2.2
+## GRC Automation: risk_classifier.py v2.2
 
 ```bash
 # Basic run with sample inventory
@@ -234,8 +250,8 @@ CSV columns for complete classification:
 | exclusion_human_result | yes / no | Article 6(3)(b): improves result of prior human activity |
 | exclusion_no_individual | yes / no | Article 6(3)(c): detects patterns without influencing individuals |
 | exclusion_preparatory | yes / no | Article 6(3)(d): preparatory task only |
-| profiling | yes / no | Article 6(3) final subparagraph: profiling of natural persons — overrides any exclusion (always high-risk) |
-| gpai_systemic | yes / no | Article 55: GPAI model with systemic risk (> 10^25 FLOP or designated) — adds Art. 55 obligations |
+| profiling | yes / no | Article 6(3) final subparagraph: profiling of natural persons, overrides any exclusion (always high-risk) |
+| gpai_systemic | yes / no | Article 55: GPAI model with systemic risk (> 10^25 FLOP or designated), adds Art. 55 obligations |
 
 > **Important:** Classifier output is a triage aid. Human compliance review is mandatory before acting on any classification. The `--format json|csv` outputs and a CI exit-code gate (exit 1 on any banned system) were added in v2.1; GPAI is handled as a parallel regime in v2.2.
 
@@ -250,7 +266,7 @@ CSV columns for complete classification:
 | Importer | EU-established entity placing a non-EU provider's AI on the EU market |
 | Distributor | Entity making AI available on market without modifying it |
 | Operator | Collective term for provider, deployer, importer, distributor, authorised representative |
-| GPAI Model | General-purpose AI model (e.g. foundation models / LLMs) — separate regime (Arts. 51-56) |
+| GPAI Model | General-purpose AI model (e.g. foundation models / LLMs), separate regime (Arts. 51-56) |
 | Notified Body | Third-party conformity assessment body |
 | FRIA | Fundamental Rights Impact Assessment (Art. 27) |
 | LIA | Legitimate Interest Assessment (GDPR Art. 6(1)(f)) |
@@ -264,17 +280,22 @@ CSV columns for complete classification:
 
 **Primary EU sources**
 - [EU AI Act Full Text (EUR-Lex)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
-- [AI Act — European Commission overview & Single Information Platform](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
+- [AI Act, European Commission overview & Single Information Platform](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
 - [EU AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)
 - [Guidelines on prohibited AI practices (Feb 2025)](https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-prohibited-artificial-intelligence-ai-practices-defined-ai-act)
 - [General-Purpose AI Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai)
 - [AI Pact](https://digital-strategy.ec.europa.eu/en/policies/ai-pact)
-- [NANDO Database — Notified Bodies](https://ec.europa.eu/growth/tools-databases/nando/)
+- [NANDO Database, Notified Bodies](https://ec.europa.eu/growth/tools-databases/nando/)
 
 **Standards**
 - [ISO/IEC 42001:2023 AI Governance](https://www.iso.org/standard/81230.html)
 - [ISO/IEC 23894:2023 AI Risk Management](https://www.iso.org/standard/77304.html)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+
+**Companion tools (built alongside this toolkit)**
+- [AI Model Card Whiteboard](https://ai-modelcard-whiteboard.lovable.app) - practise writing AI model cards
+- [AI Compliance Compass](https://iso-nist-euai.lovable.app) - cross-walk ISO 42001, NIST AI RMF and the EU AI Act
+- [ISO 42001 AI Governance Toolkit](https://github.com/Ankit-Uniyal/iso-42001-ai-governance-toolkit) - full ISO/IEC 42001:2023 AIMS implementation kit
 
 ---
 
@@ -282,7 +303,7 @@ CSV columns for complete classification:
 
 See CHANGELOG.md for full version history, regulatory coverage tracking, and planned updates.
 
-**Current version: v3.3.0 (June 2026)** — see CHANGELOG.md for what's new.
+**Current version: v3.3.0 (June 2026):** see CHANGELOG.md for what's new.
 
 ---
 
@@ -301,6 +322,6 @@ You don't need a developer setup to use these templates:
 1. Click the green **Code** button at the top of this repository, then **Download ZIP**.
 2. Unzip it. Every `NN-*.md` file is a plain-text template you can open in any text editor, or paste into Word / Google Docs to fill in.
 3. Start with **docs/QUICKSTART.md**, then the **"Which Documents Apply to Me?"** routing table above, then follow the **"How to Use This Toolkit"** steps. The [docs/INDEX.md](docs/INDEX.md) coverage map shows every document at a glance.
-4. The Python script under `scripts/` is **optional** — it automates risk classification, but the documents work fully on their own.
+4. The Python script under `scripts/` is **optional:** it automates risk classification, but the documents work fully on their own.
 
 **Prefer editable forms?** The Markdown tables paste cleanly into Word and Excel. Copy a document's table into a spreadsheet to turn a checklist into trackable rows.
