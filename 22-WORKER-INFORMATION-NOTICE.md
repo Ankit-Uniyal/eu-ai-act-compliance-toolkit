@@ -1,4 +1,4 @@
-# 22 — Worker Information Notice Template (Article 26(7))
+# 22: Worker Information Notice Template (Article 26(7))
 
 **EU AI Act Reference:** Article 26(7) | Article 26(2) | Article 14(3)
 **Applies to:** Deployers of high-risk AI systems in workplace contexts
@@ -32,7 +32,7 @@ This document provides:
 
 ---
 
-## Part 1 — Scope and Trigger Assessment
+## Part 1: Scope and Trigger Assessment
 
 ### 1.1 Does Article 26(7) Apply?
 
@@ -40,10 +40,10 @@ Complete this assessment before preparing the notice.
 
 | Question | Response |
 |---|---|
-| Is the AI system classified as high-risk under Annex I or Annex III? | Yes / No — If No, Art. 26(7) does not apply |
-| Does the system affect or is it likely to affect working conditions? | Yes / No — If No, Art. 26(7) may not apply |
+| Is the AI system classified as high-risk under Annex I or Annex III? | Yes / No, If No, Art. 26(7) does not apply |
+| Does the system affect or is it likely to affect working conditions? | Yes / No, If No, Art. 26(7) may not apply |
 | Are there workers whose working conditions are affected? | Yes / No |
-| Has the system already been deployed to affected workers without notice? | Yes / No — If Yes, remedial notice required |
+| Has the system already been deployed to affected workers without notice? | Yes / No, If Yes, remedial notice required |
 
 **Conclusion:** Article 26(7) obligation applies: **Yes / No**
 
@@ -61,7 +61,7 @@ Complete this assessment before preparing the notice.
 
 ---
 
-## Part 2 — Procedure for Providing Information
+## Part 2: Procedure for Providing Information
 
 ### 2.1 Timeline
 
@@ -89,14 +89,14 @@ Article 26(7) requires information **before** deployment. Plan the following ste
 
 ---
 
-## Part 3 — Worker Information Notice (Template)
+## Part 3: Worker Information Notice (Template)
 
 ---
 
-**NOTICE TO WORKERS — DEPLOYMENT OF AN AI SYSTEM IN THE WORKPLACE**
+**NOTICE TO WORKERS, DEPLOYMENT OF AN AI SYSTEM IN THE WORKPLACE**
 
 **Date of Notice:** [Insert date]
-**From:** [Organisation name] — [HR / People Function]
+**From:** [Organisation name], [HR / People Function]
 **To:** [Affected worker group(s)]
 **AI System Name:** [Insert system name]
 **Planned Deployment Date:** [Insert date or date range]
@@ -117,7 +117,7 @@ We are providing this information **before** the system is deployed so that you 
 |---|---|
 | **System name** | [Insert name] |
 | **What it does** | [Plain-language description of the AI system's function] |
-| **How it is classified** | High-risk AI system under the EU AI Act — [Annex III category, e.g. "Employment, workers management and access to self-employment (Annex III, Area 4)"] |
+| **How it is classified** | High-risk AI system under the EU AI Act, [Annex III category, e.g. "Employment, workers management and access to self-employment (Annex III, Area 4)"] |
 | **Who provides the system** | [Provider name] |
 | **When it will be deployed** | [Date / phase] |
 | **Where / how it will be used** | [Location, teams, processes affected] |
@@ -139,7 +139,7 @@ We are providing this information **before** the system is deployed so that you 
 
 | Safeguard | Description |
 |---|---|
-| Human oversight | [Describe the human oversight role — who reviews AI-influenced decisions] |
+| Human oversight | [Describe the human oversight role, who reviews AI-influenced decisions] |
 | Right to request human review | [How workers can request a human decision-maker to review an AI-influenced decision] |
 | Accuracy and fairness testing | [Brief description of bias testing and accuracy standards the system meets] |
 | Data protection | [How personal data is handled; GDPR rights; DPO contact] |
@@ -177,7 +177,7 @@ If you have questions about this AI system or how it affects your work, please c
 
 ---
 
-## Part 4 — National Law Assessment
+## Part 4: National Law Assessment
 
 Before finalising this notice, assess whether additional obligations apply under national law:
 
@@ -187,15 +187,15 @@ Before finalising this notice, assess whether additional obligations apply under
 
 **Common national law obligations to check:**
 
-- **Germany:** Betriebsverfassungsgesetz (BetrVG) — Works council co-determination rights for monitoring systems (§ 87(1)(6))
-- **France:** Labour Code — Information and consultation of the Social and Economic Committee (CSE) before deploying technology monitoring workers (Art. L. 2312-38)
-- **Netherlands:** Works Councils Act (WOR) — Works council consent for personnel monitoring systems (Art. 27)
-- **Sweden:** Co-Determination Act (MBL) — Employer must consult union before significant changes to operations
-- **EU level:** European Works Councils Directive (2009/38/EC) — Information and consultation for multinationals
+- **Germany:** Betriebsverfassungsgesetz (BetrVG), Works council co-determination rights for monitoring systems (§ 87(1)(6))
+- **France:** Labour Code, Information and consultation of the Social and Economic Committee (CSE) before deploying technology monitoring workers (Art. L. 2312-38)
+- **Netherlands:** Works Councils Act (WOR), Works council consent for personnel monitoring systems (Art. 27)
+- **Sweden:** Co-Determination Act (MBL), Employer must consult union before significant changes to operations
+- **EU level:** European Works Councils Directive (2009/38/EC), Information and consultation for multinationals
 
 ---
 
-## Part 5 — Information and Consultation Tracker
+## Part 5: Information and Consultation Tracker
 
 Record all information and consultation activities related to this deployment:
 
@@ -206,7 +206,7 @@ Record all information and consultation activities related to this deployment:
 
 ---
 
-## Part 6 — Post-Deployment Review
+## Part 6: Post-Deployment Review
 
 After deployment, confirm the following:
 
