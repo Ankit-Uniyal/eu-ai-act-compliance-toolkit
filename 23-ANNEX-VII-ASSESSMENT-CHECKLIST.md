@@ -1,4 +1,4 @@
-# 23 — Annex VII Assessment Criteria Checklist
+# 23: Annex VII Assessment Criteria Checklist
 
 **EU AI Act Reference:** Annex VII | Article 43 | Article 44
 **Applies to:** Providers of high-risk AI systems requiring Notified Body (NB) assessment; internal conformity teams preparing documentation packages
@@ -32,7 +32,7 @@ This checklist is organised to mirror the NB's assessment sequence: QMS assessme
 
 ---
 
-## Part 1 — Phase 1: Quality Management System Assessment
+## Part 1: Phase 1: Quality Management System Assessment
 
 Under Annex VII, the NB first assesses the provider's QMS to determine whether it adequately ensures compliance with applicable requirements.
 
@@ -44,13 +44,13 @@ The NB will review the QMS documentation to verify it covers all Article 17(1)(a
 |---|---|---|---|---|---|
 | QMS-01 | QMS document is in place and version controlled | Art. 17 | QMS document (Doc 16); version history | | |
 | QMS-02 | QMS scope covers the specific AI system under assessment | Art. 17 | QMS scope statement; system ID cross-reference | | |
-| QMS-03 | Compliance strategy documented — Art. 17(1)(a) | Art. 17(1)(a) | Doc 16 Part 3; standards gap assessment | | |
-| QMS-04 | Design and development procedures documented — Art. 17(1)(b) | Art. 17(1)(b) | Doc 16 Part 4; lifecycle gate records | | |
-| QMS-05 | Testing, validation, and examination procedures documented — Art. 17(1)(c) | Art. 17(1)(c) | Test plans; validation methodology; test reports | | |
-| QMS-06 | Technical specifications and standards strategy documented — Art. 17(1)(d) | Art. 17(1)(d) | Standards list; gap assessment vs. harmonised standards | | |
-| QMS-07 | Data management procedures documented — Art. 17(1)(e) | Art. 17(1)(e) | Data governance policy; bias audit procedure | | |
-| QMS-08 | Risk management system documented — Art. 17(1)(f) | Art. 17(1)(f) | Risk management procedure; risk register (Doc 02) | | |
-| QMS-09 | Post-market monitoring system documented — Art. 17(1)(g) | Art. 17(1)(g) | PMM Plan (Doc 09); monitoring procedure | | |
+| QMS-03 | Compliance strategy documented, Art. 17(1)(a) | Art. 17(1)(a) | Doc 16 Part 3; standards gap assessment | | |
+| QMS-04 | Design and development procedures documented, Art. 17(1)(b) | Art. 17(1)(b) | Doc 16 Part 4; lifecycle gate records | | |
+| QMS-05 | Testing, validation, and examination procedures documented, Art. 17(1)(c) | Art. 17(1)(c) | Test plans; validation methodology; test reports | | |
+| QMS-06 | Technical specifications and standards strategy documented, Art. 17(1)(d) | Art. 17(1)(d) | Standards list; gap assessment vs. harmonised standards | | |
+| QMS-07 | Data management procedures documented, Art. 17(1)(e) | Art. 17(1)(e) | Data governance policy; bias audit procedure | | |
+| QMS-08 | Risk management system documented, Art. 17(1)(f) | Art. 17(1)(f) | Risk management procedure; risk register (Doc 02) | | |
+| QMS-09 | Post-market monitoring system documented, Art. 17(1)(g) | Art. 17(1)(g) | PMM Plan (Doc 09); monitoring procedure | | |
 | QMS-10 | Incident reporting procedure documented | Art. 17(1)(g) + Art. 73 | Incident procedure (Doc 08); notification timelines | | |
 | QMS-11 | Roles and responsibilities assigned and documented | Art. 17 | Roles table (Doc 16 Part 2); named individuals | | |
 | QMS-12 | QMS approved by senior management | Art. 17 | Signed approval; management review record | | |
@@ -68,11 +68,11 @@ The NB will review the QMS documentation to verify it covers all Article 17(1)(a
 
 ---
 
-## Part 2 — Phase 2: Technical Documentation Assessment
+## Part 2: Phase 2: Technical Documentation Assessment
 
 After the QMS assessment, the NB assesses whether the technical documentation demonstrates the system meets all Chapter III Section 2 requirements.
 
-### 2.1 Annex IV Section 1 — General Description
+### 2.1 Annex IV Section 1: General Description
 
 | # | What the NB Checks | AI Act Reference | Evidence Required | Readiness | Notes |
 |---|---|---|---|---|---|
@@ -82,7 +82,7 @@ After the QMS assessment, the NB assesses whether the technical documentation de
 | TD-04 | Relevant software versions documented | Annex IV §1 | Doc 04 Section 1.4 | | |
 | TD-05 | Instructions for use (summary) included | Art. 13; Annex IV §1 | Doc 04 Section 1.6; instructions for use document | | |
 
-### 2.2 Annex IV Section 2 — Detailed System Description
+### 2.2 Annex IV Section 2: Detailed System Description
 
 | # | What the NB Checks | AI Act Reference | Evidence Required | Readiness | Notes |
 |---|---|---|---|---|---|
@@ -96,7 +96,7 @@ After the QMS assessment, the NB assesses whether the technical documentation de
 | TD-13 | Performance metrics documented and benchmarks declared | Art. 15; Annex IV §2 | Doc 04 Section 2.7; benchmark table | | |
 | TD-14 | Data labelling and annotation procedures documented | Art. 10; Annex IV §2 | Doc 04 Section 2.6 | | |
 
-### 2.3 Annex IV Section 3 — Monitoring, Functioning, and Control
+### 2.3 Annex IV Section 3: Monitoring, Functioning, and Control
 
 | # | What the NB Checks | AI Act Reference | Evidence Required | Readiness | Notes |
 |---|---|---|---|---|---|
@@ -105,7 +105,7 @@ After the QMS assessment, the NB assesses whether the technical documentation de
 | TD-17 | Logging capabilities implemented and documented | Art. 12; Annex IV §3 | Doc 04 Section 3.4; logging architecture evidence | | |
 | TD-18 | Performance on specific demographic groups assessed | Art. 10(2)(f); Annex IV §3 | Doc 04 Section 3.5; demographic performance analysis | | |
 
-### 2.4 Annex IV Section 4 — Risk Management
+### 2.4 Annex IV Section 4: Risk Management
 
 | # | What the NB Checks | AI Act Reference | Evidence Required | Readiness | Notes |
 |---|---|---|---|---|---|
@@ -113,28 +113,28 @@ After the QMS assessment, the NB assesses whether the technical documentation de
 | TD-20 | Risk register populated with identified risks, evaluations, and mitigations | Art. 9; Annex IV §4 | Doc 04 Section 4.2; risk register | | |
 | TD-21 | Cybersecurity measures documented | Art. 15; Annex IV §4 | Doc 04 Section 4.3; cybersecurity assessment | | |
 
-### 2.5 Annex IV Section 5 — Lifecycle Changes
+### 2.5 Annex IV Section 5: Lifecycle Changes
 
 | # | What the NB Checks | AI Act Reference | Evidence Required | Readiness | Notes |
 |---|---|---|---|---|---|
 | TD-22 | Version history and changes documented | Art. 25; Annex IV §5 | Doc 04 Section 5; change log | | |
 | TD-23 | Substantial modification assessment procedure referenced | Art. 25 | QMS change management procedure | | |
 
-### 2.6 Annex IV Section 6 — Standards Applied
+### 2.6 Annex IV Section 6: Standards Applied
 
 | # | What the NB Checks | AI Act Reference | Evidence Required | Readiness | Notes |
 |---|---|---|---|---|---|
 | TD-24 | Standards applied documented (harmonised and others) | Art. 9; Annex IV §6 | Doc 04 Section 6; standards table | | |
 | TD-25 | Where harmonised standards not fully applied, alternative means documented | Art. 9; Annex IV §6 | Standards gap assessment; justification for deviations | | |
 
-### 2.7 Annex IV Section 7 — EU Declaration of Conformity
+### 2.7 Annex IV Section 7: EU Declaration of Conformity
 
 | # | What the NB Checks | AI Act Reference | Evidence Required | Readiness | Notes |
 |---|---|---|---|---|---|
 | TD-26 | Draft EU Declaration of Conformity prepared and referenced | Art. 47; Annex IV §7 | Draft DoC (Doc 12); references to applicable provisions | | |
 | TD-27 | DoC references all applicable requirements | Art. 47 | Doc 12 checklist; complete | | |
 
-### 2.8 Annex IV Section 8 — Post-Market Monitoring
+### 2.8 Annex IV Section 8: Post-Market Monitoring
 
 | # | What the NB Checks | AI Act Reference | Evidence Required | Readiness | Notes |
 |---|---|---|---|---|---|
@@ -146,7 +146,7 @@ After the QMS assessment, the NB assesses whether the technical documentation de
 
 ---
 
-## Part 3 — Substantive Requirements Assessment
+## Part 3: Substantive Requirements Assessment
 
 Beyond documentation completeness, the NB assesses whether the AI system actually meets the substantive requirements.
 
@@ -156,7 +156,7 @@ Beyond documentation completeness, the NB assesses whether the AI system actuall
 |---|---|---|---|---|---|
 | RM-01 | Risk management system is iterative and integrated throughout lifecycle | Art. 9(1) | Risk management procedure shows lifecycle integration | | |
 | RM-02 | All known reasonably foreseeable risks identified | Art. 9(2) | Risk register comprehensive; foreseeable misuse covered | | |
-| RM-03 | Risk estimation and evaluation methodology sound | Art. 9(3) | Likelihood × severity matrix; residual risk analysis | | |
+| RM-03 | Risk estimation and evaluation methodology sound | Art. 9(3) | Likelihood x severity matrix; residual risk analysis | | |
 | RM-04 | Risk management measures appropriate and proportionate | Art. 9(4) | Evidence measures match risk severity | | |
 | RM-05 | Testing against real-world conditions documented | Art. 9(6)-(7) | Real-world test evidence; edge case testing | | |
 
@@ -197,20 +197,20 @@ Beyond documentation completeness, the NB assesses whether the AI system actuall
 
 ---
 
-## Part 4 — Overall Assessment Readiness Summary
+## Part 4: Overall Assessment Readiness Summary
 
 ### 4.1 Traffic Light Summary
 
 | Assessment Area | Status | Critical Gaps | Action Required Before NB Submission |
 |---|---|---|---|
 | QMS documentation | Green / Amber / Red | | |
-| Annex IV — General Description | Green / Amber / Red | | |
-| Annex IV — System Description | Green / Amber / Red | | |
-| Annex IV — Monitoring and Control | Green / Amber / Red | | |
-| Annex IV — Risk Management | Green / Amber / Red | | |
-| Annex IV — Standards | Green / Amber / Red | | |
-| Annex IV — DoC | Green / Amber / Red | | |
-| Annex IV — PMM | Green / Amber / Red | | |
+| Annex IV, General Description | Green / Amber / Red | | |
+| Annex IV, System Description | Green / Amber / Red | | |
+| Annex IV, Monitoring and Control | Green / Amber / Red | | |
+| Annex IV, Risk Management | Green / Amber / Red | | |
+| Annex IV, Standards | Green / Amber / Red | | |
+| Annex IV, DoC | Green / Amber / Red | | |
+| Annex IV, PMM | Green / Amber / Red | | |
 | Risk Management (Art. 9) | Green / Amber / Red | | |
 | Data Governance (Art. 10) | Green / Amber / Red | | |
 | Human Oversight (Art. 14) | Green / Amber / Red | | |
