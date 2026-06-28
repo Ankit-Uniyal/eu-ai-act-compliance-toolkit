@@ -1,6 +1,6 @@
-# 10 — Provider & Deployer Responsibilities Matrix
+# 10: Provider & Deployer Responsibilities Matrix
 
-**EU AI Act Reference:** Articles 16–27 | Articles 49, 72, 73  
+**EU AI Act Reference:** Articles 16-27 | Articles 49, 72, 73  
 **Applies to:** Providers, Deployers, Importers, Distributors  
 **Last Updated:** April 2026
 
@@ -12,7 +12,7 @@ The EU AI Act distributes responsibilities across the AI value chain. This docum
 
 ---
 
-## Part 1 — Role Definitions
+## Part 1: Role Definitions
 
 | Role | Definition | Typical Examples |
 |------|-----------|-----------------|
@@ -26,7 +26,7 @@ The EU AI Act distributes responsibilities across the AI value chain. This docum
 
 ---
 
-## Part 2 — Full Obligations Matrix
+## Part 2: Full Obligations Matrix
 
 ### PROVIDER Obligations (Article 16)
 
@@ -90,9 +90,9 @@ The EU AI Act distributes responsibilities across the AI value chain. This docum
 
 ---
 
-## Part 3 — When Does a Deployer Become a Provider? (Article 25)
+## Part 3: When Does a Deployer Become a Provider? (Article 25)
 
-A deployer becomes the new **provider** — with full provider obligations — if they:
+A deployer becomes the new **provider:** with full provider obligations, if they:
 
 | Action | Outcome |
 |--------|---------|
@@ -106,7 +106,7 @@ A deployer becomes the new **provider** — with full provider obligations — i
 
 ---
 
-## Part 4 — Obligation Allocation for Third-Party AI Systems
+## Part 4: Obligation Allocation for Third-Party AI Systems
 
 Use this table when your organisation deploys a third-party AI system:
 
@@ -115,7 +115,7 @@ Use this table when your organisation deploys a third-party AI system:
 | Conformity assessment | **Provider** | Certificate / DoC from provider |
 | Technical documentation | **Provider** | Request from provider |
 | EU database registration (system) | **Provider** | Registration number from provider |
-| EU database registration (deployer — public sector) | **Deployer** | Self-registered |
+| EU database registration (deployer, public sector) | **Deployer** | Self-registered |
 | Instructions for use | **Provider** supplies; **Deployer** follows | Instructions document |
 | Human oversight design | **Provider** designs; **Deployer** implements | Oversight plan |
 | Human oversight operation | **Deployer** | Oversight logs |
@@ -127,7 +127,7 @@ Use this table when your organisation deploys a third-party AI system:
 
 ---
 
-## Part 5 — Obligation Tracker
+## Part 5: Obligation Tracker
 
 Use this to track completion of all applicable obligations:
 
