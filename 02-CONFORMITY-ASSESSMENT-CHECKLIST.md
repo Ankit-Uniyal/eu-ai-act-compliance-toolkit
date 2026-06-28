@@ -1,6 +1,6 @@
-# 02 — Conformity Assessment Checklist (High-Risk AI Systems)
+# 02: Conformity Assessment Checklist (High-Risk AI Systems)
 
-**EU AI Act Reference:** Articles 9–15, 17, 43–48 | Annexes IV, VI, VII
+**EU AI Act Reference:** Articles 9-15, 17, 43-48 | Annexes IV, VI, VII
 **Applies to:** Providers of High-Risk AI Systems
 **Last Updated:** April 2026
 
@@ -12,7 +12,7 @@ This checklist supports providers in completing conformity assessment before pla
 
 ---
 
-## Section 0 — Which Conformity Assessment Route Applies? (Article 43)
+## Section 0: Which Conformity Assessment Route Applies? (Article 43)
 
 Before completing the checklist, determine your route. This is one of the most consequential decisions a provider makes.
 
@@ -20,8 +20,8 @@ Before completing the checklist, determine your route. This is one of the most c
 |---|---|---|
 | Annex III system **Area 1 (biometrics)** where **no harmonised standards / common specifications** have been applied | **Third-party** assessment by a Notified Body (Annex VII) | Art. 43(1) |
 | Annex III system **Area 1 (biometrics)** where harmonised standards or common specifications **have been fully applied** | Provider may choose **internal control (Annex VI)** | Art. 43(1) |
-| Annex III systems in **Areas 2–8** (critical infrastructure, education, employment, essential services, law enforcement, migration, justice) | **Internal control (Annex VI)** | Art. 43(2) |
-| Annex I product systems (machinery, medical devices, etc.) | Conformity assessment under the relevant **sectoral Annex I legislation** (which incorporates the AI Act requirements) — often a Notified Body | Art. 43(3) |
+| Annex III systems in **Areas 2-8** (critical infrastructure, education, employment, essential services, law enforcement, migration, justice) | **Internal control (Annex VI)** | Art. 43(2) |
+| Annex I product systems (machinery, medical devices, etc.) | Conformity assessment under the relevant **sectoral Annex I legislation** (which incorporates the AI Act requirements), often a Notified Body | Art. 43(3) |
 
 **Selected route:** ☐ Annex VI (internal control) ☐ Annex VII (Notified Body) ☐ Sectoral Annex I legislation
 
@@ -44,7 +44,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section A — Risk Management System (Article 9)
+## Section A: Risk Management System (Article 9)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -63,7 +63,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section B — Data and Data Governance (Article 10)
+## Section B: Data and Data Governance (Article 10)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -79,7 +79,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section C — Technical Documentation (Article 11 + Annex IV)
+## Section C: Technical Documentation (Article 11 + Annex IV)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -100,7 +100,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section D — Record-Keeping and Logging (Article 12)
+## Section D: Record-Keeping and Logging (Article 12)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -114,7 +114,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section E — Transparency and Instructions for Use (Article 13)
+## Section E: Transparency and Instructions for Use (Article 13)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -130,7 +130,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section F — Human Oversight (Article 14)
+## Section F: Human Oversight (Article 14)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -148,7 +148,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section G — Accuracy, Robustness, and Cybersecurity (Article 15)
+## Section G: Accuracy, Robustness, and Cybersecurity (Article 15)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -163,7 +163,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section H — Quality Management System (Article 17)
+## Section H: Quality Management System (Article 17)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -179,7 +179,7 @@ Before completing the checklist, determine your route. This is one of the most c
 
 ---
 
-## Section I — EU Registration (Article 49 + Article 71)
+## Section I: EU Registration (Article 49 + Article 71)
 
 | # | Requirement | Status | Evidence / Notes |
 |---|-------------|--------|-----------------|
@@ -196,22 +196,22 @@ Before completing the checklist, determine your route. This is one of the most c
 
 | Section | Status | Critical Gaps |
 |---------|--------|--------------|
-| 0 — Conformity Route | | |
-| A — Risk Management | | |
-| B — Data Governance | | |
-| C — Technical Documentation | | |
-| D — Logging & Record-keeping | | |
-| E — Transparency & Instructions | | |
-| F — Human Oversight | | |
-| G — Accuracy & Robustness | | |
-| H — Quality Management | | |
-| I — EU Registration | | |
+| 0, Conformity Route | | |
+| A, Risk Management | | |
+| B, Data Governance | | |
+| C, Technical Documentation | | |
+| D, Logging & Record-keeping | | |
+| E, Transparency & Instructions | | |
+| F, Human Oversight | | |
+| G, Accuracy & Robustness | | |
+| H, Quality Management | | |
+| I, EU Registration | | |
 
 **Overall Conformity Assessment Result:**
 
-☐ **CONFORMANT** — System meets all requirements. Ready for market placement.
-☐ **CONDITIONAL** — Gaps identified. Remediation plan required before placement.
-☐ **NON-CONFORMANT** — System does not meet requirements. Cannot be placed on market.
+☐ **CONFORMANT:** System meets all requirements. Ready for market placement.
+☐ **CONDITIONAL:** Gaps identified. Remediation plan required before placement.
+☐ **NON-CONFORMANT:** System does not meet requirements. Cannot be placed on market.
 
 ---
 
@@ -220,7 +220,7 @@ Before completing the checklist, determine your route. This is one of the most c
 | Role | Name | Signature | Date |
 |------|------|-----------|------|
 | Responsible Person / Senior Compliance Owner | | | |
-| Authorised Representative (Article 22 — non-EU providers only, if applicable) | | | |
+| Authorised Representative (Article 22, non-EU providers only, if applicable) | | | |
 | Legal/Compliance Review | | | |
 | Technical Lead | | | |
 
