@@ -1,4 +1,4 @@
-# 20 — Notified Body Engagement Guide
+# 20: Notified Body Engagement Guide
 
 **EU AI Act Reference:** Article 43 | Article 44 | Article 45 | Article 46 | Annex VII
 **Applies to:** Providers of High-Risk AI Systems requiring third-party conformity assessment
@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Most high-risk AI systems under the EU AI Act allow providers to self-certify via an internal conformity assessment (Annex VI). However, certain categories require involvement of a Notified Body — an independent third-party assessment organisation accredited by a national accreditation body. This guide explains when a Notified Body is required, how to find and select one, how to prepare for the assessment, and how to manage the ongoing relationship.
+Most high-risk AI systems under the EU AI Act allow providers to self-certify via an internal conformity assessment (Annex VI). However, certain categories require involvement of a Notified Body, an independent third-party assessment organisation accredited by a national accreditation body. This guide explains when a Notified Body is required, how to find and select one, how to prepare for the assessment, and how to manage the ongoing relationship.
 
 ## Document Control
 
@@ -19,7 +19,7 @@ Most high-risk AI systems under the EU AI Act allow providers to self-certify vi
 
 ---
 
-## Part 1 — When Is a Notified Body Required?
+## Part 1: When Is a Notified Body Required?
 
 ### 1.1 The Default Rule: Internal Conformity Assessment
 
@@ -32,17 +32,17 @@ For most Annex III high-risk AI systems, Article 43(2) permits providers to cond
 
 A Notified Body is required in two specific circumstances:
 
-**Circumstance 1 — Annex I Product Safety Components (Article 43(1))**
+**Circumstance 1, Annex I Product Safety Components (Article 43(1))**
 
 Where a high-risk AI system is a safety component of, or is itself, a product covered by Annex I EU harmonisation legislation, AND that legislation requires third-party conformity assessment, the AI Act conformity assessment must also be carried out by a Notified Body.
 
 Relevant Annex I legislation typically requiring NB involvement:
-- Medical Devices Regulation (MDR) (EU) 2017/745 — Class IIa and above
-- In Vitro Diagnostic Devices Regulation (IVDR) (EU) 2017/746 — Class B and above
-- Machinery Regulation (EU) 2023/1230 — Annex IV machinery
-- Radio Equipment Directive 2014/53/EU — certain categories
+- Medical Devices Regulation (MDR) (EU) 2017/745, Class IIa and above
+- In Vitro Diagnostic Devices Regulation (IVDR) (EU) 2017/746, Class B and above
+- Machinery Regulation (EU) 2023/1230, Annex IV machinery
+- Radio Equipment Directive 2014/53/EU, certain categories
 
-**Circumstance 2 — Real-Time Remote Biometric Identification Systems (Article 43(1)(b))**
+**Circumstance 2, Real-Time Remote Biometric Identification Systems (Article 43(1)(b))**
 
 Where a high-risk AI system is intended for use as a real-time remote biometric identification system in publicly accessible spaces, Notified Body involvement is required under Article 43(1)(b).
 
@@ -54,16 +54,16 @@ Under the enacted EU AI Act (Regulation (EU) 2024/1689), the use of real-time re
 
 | AI System Type | Notified Body Required? | Assessment Procedure |
 |---|---|---|
-| Annex III high-risk — standalone software (e.g. HR AI, credit scoring) | No | Internal — Annex VI |
-| Annex III high-risk — safety component of Annex I product with mandatory NB | Yes | Annex VII (NB) |
-| Medical device AI — Class I | No (unless AI Act Art. 43(1)(b) applies) | Internal — Annex VI |
-| Medical device AI — Class IIa and above (MDR) | Yes (MDR NB required) | MDR NB + Annex VII AI Act |
+| Annex III high-risk, standalone software (e.g. HR AI, credit scoring) | No | Internal, Annex VI |
+| Annex III high-risk, safety component of Annex I product with mandatory NB | Yes | Annex VII (NB) |
+| Medical device AI, Class I | No (unless AI Act Art. 43(1)(b) applies) | Internal, Annex VI |
+| Medical device AI, Class IIa and above (MDR) | Yes (MDR NB required) | MDR NB + Annex VII AI Act |
 | Real-time remote biometric identification in publicly accessible spaces (Art. 43(1)(b)) | Yes | Annex VII (NB) |
-| GPAI model only (no high-risk AI system) | No | N/A — Articles 53-56 apply |
+| GPAI model only (no high-risk AI system) | No | N/A, Articles 53-56 apply |
 
 ---
 
-## Part 2 — Understanding the Notified Body Role
+## Part 2: Understanding the Notified Body Role
 
 ### 2.1 What a Notified Body Does
 
@@ -92,7 +92,7 @@ Notified Bodies must be:
 
 ---
 
-## Part 3 — Finding a Notified Body
+## Part 3: Finding a Notified Body
 
 ### 3.1 NANDO Database
 
@@ -137,7 +137,7 @@ Evaluate potential NBs against these criteria:
 
 ---
 
-## Part 4 — Preparing for a Notified Body Assessment
+## Part 4: Preparing for a Notified Body Assessment
 
 ### 4.1 Pre-Assessment Readiness Checklist
 
@@ -179,7 +179,7 @@ Prepare the following documentation package for submission to the NB:
 
 ---
 
-## Part 5 — The Assessment Process (Annex VII)
+## Part 5: The Assessment Process (Annex VII)
 
 ### 5.1 Assessment Phases
 
@@ -189,8 +189,8 @@ Prepare the following documentation package for submission to the NB:
 | Phase 2: Document review | NB reviews technical documentation package | 4-8 weeks | Respond to information requests promptly |
 | Phase 3: Product assessment | NB technical experts assess the AI system itself; may include testing | 4-8 weeks | Provide system access; support testing activities |
 | Phase 4: Findings and non-conformances | NB issues preliminary findings; provider addresses non-conformances | 2-6 weeks | Remediate findings; provide evidence of corrections |
-| Phase 5: Certificate decision | NB issues certificate of conformity or declines | 1-2 weeks | — |
-| Phase 6: Certificate issuance | Certificate issued; valid for defined period (typically 3-5 years) | — | Update DoC, register, technical docs to reference certificate |
+| Phase 5: Certificate decision | NB issues certificate of conformity or declines | 1-2 weeks |, |
+| Phase 6: Certificate issuance | Certificate issued; valid for defined period (typically 3-5 years) |, | Update DoC, register, technical docs to reference certificate |
 
 **Total typical timeline:** 3-6 months for a straightforward system. Complex systems, significant non-conformances, or NB capacity constraints can extend this materially. Plan your compliance timeline accordingly.
 
@@ -215,7 +215,7 @@ If a Notified Body concludes the system does not meet requirements:
 
 ---
 
-## Part 6 — Certificate Maintenance and Surveillance
+## Part 6: Certificate Maintenance and Surveillance
 
 ### 6.1 Certificate Validity and Renewal
 
@@ -248,7 +248,7 @@ Maintain a register of all active NB certificates:
 
 ---
 
-## Part 7 — Costs and Timeline Planning
+## Part 7: Costs and Timeline Planning
 
 ### 7.1 Cost Drivers for NB Assessment
 
@@ -279,24 +279,24 @@ Working backwards from your target market placement date:
 | Technical documentation complete | 7-11 months before target placement |
 | System development complete and tested | 8-12 months before target placement |
 
-**Recommended approach:** Engage a Notified Body early — even before internal assessment is complete — to understand their requirements, queue times, and documentation expectations. Many NBs offer pre-assessment consultations or scoping meetings.
+**Recommended approach:** Engage a Notified Body early, even before internal assessment is complete, to understand their requirements, queue times, and documentation expectations. Many NBs offer pre-assessment consultations or scoping meetings.
 
 ---
 
-## Part 8 — Interaction with Other EU Legislation NBs
+## Part 8: Interaction with Other EU Legislation NBs
 
 Where an AI system is a component of a product regulated under Annex I legislation, the NB assessment may be combined or coordinated:
 
 | Scenario | Approach |
 |---|---|
-| AI system is a medical device (MDR) — Class IIa+ | Single NB preferred; NB must be designated under both MDR and EU AI Act. Article 11(3) permits combined technical documentation. |
+| AI system is a medical device (MDR), Class IIa+ | Single NB preferred; NB must be designated under both MDR and EU AI Act. Article 11(3) permits combined technical documentation. |
 | AI system in machinery (Machinery Regulation Annex IV) | Coordinate with MDR NB or separate Machinery NB; confirm dual designation |
 | AI system in radio equipment (RED) | RED NB + AI Act NB; combined assessment if NB holds dual designation |
 | Single combined certificate possible? | Only if NB holds designation under all applicable legislation; confirm with specific NB |
 
 ---
 
-## Part 9 — Notified Body Engagement Tracker
+## Part 9: Notified Body Engagement Tracker
 
 | Activity | Date | Status | Notes | Owner |
 |---|---|---|---|---|
