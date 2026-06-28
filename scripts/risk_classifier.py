@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
 """
-risk_classifier.py - UPGRADED v2.1
+risk_classifier.py - UPGRADED v2.2
 EU AI Act Compliance Toolkit -- GRC Engineering Automation
+
+Upgrades in v2.2:
+- GPAI is treated as an ORTHOGONAL regime, not a "Limited Risk" sub-tier.
+  A GPAI model embedded in a high-risk system now correctly retains BOTH the
+  high-risk system obligations AND the GPAI model obligations (Arts. 53-55).
+- Added 'gpai_systemic' CSV flag (>10^25 FLOP or designated) -> Art. 55 obligations.
+- Corrected Article reference comments.
 
 Upgrades in v2.1:
 - --format txt|json|csv: machine-readable output for GRC platforms / CI pipelines
@@ -12,7 +19,7 @@ Upgrades in v2.0:
 - Article 6(3) exclusion logic: structured CSV fields prevent incorrect high-risk classification
 - Dedicated 'prohibited_practice' CSV field: reduces reliance on brittle keyword matching
 - Warning system: flags keyword-matched prohibited practices for human review
-- GPAI model flag triggers reference to new document 11
+- GPAI model flag triggers reference to document 11
 - Disclaimer: output is a triage aid, not a legal determination
 """
 
@@ -23,7 +30,7 @@ import sys
 import os
 from datetime import datetime
 
-__version__ = "2.1.0"
+__version__ = "2.2.0"
 
 ARTICLE_5_KEYWORDS = [
     "subliminal manipulation", "subliminal technique",
@@ -33,6 +40,7 @@ ARTICLE_5_KEYWORDS = [
     "untargeted facial scraping", "facial database scraping",
     "predict criminal", "predictive policing profiling",
     "exploitation of vulnerabilities",
+    "biometric categorisation",
 ]
 
 ANNEX_III_AREAS = {
@@ -61,27 +69,39 @@ OBLIGATIONS = {
         "Human oversight (Article 14)",
         "Accuracy, robustness, cybersecurity (Article 15)",
         "Quality management system (Article 17)",
-        "EU database registration (Articles 49/71)",
-        "Conformity assessment (Articles 43-48)",
+        "Conformity assessment: Annex VI (internal) or Annex VII (Notified Body) (Articles 43-48)",
+        "EU database registration (Article 49)",
         "EU Declaration of Conformity (Article 47) -- see 12-EU-DECLARATION-OF-CONFORMITY.md",
         "Post-market monitoring (Article 72)",
-        "Incident reporting (Article 73)",
-        "FRIA if deployer in public/public-service context (Article 27)",
+        "Serious incident reporting: immediately, max 15/2/10 days (Article 73)",
+        "FRIA if deployer in public/public-service or credit/insurance context (Article 27)",
         "Inform workers before deployment in workplace (Article 26(7))",
     ],
     "LIMITED": [
         "Disclose AI to users (Article 50(1)) -- if chatbot/conversational",
-        "Label emotion recognition / biometric categorisation (Article 50(3))",
-        "Label AI-generated content / deepfakes (Article 50(4)-(5))",
-        "GPAI: Technical documentation Annex XI (Article 53) -- see 11-GPAI-TECHNICAL-DOCUMENTATION.md",
-        "GPAI: Copyright compliance policy (Article 53(1)(c))",
-        "GPAI: Publish training data summary (Article 53(1)(d))",
-        "GPAI systemic risk (>10^25 FLOPs): red-teaming, incident reporting (Article 55)",
+        "Mark AI-generated/manipulated outputs machine-readably (Article 50(2))",
+        "Inform persons of emotion recognition / biometric categorisation (Article 50(3))",
+        "Disclose deepfakes / AI-generated public-interest text (Article 50(4))",
     ],
     "MINIMAL": [
         "No mandatory obligations under EU AI Act",
-        "Consider voluntary codes of conduct",
+        "Consider voluntary codes of conduct (Article 95)",
         "Maintain good AI governance practices",
+    ],
+    # GPAI is a separate, parallel regime (Arts. 51-56), appended regardless of the
+    # system risk tier above. It is NOT a sub-tier of LIMITED.
+    "GPAI": [
+        "GPAI: Technical documentation Annex XI (Article 53(1)(a)-(b)) -- see 11-GPAI-TECHNICAL-DOCUMENTATION.md",
+        "GPAI: Information/documentation to downstream providers (Article 53(1)(b))",
+        "GPAI: Copyright compliance policy (Article 53(1)(c))",
+        "GPAI: Publish training-content summary (Article 53(1)(d))",
+    ],
+    "GPAI_SYSTEMIC": [
+        "GPAI SYSTEMIC: Model evaluation / adversarial testing (Article 55(1)(a))",
+        "GPAI SYSTEMIC: Assess and mitigate systemic risks (Article 55(1)(b))",
+        "GPAI SYSTEMIC: Report serious incidents to AI Office without undue delay (Article 55(1)(c))",
+        "GPAI SYSTEMIC: Adequate cybersecurity protection (Article 55(1)(d))",
+        "GPAI SYSTEMIC: Cooperate with AI Office/Commission (Articles 88, 91-93) -- see 27-GPAI-SYSTEMIC-RISK-COMPLIANCE.md",
     ],
 }
 
@@ -89,10 +109,15 @@ OBLIGATIONS = {
 def check_article_6_3_exclusion(row):
     """
     Check Article 6(3) exclusions. A system listed in Annex III is NOT
-    high-risk if it meets any of the four exclusions. Returns (excluded, reason).
+    high-risk if it meets any of the four exclusions AND does not perform
+    profiling of natural persons. Returns (excluded, reason).
     Requires CSV columns: exclusion_narrow_task, exclusion_human_result,
-    exclusion_no_individual, exclusion_preparatory (values: yes/no)
+    exclusion_no_individual, exclusion_preparatory (values: yes/no).
+    The 'profiling' column, if "yes", overrides any exclusion (always high-risk).
     """
+    # Art. 6(3) final subparagraph: profiling of natural persons => always high-risk.
+    if row.get("profiling", "").strip().lower() == "yes":
+        return False, ""
     exclusions = {
         "exclusion_narrow_task": "Art. 6(3)(a): narrow procedural task only",
         "exclusion_human_result": "Art. 6(3)(b): improves result of prior human activity only",
@@ -105,6 +130,16 @@ def check_article_6_3_exclusion(row):
     return False, ""
 
 
+def gpai_obligations(row):
+    """Return GPAI obligations (orthogonal to the system risk tier), or []."""
+    obs = []
+    if row.get("gpai_model", "").strip().lower() == "yes":
+        obs.extend(OBLIGATIONS["GPAI"])
+        if row.get("gpai_systemic", "").strip().lower() == "yes":
+            obs.extend(OBLIGATIONS["GPAI_SYSTEMIC"])
+    return obs
+
+
 def classify_system(row):
     use_case = row.get("use_case_category", "").strip().lower()
     annex_iii_area = row.get("annex_iii_area", "").strip()
@@ -115,6 +150,12 @@ def classify_system(row):
 
     warnings = []
     exclusion = ""
+    gpai_obs = gpai_obligations(row)
+    if gpai_obs:
+        warnings.append(
+            "GPAI model detected: GPAI obligations (Arts. 53-55) apply IN ADDITION "
+            "to the system risk tier below. GPAI is a separate regime, not 'Limited Risk'."
+        )
 
     # Step 1: Article 5 prohibited practices
     is_prohibited = prohibited_practice == "yes"
@@ -148,7 +189,7 @@ def classify_system(row):
         return {
             "tier": "HIGH",
             "reason": "HIGH -- Annex I safety component (Article 6(1))",
-            "obligations": OBLIGATIONS["HIGH"],
+            "obligations": OBLIGATIONS["HIGH"] + gpai_obs,
             "exclusion": "",
             "warnings": warnings,
         }
@@ -161,30 +202,32 @@ def classify_system(row):
             exclusion = excl_reason
             warnings.append(
                 f"Article 6(3) exclusion claimed: '{excl_reason}'. "
-                f"Document justification in 05-AI-SYSTEM-REGISTER.md. "
+                f"Register the exclusion in the EU database (Art. 49(2)) and "
+                f"document justification in 05-AI-SYSTEM-REGISTER.md. "
                 f"Misapplication creates regulatory risk."
             )
-            # Fall through to LIMITED/MINIMAL
+            # Fall through to LIMITED/MINIMAL (still apply any GPAI obligations)
         else:
             return {
                 "tier": "HIGH",
                 "reason": f"HIGH -- Annex III Area {annex_iii_area}: {area_name} (Art. 6(2))",
-                "obligations": OBLIGATIONS["HIGH"],
+                "obligations": OBLIGATIONS["HIGH"] + gpai_obs,
                 "exclusion": "",
                 "warnings": warnings,
             }
 
-    # Step 4: Article 50 / GPAI -- Limited Risk
+    # Step 4: Article 50 transparency / GPAI -- Limited Risk (transparency overlay)
     if transparency_obligation == "yes" or gpai_model == "yes":
         parts = []
         if transparency_obligation == "yes":
             parts.append("transparency obligation (Article 50)")
         if gpai_model == "yes":
-            parts.append("GPAI model (Article 53) -- see 11-GPAI-TECHNICAL-DOCUMENTATION.md")
+            parts.append("GPAI model (Arts. 53-55) -- see 11-GPAI-TECHNICAL-DOCUMENTATION.md")
+        base = OBLIGATIONS["LIMITED"] if transparency_obligation == "yes" else []
         return {
             "tier": "LIMITED",
             "reason": "LIMITED -- " + "; ".join(parts),
-            "obligations": OBLIGATIONS["LIMITED"],
+            "obligations": base + gpai_obs,
             "exclusion": exclusion,
             "warnings": warnings,
         }
@@ -193,7 +236,7 @@ def classify_system(row):
     return {
         "tier": "MINIMAL",
         "reason": "MINIMAL -- no Article 5, 6, or 50 triggers",
-        "obligations": OBLIGATIONS["MINIMAL"],
+        "obligations": OBLIGATIONS["MINIMAL"] + gpai_obs,
         "exclusion": exclusion,
         "warnings": warnings,
     }
@@ -208,19 +251,20 @@ REQUIRED_COLUMNS = {
 ART_63_COLUMNS = {
     "exclusion_narrow_task", "exclusion_human_result",
     "exclusion_no_individual", "exclusion_preparatory", "prohibited_practice",
+    "profiling", "gpai_systemic",
 }
 
 YES_NO_COLUMNS = [
-    "annex_i_product", "transparency_obligation", "gpai_model",
-    "prohibited_practice", "exclusion_narrow_task", "exclusion_human_result",
+    "annex_i_product", "transparency_obligation", "gpai_model", "gpai_systemic",
+    "prohibited_practice", "profiling", "exclusion_narrow_task", "exclusion_human_result",
     "exclusion_no_individual", "exclusion_preparatory",
 ]
 
 TIER_LABELS = {
     "UNACCEPTABLE": "[BANNED]",
-    "HIGH": "[HIGH ]",
-    "LIMITED": "[LTD ]",
-    "MINIMAL": "[MIN ]",
+    "HIGH": "[HIGH  ]",
+    "LIMITED": "[LTD   ]",
+    "MINIMAL": "[MIN   ]",
 }
 
 
@@ -247,7 +291,7 @@ def generate_report(results, input_file):
     thin = "-" * 88
     lines = [
         sep,
-        "EU AI Act -- AI System Risk Classification Report (v2.1)",
+        "EU AI Act -- AI System Risk Classification Report (v2.2)",
         f"Run Date   : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         f"Input File : {input_file}",
         "Regulation : (EU) 2024/1689 -- EU Artificial Intelligence Act",
@@ -268,7 +312,7 @@ def generate_report(results, input_file):
 
     exclusions = [r for r in results if r.get("exclusion")]
     if exclusions:
-        lines.extend(["", "ARTICLE 6(3) EXCLUSIONS (require documented justification):"])
+        lines.extend(["", "ARTICLE 6(3) EXCLUSIONS (require documented justification + Art. 49(2) registration):"])
         for r in exclusions:
             lines.append(f"  {r['system_id']} {r['system_name']}: {r['exclusion']}")
 
@@ -287,9 +331,9 @@ def generate_report(results, input_file):
         "", thin, "SUMMARY",
         f"  Total    : {len(results)}",
         f"  [BANNED] : {tier_counts['UNACCEPTABLE']}",
-        f"  [HIGH ]  : {tier_counts['HIGH']}",
-        f"  [LTD ]   : {tier_counts['LIMITED']}",
-        f"  [MIN ]   : {tier_counts['MINIMAL']}",
+        f"  [HIGH  ] : {tier_counts['HIGH']}",
+        f"  [LTD   ] : {tier_counts['LIMITED']}",
+        f"  [MIN   ] : {tier_counts['MINIMAL']}",
         thin, "",
     ])
 
@@ -313,7 +357,7 @@ def write_csv(results, path):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="EU AI Act Risk Classifier v2.1 -- exits with code 1 on BANNED systems"
+        description="EU AI Act Risk Classifier v2.2 -- exits with code 1 on BANNED systems"
     )
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument(
@@ -347,7 +391,7 @@ def main():
         missing_63 = ART_63_COLUMNS - set(headers)
         if missing_63:
             print(
-                f"WARNING: Missing Art. 6(3)/prohibited columns: {sorted(missing_63)}. "
+                f"WARNING: Missing Art. 6(3)/prohibited/GPAI columns: {sorted(missing_63)}. "
                 f"Add to inventory for complete classification.",
                 file=sys.stderr,
             )
@@ -375,7 +419,7 @@ def main():
         print(report)
         with open(output_file, "w", encoding="utf-8") as f:
             f.write(report)
-    print(f"Report saved: {output_file}")
+        print(f"Report saved: {output_file}")
 
     banned = sum(1 for r in results if r["tier"] == "UNACCEPTABLE")
     if banned > 0:
