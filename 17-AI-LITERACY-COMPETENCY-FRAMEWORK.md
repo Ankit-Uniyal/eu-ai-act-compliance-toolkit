@@ -1,4 +1,4 @@
-# 17 — AI Literacy and Competency Framework
+# 17: AI Literacy and Competency Framework
 
 **EU AI Act Reference:** Article 4 | Article 14(3) | Article 26(2)
 **Applies to:** All organisations providing or deploying AI systems in the EU
@@ -29,9 +29,9 @@ This framework provides the structure for meeting these obligations across all r
 
 ---
 
-## Part 1 — Regulatory Basis and Obligations
+## Part 1: Regulatory Basis and Obligations
 
-### 1.1 Article 4 — AI Literacy Obligation
+### 1.1 Article 4: AI Literacy Obligation
 
 Article 4 applies to **providers and deployers** and requires:
 
@@ -41,7 +41,7 @@ Article 4 applies to **providers and deployers** and requires:
 
 **Key principle:** AI literacy is not a one-size-fits-all requirement. The level and type of literacy required depends on the person's role and the AI systems they interact with.
 
-### 1.2 Article 14(3) — Human Oversight Competency Obligation
+### 1.2 Article 14(3): Human Oversight Competency Obligation
 
 Deployers must assign oversight of high-risk AI systems only to persons who have:
 - Necessary competence to understand the system's capabilities and limitations
@@ -49,13 +49,13 @@ Deployers must assign oversight of high-risk AI systems only to persons who have
 - Authority to intervene, override, or suspend the system
 - Necessary resources to carry out their oversight tasks
 
-### 1.3 Article 26(2) — Deployer Obligation
+### 1.3 Article 26(2): Deployer Obligation
 
 Deployers must ensure that persons assigned to human oversight tasks have the competence, training, and authority required by Article 14(3), and provide them with the necessary support.
 
 ---
 
-## Part 2 — Role-Based Competency Framework
+## Part 2: Role-Based Competency Framework
 
 ### 2.1 Role Categories
 
@@ -92,7 +92,7 @@ Deployers must ensure that persons assigned to human oversight tasks have the co
 
 ---
 
-## Part 3 — AI Literacy Training Programme
+## Part 3: AI Literacy Training Programme
 
 ### 3.1 Core Training Modules
 
@@ -100,13 +100,13 @@ Deployers must ensure that persons assigned to human oversight tasks have the co
 |---|---|---|---|---|
 | M1: What is the EU AI Act? | All staff | L1 | 30 minutes | e-learning / induction |
 | M2: AI Risk Classification for Non-Technical Staff | Business, Product, Oversight Persons | L2 | 1 hour | Workshop / e-learning |
-| M3: High-Risk AI — Obligations and Controls | AI Governance, Compliance, Engineering | L3 | Half day | Workshop |
+| M3: High-Risk AI, Obligations and Controls | AI Governance, Compliance, Engineering | L3 | Half day | Workshop |
 | M4: Human Oversight in Practice | AI Oversight Persons | L3 | 2 hours | Role-specific workshop |
 | M5: Automation Bias Awareness | AI Oversight Persons, End Users | L2 | 45 minutes | e-learning |
 | M6: Data Governance and Bias in AI | AI Engineering, Data Teams | L3 | Half day | Technical workshop |
 | M7: GPAI and Foundation Model Obligations | AI Engineering, Product, Governance | L3-L4 | 2 hours | Workshop |
 | M8: Incident Recognition and Reporting | All staff dealing with AI outputs | L2 | 45 minutes | e-learning |
-| M9: EU AI Act — Full Regulatory Deep Dive | AI Governance, Compliance, Legal | L4 | Full day | Expert-led training |
+| M9: EU AI Act, Full Regulatory Deep Dive | AI Governance, Compliance, Legal | L4 | Full day | Expert-led training |
 | M10: AI Procurement and Supply Chain | Procurement, Legal | L3 | 2 hours | Workshop |
 
 ### 3.2 Training Requirements by Role
@@ -123,11 +123,11 @@ Deployers must ensure that persons assigned to human oversight tasks have the co
 
 ---
 
-## Part 4 — AI Literacy Assessment Tool
+## Part 4: AI Literacy Assessment Tool
 
 Use this self-assessment to evaluate current AI literacy levels across teams. Rate each statement 1 (not at all) to 5 (fully).
 
-### 4.1 Awareness Level (L1) — All Staff
+### 4.1 Awareness Level (L1): All Staff
 
 | Statement | Rating (1-5) |
 |---|---|
@@ -139,7 +139,7 @@ Use this self-assessment to evaluate current AI literacy levels across teams. Ra
 
 **L1 Score: ___ / 25** (Target: 20+)
 
-### 4.2 Foundation Level (L2) — Business, Product, Oversight Persons
+### 4.2 Foundation Level (L2): Business, Product, Oversight Persons
 
 | Statement | Rating (1-5) |
 |---|---|
@@ -151,7 +151,7 @@ Use this self-assessment to evaluate current AI literacy levels across teams. Ra
 
 **L2 Score: ___ / 25** (Target: 18+)
 
-### 4.3 Practitioner Level (L3) — AI Governance, Oversight Persons, Technical Staff
+### 4.3 Practitioner Level (L3): AI Governance, Oversight Persons, Technical Staff
 
 | Statement | Rating (1-5) |
 |---|---|
@@ -165,7 +165,7 @@ Use this self-assessment to evaluate current AI literacy levels across teams. Ra
 
 **L3 Score: ___ / 35** (Target: 28+)
 
-### 4.4 Expert Level (L4) — AI Governance Lead, Compliance Lead
+### 4.4 Expert Level (L4): AI Governance Lead, Compliance Lead
 
 | Statement | Rating (1-5) |
 |---|---|
@@ -181,7 +181,7 @@ Use this self-assessment to evaluate current AI literacy levels across teams. Ra
 
 ---
 
-## Part 5 — Competency Gap Analysis
+## Part 5: Competency Gap Analysis
 
 ### 5.1 Team / Department Gap Analysis
 
@@ -197,7 +197,7 @@ Use this self-assessment to evaluate current AI literacy levels across teams. Ra
 
 ---
 
-## Part 6 — Training Delivery and Records
+## Part 6: Training Delivery and Records
 
 ### 6.1 Training Delivery Log
 
@@ -236,7 +236,7 @@ For each individual assigned human oversight duties on a high-risk AI system, ma
 
 ---
 
-## Part 7 — AI Literacy Programme Governance
+## Part 7: AI Literacy Programme Governance
 
 ### 7.1 Ownership and Accountability
 
@@ -268,7 +268,7 @@ For each individual assigned human oversight duties on a high-risk AI system, ma
 
 ---
 
-## Part 8 — Regulatory Reference Summary
+## Part 8: Regulatory Reference Summary
 
 | Obligation | Article | Who | What |
 |---|---|---|---|
