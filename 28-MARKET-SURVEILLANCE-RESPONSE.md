@@ -1,6 +1,6 @@
-# 28 — Market Surveillance and Regulatory Response Procedure
+# 28: Market Surveillance and Regulatory Response Procedure
 ## EU AI Act Compliance Toolkit | v3.2.0 | April 2026
-### Regulatory Reference: Articles 74–99 | Applicable to: All Operators (Providers, Deployers, Importers, Distributors)
+### Regulatory Reference: Articles 74-99 | Applicable to: All Operators (Providers, Deployers, Importers, Distributors)
 
 ---
 
@@ -8,15 +8,15 @@
 
 This document provides a **Market Surveillance and Regulatory Response Procedure** for organisations subject to the EU AI Act. It covers three areas:
 
-1. **Regulatory readiness** — what documents to have, where to keep them, and how long to retain them
-2. **Response to competent authority requests** — how to respond when a national market surveillance authority (MSA) or the EU AI Office contacts you
-3. **Corrective action and enforcement** — what to do if an authority finds non-compliance
+1. **Regulatory readiness:** what documents to have, where to keep them, and how long to retain them
+2. **Response to competent authority requests:** how to respond when a national market surveillance authority (MSA) or the EU AI Office contacts you
+3. **Corrective action and enforcement:** what to do if an authority finds non-compliance
 
 **Who should use this document:**
-- Providers of high-risk AI systems (Annex I/III) — primary audience
-- Deployers of high-risk AI systems — secondary audience (deployer-specific obligations noted)
-- Importers and distributors — relevant obligations flagged
-- GPAI model providers — EU AI Office interaction covered (see also Doc 27)
+- Providers of high-risk AI systems (Annex I/III), primary audience
+- Deployers of high-risk AI systems, secondary audience (deployer-specific obligations noted)
+- Importers and distributors, relevant obligations flagged
+- GPAI model providers, EU AI Office interaction covered (see also Doc 27)
 
 **Key enforcement dates:**
 - Prohibited AI practices: enforceable from **2 February 2025**
@@ -26,17 +26,17 @@ This document provides a **Market Surveillance and Regulatory Response Procedure
 
 ---
 
-## Part 1 — Regulatory Landscape: Who Can Come Knocking?
+## Part 1: Regulatory Landscape: Who Can Come Knocking?
 
 ### 1.1 Market Surveillance Authorities
 
 Each EU Member State designates one or more **national market surveillance authorities (MSAs)** responsible for enforcing the AI Act within their territory (Article 74(1)).
 
-**MSA powers include (Articles 74–83):**
+**MSA powers include (Articles 74-83):**
 - Requesting documents, technical documentation, and access to AI systems
 - Inspecting AI systems in operation
 - Ordering corrective actions (modifications, restrictions, withdrawal)
-- Imposing administrative fines (Articles 99–101)
+- Imposing administrative fines (Articles 99-101)
 - Issuing public warnings
 - Ordering suspension or recall of AI systems from the market
 
@@ -58,7 +58,7 @@ The EU AI Office (established under Article 64) has enforcement powers over **GP
 | Sectoral Regulators (EBA, EMA, EASA, etc.) | Sector-specific law | AI in finance, healthcare, aviation |
 | National CSIRT / Cybersecurity Agency (ENISA) | Cybersecurity | AI affecting critical infrastructure |
 
-### 1.4 Contact Register — Know Your Relevant Authorities
+### 1.4 Contact Register: Know Your Relevant Authorities
 
 Maintain a register of the competent authorities relevant to your organisation:
 
@@ -68,11 +68,11 @@ Maintain a register of the competent authorities relevant to your organisation:
 | National MSA (secondary, if applicable) | | | | |
 | Lead DPA | | | | |
 | Sectoral regulator (if applicable) | | | | |
-| EU AI Office | EU AI Office — European Commission | EU-wide | euaioffice@ec.europa.eu | |
+| EU AI Office | EU AI Office, European Commission | EU-wide | euaioffice@ec.europa.eu | |
 
 ---
 
-## Part 2 — Document Retention Schedule
+## Part 2: Document Retention Schedule
 
 The AI Act imposes specific document retention obligations. Failure to retain required documents is itself a compliance failure and can result in fines.
 
@@ -100,7 +100,7 @@ The AI Act imposes specific document retention obligations. Failure to retain re
 
 | Document Type | Retention Period | Legal Basis |
 |---|---|---|
-| FRIA (Doc 03) — deployers subject to Art. 27 | Duration of deployment + 3 years | Art. 27(5) |
+| FRIA (Doc 03), deployers subject to Art. 27 | Duration of deployment + 3 years | Art. 27(5) |
 | Logs from AI system use | Minimum 6 months | Art. 26(5) |
 | Records of human oversight decisions | Minimum 1 year (recommended) | Art. 14 + Art. 26 |
 | Worker notification records (Doc 22) | Duration of deployment + 3 years | Art. 26(7) |
@@ -122,7 +122,7 @@ Conduct annually. Confirm all required documents are retained and accessible:
 
 ---
 
-## Part 3 — Regulatory Readiness Assessment
+## Part 3: Regulatory Readiness Assessment
 
 Before a regulator arrives, assess your readiness using this checklist. Run this exercise annually and before any known regulatory inspection.
 
@@ -172,14 +172,14 @@ Count YES responses and calculate readiness:
 
 ---
 
-## Part 4 — Response to Competent Authority Requests
+## Part 4: Response to Competent Authority Requests
 
 ### 4.1 Types of Authority Requests
 
 | Request Type | Authority | Typical Timeframe for Response | Reference |
 |---|---|---|---|
-| Information request — documents only | MSA | 15 working days (unless urgent) | Art. 74(4) |
-| Information request — system access | MSA | Agreed during inspection | Art. 74(4) |
+| Information request, documents only | MSA | 15 working days (unless urgent) | Art. 74(4) |
+| Information request, system access | MSA | Agreed during inspection | Art. 74(4) |
 | Corrective action order | MSA | Specified in order (typically 15-30 days) | Art. 79 |
 | Urgent safety measure (serious risk) | MSA | Immediate / within 24 hours | Art. 80 |
 | Recall or withdrawal order | MSA | Specified in order | Art. 79(5) |
@@ -190,7 +190,7 @@ Count YES responses and calculate readiness:
 
 When a contact is received from a competent authority:
 
-#### Step 1 — Receive and Authenticate (Day 0)
+#### Step 1: Receive and Authenticate (Day 0)
 
 | Action | Owner | Complete? |
 |---|---|---|
@@ -200,17 +200,17 @@ When a contact is received from a competent authority:
 | Notify executive team immediately | Compliance Lead | ☐ |
 | Engage external legal counsel if not already retained | CEO / Compliance Lead | ☐ |
 
-#### Step 2 — Internal Triage (Days 1–2)
+#### Step 2: Internal Triage (Days 1-2)
 
 | Action | Owner | Complete? |
 |---|---|---|
 | Identify all AI systems, documents, and data within scope of request | Technical Lead + Compliance | ☐ |
-| Apply legal hold: preserve all relevant documents and logs — do not delete or modify | Legal Counsel | ☐ |
+| Apply legal hold: preserve all relevant documents and logs, do not delete or modify | Legal Counsel | ☐ |
 | Assess whether request may indicate: (a) routine surveillance, (b) complaint-based investigation, (c) serious risk or incident investigation | Legal Counsel | ☐ |
 | Review all requested documents internally before disclosure | Legal Counsel + Technical Lead | ☐ |
 | Identify any legally privileged, trade secret, or confidential third-party information | Legal Counsel | ☐ |
 
-#### Step 3 — Prepare Response (Days 2–14)
+#### Step 3: Prepare Response (Days 2-14)
 
 | Action | Owner | Complete? |
 |---|---|---|
@@ -221,7 +221,7 @@ When a contact is received from a competent authority:
 | Prepare covering letter: scope of response, any limitations, requests for extension if needed | Legal Counsel | ☐ |
 | Obtain sign-off from Compliance Lead and Legal Counsel before submission | Compliance Lead + Legal | ☐ |
 
-#### Step 4 — Submit Response
+#### Step 4: Submit Response
 
 | Action | Owner | Complete? |
 |---|---|---|
@@ -230,7 +230,7 @@ When a contact is received from a competent authority:
 | Confirm receipt with authority | Compliance Lead | ☐ |
 | Update regulatory interaction log (see Part 4.4) | Compliance Lead | ☐ |
 
-#### Step 5 — Follow-Up
+#### Step 5: Follow-Up
 
 | Action | Owner | Complete? |
 |---|---|---|
@@ -269,11 +269,11 @@ Maintain a log of all contacts with regulatory authorities:
 
 ---
 
-## Part 5 — Corrective Action and Enforcement Response
+## Part 5: Corrective Action and Enforcement Response
 
 ### 5.1 Types of Corrective Measures
 
-Under Articles 79–83, MSAs can impose the following corrective measures, in escalating order:
+Under Articles 79-83, MSAs can impose the following corrective measures, in escalating order:
 
 | Measure | Description | Reference | Typical Timeframe |
 |---|---|---|---|
@@ -323,7 +323,7 @@ Article 99 establishes the following maximum fines:
 
 ---
 
-## Part 6 — Enforcement Readiness Checklist
+## Part 6: Enforcement Readiness Checklist
 
 Use this checklist for annual enforcement readiness review:
 
@@ -368,7 +368,7 @@ Use this checklist for annual enforcement readiness review:
 
 ---
 
-## Part 7 — Annual Review and Sign-Off
+## Part 7: Annual Review and Sign-Off
 
 | Review Item | Complete? | Notes |
 |---|---|---|
@@ -388,7 +388,7 @@ Use this checklist for annual enforcement readiness review:
 
 ---
 
-## Appendix A — Cross-References to Toolkit Documents
+## Appendix A: Cross-References to Toolkit Documents
 
 | Situation | Documents to Produce |
 |---|---|
@@ -402,7 +402,7 @@ Use this checklist for annual enforcement readiness review:
 
 ---
 
-## Appendix B — Key Contacts Template
+## Appendix B: Key Contacts Template
 
 | Role | Name | Direct Phone | Email | Availability |
 |---|---|---|---|---|
@@ -418,7 +418,7 @@ Use this checklist for annual enforcement readiness review:
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.0 | April 2026 | Initial release — market surveillance response, document retention, enforcement readiness | Toolkit Team |
+| 1.0 | April 2026 | Initial release, market surveillance response, document retention, enforcement readiness | Toolkit Team |
 
 ---
 
