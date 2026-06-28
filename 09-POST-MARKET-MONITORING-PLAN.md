@@ -1,4 +1,4 @@
-# 09 — Post-Market Monitoring Plan
+# 09: Post-Market Monitoring Plan
 
 **EU AI Act Reference:** Article 72 | Article 61 (GPAI Models)  
 **Applies to:** Providers of High-Risk AI Systems  
@@ -12,7 +12,7 @@ Article 72 requires providers of high-risk AI systems to establish and document 
 
 ---
 
-## Part 1 — System and Plan Information
+## Part 1: System and Plan Information
 
 | Field | Entry |
 |-------|-------|
@@ -28,7 +28,7 @@ Article 72 requires providers of high-risk AI systems to establish and document 
 
 ---
 
-## Part 2 — Monitoring Objectives
+## Part 2: Monitoring Objectives
 
 | Objective | Description |
 |-----------|-------------|
@@ -41,7 +41,7 @@ Article 72 requires providers of high-risk AI systems to establish and document 
 
 ---
 
-## Part 3 — Data Collection
+## Part 3: Data Collection
 
 ### 3.1 Data Sources
 
@@ -65,7 +65,7 @@ Article 72 requires providers of high-risk AI systems to establish and document 
 
 ---
 
-## Part 4 — Performance Metrics and Thresholds
+## Part 4: Performance Metrics and Thresholds
 
 | Metric | Baseline Value | Alert Threshold | Critical Threshold | Review Action |
 |--------|---------------|----------------|-------------------|---------------|
@@ -81,7 +81,7 @@ Article 72 requires providers of high-risk AI systems to establish and document 
 
 ---
 
-## Part 5 — Monitoring Activities and Schedule
+## Part 5: Monitoring Activities and Schedule
 
 | Activity | Description | Frequency | Owner | Output |
 |----------|-------------|-----------|-------|--------|
@@ -95,7 +95,7 @@ Article 72 requires providers of high-risk AI systems to establish and document 
 
 ---
 
-## Part 6 — Risk-Triggered Review Criteria
+## Part 6: Risk-Triggered Review Criteria
 
 The following events trigger an immediate unscheduled review:
 
@@ -111,7 +111,7 @@ The following events trigger an immediate unscheduled review:
 
 ---
 
-## Part 7 — Corrective Actions and System Updates
+## Part 7: Corrective Actions and System Updates
 
 | Trigger | Corrective Action Types | Responsibility | Notification Required |
 |---------|------------------------|---------------|----------------------|
@@ -131,7 +131,7 @@ The following events trigger an immediate unscheduled review:
 
 ---
 
-## Part 8 — Substantial Modification Assessment
+## Part 8: Substantial Modification Assessment
 
 Under **Article 25**, a substantial modification requires a new conformity assessment.
 
@@ -148,7 +148,7 @@ Under **Article 25**, a substantial modification requires a new conformity asses
 
 ---
 
-## Part 9 — PMM Reporting
+## Part 9: PMM Reporting
 
 ### 9.1 Internal Reporting
 
@@ -168,7 +168,7 @@ Under **Article 25**, a substantial modification requires a new conformity asses
 
 ---
 
-## Part 10 — PMM Plan Review and Update Log
+## Part 10: PMM Plan Review and Update Log
 
 | Version | Date | Changes Made | Approved By |
 |---------|------|-------------|------------|
