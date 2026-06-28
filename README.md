@@ -303,7 +303,7 @@ CSV columns for complete classification:
 
 See CHANGELOG.md for full version history, regulatory coverage tracking, and planned updates.
 
-**Current version: v3.3.0 (June 2026):** see CHANGELOG.md for what's new.
+**Current version: v3.4.0 (June 2026):** see CHANGELOG.md for what's new.
 
 ---
 
