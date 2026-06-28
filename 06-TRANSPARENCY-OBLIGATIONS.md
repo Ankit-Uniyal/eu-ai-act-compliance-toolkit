@@ -1,6 +1,6 @@
-# 06 — Transparency Obligations Checklist
+# 06: Transparency Obligations Checklist
 
-**EU AI Act Reference:** Articles 50, 53 | Recitals 132–136  
+**EU AI Act Reference:** Articles 50, 53 | Recitals 132-136  
 **Applies to:** Providers and Deployers of Limited-Risk AI Systems; GPAI Model Providers  
 **Last Updated:** April 2026
 
@@ -8,11 +8,11 @@
 
 ## Purpose
 
-Article 50 imposes transparency obligations on providers and deployers of certain AI systems. Unlike high-risk AI, these systems do not require conformity assessments — but they must ensure that people interacting with them are informed. This checklist covers all Article 50 obligations.
+Article 50 imposes transparency obligations on providers and deployers of certain AI systems. Unlike high-risk AI, these systems do not require conformity assessments, but they must ensure that people interacting with them are informed. This checklist covers all Article 50 obligations.
 
 ---
 
-## Part 1 — Conversational AI (Chatbots) — Article 50(1)
+## Part 1: Conversational AI (Chatbots): Article 50(1)
 
 **Obligation:** Providers must ensure AI systems intended to interact directly with natural persons are designed so those persons are informed they are interacting with an AI system (unless it is obvious from context).
 
@@ -29,7 +29,7 @@ Article 50 imposes transparency obligations on providers and deployers of certai
 
 ---
 
-## Part 2 — Emotion Recognition / Biometric Categorisation — Article 50(3)
+## Part 2: Emotion Recognition / Biometric Categorisation: Article 50(3)
 
 **Obligation:** Deployers of emotion recognition or biometric categorisation systems must inform natural persons of the system's operation.
 
@@ -42,7 +42,7 @@ Article 50 imposes transparency obligations on providers and deployers of certai
 
 ---
 
-## Part 3 — Deepfake and AI-Generated Content — Article 50(4) & (5)
+## Part 3: Deepfake and AI-Generated Content: Article 50(4) & (5)
 
 **Obligation:** Providers of AI systems generating synthetic audio, image, video, or text content must mark outputs as AI-generated. Deployers must label content as such.
 
@@ -64,7 +64,7 @@ Article 50 imposes transparency obligations on providers and deployers of certai
 
 ---
 
-## Part 4 — GPAI Model Transparency Obligations — Article 53
+## Part 4: GPAI Model Transparency Obligations: Article 53
 
 **Applies to:** Providers of General-Purpose AI (GPAI) models  
 *(e.g. foundation models, large language models)*
@@ -76,7 +76,7 @@ Article 50 imposes transparency obligations on providers and deployers of certai
 | 4.3 | Policy for compliance with EU copyright law in place | ☐ Done / ☐ Pending | |
 | 4.4 | Summary of content used for training published | ☐ Done / ☐ Pending | |
 
-**For GPAI models with systemic risk (Article 51 — >10^25 FLOPs):**
+**For GPAI models with systemic risk (Article 51, >10^25 FLOPs):**
 
 | # | Additional Requirement | Status | Notes |
 |---|----------------------|--------|-------|
@@ -87,7 +87,7 @@ Article 50 imposes transparency obligations on providers and deployers of certai
 
 ---
 
-## Part 5 — User Rights Information
+## Part 5: User Rights Information
 
 Ensure users are aware of their rights when interacting with AI systems:
 
@@ -100,7 +100,7 @@ Ensure users are aware of their rights when interacting with AI systems:
 
 ---
 
-## Part 6 — Transparency Implementation Log
+## Part 6: Transparency Implementation Log
 
 | System | Transparency Measure | Implementation Date | Method | Evidence | Review Date |
 |--------|---------------------|-------------------|--------|---------|------------|
