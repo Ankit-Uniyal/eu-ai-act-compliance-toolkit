@@ -8,6 +8,16 @@ Regulatory baseline: Regulation (EU) 2024/1689 as entered into force 1 August 20
 
 ---
 
+## [3.5.0] - 2026-08-22
+
+### Fixed (regulatory timeline)
+
+**Digital Omnibus on AI.** Regulation (EU) 2026/1744 was published in the Official Journal on 24 July 2026 and entered into force on 27 July 2026. It deferred the AI Act high-risk deadlines. The compliance timeline in README.md and the deadline table in docs/QUICKSTART.md previously gave 2 August 2026 for standalone Annex III high-risk obligations and 2 August 2027 for Annex I embedded high-risk systems. Both were corrected: Annex III (Art. 6(2)) is now 2 December 2027, and Annex I embedded (Art. 6(1)) is now 2 August 2028.
+
+**What did not change.** Prohibited practices (Art. 5), AI literacy (Art. 4) and the GPAI regime kept their existing dates. Article 50 transparency, the governance and conformity-assessment architecture and regulatory sandboxes did apply from 2 August 2026; marking of AI-generated content for systems already on the market has until 2 December 2026. Legacy public-authority high-risk systems still have until 2 August 2030.
+
+---
+
 ## [3.4.0] - 2026-06-28
 
 ### Changed (companion tools and formatting)
