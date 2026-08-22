@@ -1,9 +1,11 @@
 # EU AI Act Compliance Toolkit
-## Version 3.4.0 | June 2026
+## Version 3.5.0 | August 2026
 
 A practical, practitioner-built compliance toolkit for the EU Artificial Intelligence Act (Regulation (EU) 2024/1689). Now with **28 compliance documents**, 2 worked examples, and GRC automation scripts, covering every major obligation from risk classification through market surveillance response.
 
 **New here?** Start with **[docs/QUICKSTART.md](docs/QUICKSTART.md):** a plain-language, 10-minute overview of the four risk tiers, the real compliance deadlines, and the first three things to do.
+
+**New in v3.5.0:** Compliance timeline corrected for the Digital Omnibus on AI, Regulation (EU) 2026/1744, which deferred the Annex III high-risk deadline to 2 December 2027 and the Annex I embedded high-risk deadline to 2 August 2028. See [Compliance Timeline](#compliance-timeline).
 
 **New in v3.4.0:** Three companion tools are now linked throughout, so you can go from filling in a template to practising on a live app. See [Companion tools (live)](#companion-tools-live).
 
@@ -40,11 +42,12 @@ If you are building a management system, the ISO 42001 toolkit is the natural si
 | EU AI Act enters into force | 1 August 2024 |
 | Prohibited practices (Art. 5) banned; AI literacy (Art. 4) applies | **2 February 2025** |
 | GPAI model obligations + governance/penalties apply | **2 August 2025** |
-| Annex III high-risk obligations + most of the Act apply | **2 August 2026** |
-| High-risk AI that are Annex I products (embedded safety components) apply (Art. 6(1)) | **2 August 2027** |
+| Art. 50 transparency obligations, governance architecture and regulatory sandboxes apply | **2 August 2026** |
+| Annex III high-risk obligations apply (Art. 6(2)) | **2 December 2027** |
+| High-risk AI that are Annex I products (embedded safety components) apply (Art. 6(1)) | **2 August 2028** |
 | GPAI models already on the market before 2 Aug 2025 must be compliant | 2 August 2027 |
 
-> Note: the 2 August 2026 date covers Annex III high-risk systems (Art. 6(2)); the obligations tied to Art. 6(1) (high-risk AI that are safety components of Annex I regulated products) apply from 2 August 2027. Legacy public-authority high-risk systems have until 2 August 2030. Always verify current dates against EUR-Lex, as delegated/implementing acts may adjust details.
+> **Timeline updated August 2026.** Regulation (EU) 2026/1744, the Digital Omnibus on AI, was published in the Official Journal on 24 July 2026 and entered into force on 27 July 2026. It deferred the high-risk deadlines: standalone Annex III systems (Art. 6(2)) moved from 2 August 2026 to 2 December 2027, and high-risk AI embedded in Annex I regulated products (Art. 6(1)) moved from 2 August 2027 to 2 August 2028. What did apply from 2 August 2026: Article 50 transparency, the governance and conformity-assessment architecture, and regulatory sandboxes; marking of AI-generated content for systems already on the market has until 2 December 2026. Prohibited practices (Art. 5), AI literacy (Art. 4) and the GPAI regime were unaffected. Legacy public-authority high-risk systems still have until 2 August 2030. Always verify current dates against EUR-Lex.
 
 ---
 
