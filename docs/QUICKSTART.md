@@ -37,11 +37,13 @@ Your obligations depend on your role. You can wear more than one hat.
 |---|---|
 | 2 February 2025 | Prohibited practices banned; AI-literacy duty starts |
 | 2 August 2025 | GPAI model rules + governance/penalties |
-| 2 August 2026 | Most high-risk (Annex III) obligations + transparency duties (Art. 50) |
-| 2 August 2027 | High-risk AI embedded in regulated products (Annex I, Art. 6(1)); legacy GPAI models |
+| 2 August 2026 | Transparency duties (Art. 50), governance architecture and regulatory sandboxes |
+| 2 August 2027 | Legacy GPAI models placed on the market before 2 August 2025 |
+| 2 December 2027 | High-risk Annex III obligations (Art. 6(2)), deferred from 2 August 2026 |
+| 2 August 2028 | High-risk AI embedded in regulated products (Annex I, Art. 6(1)), deferred from 2 August 2027 |
 | 2 August 2030 | Legacy high-risk systems used by public authorities |
 
-*(Dates can be adjusted by later EU acts, verify against EUR-Lex.)*
+*The high-risk dates moved. Regulation (EU) 2026/1744, the Digital Omnibus on AI (Official Journal 24 July 2026, in force 27 July 2026), deferred Annex III high-risk to 2 December 2027 and Annex I embedded high-risk to 2 August 2028. Prohibited practices, AI literacy and the GPAI regime were not affected. Dates can be adjusted again by later EU acts, so verify against EUR-Lex.*
 
 ## 5. Do these three things first
 
